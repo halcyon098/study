@@ -1,0 +1,15 @@
+/设备/*
+/杂记&TODO/日记/*
+# 忽略系统文件
+.DS_Store
+Thumbs.db
+
+# 忽略笔记软件的回收站和临时文件
+.trash/
+.space/
+
+# 忽略 Obsidian 的工作区状态（但保留插件和主题设置）
+# 如果你想完全不同步配置，可以直接写 .obsidian/
+.obsidian/workspace.json
+.obsidian/workspace-mobile.json
+.obsidian/graph.json
