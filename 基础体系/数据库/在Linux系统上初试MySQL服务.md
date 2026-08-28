@@ -40,7 +40,7 @@ sudo netstat -tap | grep mysql
 
 如果出现如下提示，则安装成功：
 
-![1-02](../assets/在Linux系统上初试MySQL服务/sql-01-02.png)
+[图片缺失：原路径 ../assets/在Linux系统上初试MySQL服务/sql-01-02.png，仓库内无原图，需从旧电脑找回]
 
 此时，可以根据自己的需求，用 gedit 修改 MySQL 的配置文件（my.cnf）,使用以下命令:
 

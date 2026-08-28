@@ -127,11 +127,11 @@ CORS定义了两种跨域请求，简单跨域请求和非简单跨域请求。�
 使用burpsuite。
 
 1. 选择Proxy模块中的Options选项，找到Match and Replace这一栏，勾选Request header 将空替换为 `Origin:foo.example.org` 的Enable框。  
-	![](https://img2020.cnblogs.com/blog/1898662/202103/1898662-20210320222651027-163597185.png)
+	![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/adf27a09c7546a77d2f95baed2f3b4c9.png)
 2. 在Filter by search term 中输入： `Access-Control-Allow-Origin: foo.example.org`  
-	![](https://img2020.cnblogs.com/blog/1898662/202103/1898662-20210320222714962-1357949050.png)
+	![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/c9fd5e6a79f33d483a908e03953003ab.png)
 3. HTTP history列表中出现符合条件的请求包，点击Ctrl+R，点击GO，如下图，即该处有CORS漏洞。  
-	![](https://img2020.cnblogs.com/blog/1898662/202103/1898662-20210320222731731-1092560271.png)  
+	![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/6dcc331fc1a3bb404c10a3037ea04a02.png)  
 	组合应是这种：
 	```yaml
 	Access-Control-Allow-Origin: foo.example.org
@@ -146,7 +146,7 @@ CORS定义了两种跨域请求，简单跨域请求和非简单跨域请求。�
 **方式二**
 
 1. curl命令，输入 `curl http://127.0.0.1/DoraBox-master/csrf/userinfo.php -H "Origin:https://example.com/" -I`  
-	![](https://img2020.cnblogs.com/blog/1898662/202103/1898662-20210320222750589-1111105398.png)
+	![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/c43e0238321b64be9a3c9e0b15f9a7f3.png)
 2. 果出现这种组合，说明存在CORS漏洞
 	```yaml
 	Access-Control-Allow-Origin: foo.example.org
@@ -292,7 +292,7 @@ Content-Type: text/html; charset=UTF-7
 1,交互式xss。通过cors，绕过一些反会话劫持的方法，如HTTP-Only限制的cookie，绑定IP地址的会话ID等，劫持用户会话。
 
 2,程序猿在写ajax请求的时候，对目标域限制不严。有点类似于url跳转。facebook出现过这样一个案例。javascript通过url里的参数进行ajax请求。  
-![](https://img2020.cnblogs.com/blog/1898662/202103/1898662-20210320222845089-247588606.png)
+![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/c53889092c3f27a569f334754f6cb974.png)
 
 ---
 

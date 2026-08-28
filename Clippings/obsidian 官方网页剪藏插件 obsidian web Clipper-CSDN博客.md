@@ -14,23 +14,23 @@ obsidian web Clipper 一款 obsidian 官方网站剪藏软件，相当于印象�
 
 目前上架了 chrome 应用商店，edge 直接搜索是没有的。在 chrome 应用商店搜索安装即可。
 
-![](https://img-blog.csdnimg.cn/img_convert/59b5445cd9b9ff3d31428a0a3412a6c9.png)
+![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/e428224d611abfd30c7c9967c1017302.png)
 
 但是我的主流浏览器是 edge，也是可以解决的，将网址[复制粘贴](https://so.csdn.net/so/search?q=%E5%A4%8D%E5%88%B6%E7%B2%98%E8%B4%B4&spm=1001.2101.3001.7020)到 edge, 会在顶部出现提示框，直接安装即可，这适用于所有没上架 edge 应用商店的插件。
 
 [Obsidian Web Clipper - Chrome 应用商店 (google.com)](https://chromewebstore.google.com/detail/obsidian-web-clipper/cnjifjpddelmedmihgijeibhnjfabmlf?hl=zh-CN&utm_source=ext_sidebar "Obsidian Web Clipper - Chrome 应用商店 (google.com)")
 
-![](https://img-blog.csdnimg.cn/img_convert/7455218700fec135eb9eaf8afdd91916.png)
+![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/049d1064779338e8de1e6d10b6d54b94.png)
 
 ### 插件使用及笔记效果
 
 插件使用非常无脑，无需设置，在 obsidian 开启的情况下，点击 obsidian web Clipper 按钮，默认收集到到Clippings，而且自带文章元数据。包括文件名、来源，创建时间，标签等，排版都给你排好了，真香。
 
-![](https://img-blog.csdnimg.cn/img_convert/45e1573a73899c6058f91899775ed785.png)
+![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/eeaef73f7c57ecaf17e19e532147c884.png)
 
 #### 笔记效果
 
-![](https://img-blog.csdnimg.cn/img_convert/0d36be00170e98576db2129cf4f5b061.png)
+![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/053504ba72b9bd8bdc7720bd44b860ac.png)
 
 如果你在用 obsidian，那就快快用起来吧~
 
@@ -41,7 +41,7 @@ obsidian web Clipper 一款 obsidian 官方网站剪藏软件，相当于印象�
 CSDN : 细节处有神明  
 个人博客： https://maoyu92.github.io/
 
-![](https://i-blog.csdnimg.cn/direct/51dc609db1e645b9b9727d042898ad3a.jpeg)
+![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/851eb89c435ade382a2bb3d0a9b98ddc.jpeg)
 
 环境猫er
 

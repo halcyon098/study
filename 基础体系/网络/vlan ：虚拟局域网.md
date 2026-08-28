@@ -1,6 +1,6 @@
 # vlan ：虚拟局域网
 
-![image-20230111103722168](C:\Users\丁明明\AppData\Roaming\Typora\typora-user-images\image-20230111103722168.png)
+[图片缺失：原路径 C:\Users\丁明明\AppData\Roaming\Typora\typora-user-images\image-20230111103722168.png，仓库内无原图，需从旧电脑找回]
 
 vlan技术用于交换机设备，用于将网段中的设备进行隔离，当某台设备被病毒攻击后不会传播到相连的其他设备中去。
 
@@ -38,7 +38,7 @@ vlan技术用于交换机设备，用于将网段中的设备进行隔离，当�
 
 ### Trunk
 
-![image-20230112125647732](vlan ：虚拟局域网.assets/image-20230112125647732.png)
+[图片缺失：原路径 vlan ：虚拟局域网.assets/image-20230112125647732.png，仓库内无原图，需从旧电脑找回]
 
 ```Huawei
 <Huawei>sy

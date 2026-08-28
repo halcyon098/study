@@ -233,7 +233,7 @@ linux大小写敏感, windows大小写不敏感。
 
 巧记：
 
-![](https://i-blog.csdnimg.cn/blog_migrate/813607e7ad44d40f97910b3caf5c278a.png)
+![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/a40fd2388acbbc10856823af9b01f7ad.png)
 
 10、3389无法连接的几种情况
 
@@ -255,7 +255,7 @@ linux大小写敏感, windows大小写不敏感。
 
 巧记：
 
-![](https://i-blog.csdnimg.cn/blog_migrate/00e736cd7ac0c92b2268e4174ad2b48d.png)
+![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/0b537315fa406821f26817d54a113275.png)
 
 11.如何突破注入时字符被转义？
 
@@ -433,7 +433,7 @@ and/or/xor，前面的1=1、1=2步骤只是为了判断是否为注入点，如�
 
 巧记：
 
-![](https://i-blog.csdnimg.cn/blog_migrate/f4efd0679c4e8d9ee117066d164d98d3.png)
+![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/01893fe05fc194afc16d74eed5a533b7.png)
 
 27.在 有shell 的情况下，如何使用 xss 实现对目标站的长久控制？
 
@@ -954,19 +954,19 @@ src指定一个远程的脚本文件获取referer。
 
 举报
 
- [![](https://csdnimg.cn/release/blogv2/dist/pc/img/toolbar/Group.png) 点击体验  
-DeepSeekR1满血版](https://ai.csdn.net/?utm_source=cknow_pc_blogdetail&spm=1001.2101.3001.10583) 隐藏侧栏 ![程序员都在用的中文IT技术交流社区](https://g.csdnimg.cn/side-toolbar/3.6/images/qr_app.png)
+ [![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/4b5d638b57b796bf4228e36a12fd3244.png) 点击体验  
+DeepSeekR1满血版](https://ai.csdn.net/?utm_source=cknow_pc_blogdetail&spm=1001.2101.3001.10583) 隐藏侧栏 ![程序员都在用的中文IT技术交流社区](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/6ddf638effe61d927f03a0789e73f41e.png)
 
 程序员都在用的中文IT技术交流社区
 
-![专业的中文 IT 技术社区，与千万技术人共成长](https://g.csdnimg.cn/side-toolbar/3.6/images/qr_wechat.png)
+![专业的中文 IT 技术社区，与千万技术人共成长](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/4832e9a5e9fe3a702f3d81b1ce7c9ca3.png)
 
 专业的中文 IT 技术社区，与千万技术人共成长
 
-![关注【CSDN】视频号，行业资讯、技术分享精彩不断，直播好礼送不停！](https://g.csdnimg.cn/side-toolbar/3.6/images/qr_video.png)
+![关注【CSDN】视频号，行业资讯、技术分享精彩不断，直播好礼送不停！](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/e311c5ce3170b9f4471a19010a5c3bd8.png)
 
 关注【CSDN】视频号，行业资讯、技术分享精彩不断，直播好礼送不停！
 
 客服 返回顶部
 
-![](https://i-blog.csdnimg.cn/blog_migrate/813607e7ad44d40f97910b3caf5c278a.png) ![](https://i-blog.csdnimg.cn/blog_migrate/00e736cd7ac0c92b2268e4174ad2b48d.png) ![](https://i-blog.csdnimg.cn/blog_migrate/f4efd0679c4e8d9ee117066d164d98d3.png)
+![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/a40fd2388acbbc10856823af9b01f7ad.png) ![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/0b537315fa406821f26817d54a113275.png) ![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/01893fe05fc194afc16d74eed5a533b7.png)

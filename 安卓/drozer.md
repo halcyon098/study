@@ -286,7 +286,7 @@ run app.service.info -a com.xxx.xxxx
 run app.service.info -a com.mwr.example.sieve
 ```
 
-[![img](https://xzfile.aliyuncs.com/media/upload/picture/20240616111911-33941766-2b8f-1.png)](https://xzfile.aliyuncs.com/media/upload/picture/20240616111911-33941766-2b8f-1.png)
+[![img](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/f5ac6506e5b9139b4ec1df251c4caf3c.png)](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/f5ac6506e5b9139b4ec1df251c4caf3c.png)
 
 b、发送service服务
 
@@ -298,7 +298,7 @@ run app.service.start --component 软件包名 软件包名.对应exported的act
 run app.service.start --component com.mwr.example.sieve com.mwr.example.sieve.AuthService --extra string phone 12345678901 --extra string content Hello
 ```
 
-[![img](https://xzfile.aliyuncs.com/media/upload/picture/20240616111937-42a600f2-2b8f-1.png)](https://xzfile.aliyuncs.com/media/upload/picture/20240616111937-42a600f2-2b8f-1.png)
+[![img](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/49bbea433dd7e58a0621785370c8ec3a.png)](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/49bbea433dd7e58a0621785370c8ec3a.png)
 
 ####  Broadcast Receivers测试
 
@@ -312,7 +312,7 @@ run app.broadcast.info -a com.xxx.xxxx
 run app.broadcast.info -a com.mwr.example.sieve
 ```
 
-[![img](https://xzfile.aliyuncs.com/media/upload/picture/20240616111952-4be49a84-2b8f-1.png)](https://xzfile.aliyuncs.com/media/upload/picture/20240616111952-4be49a84-2b8f-1.png)
+[![img](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/0436977c7b918a699e2454681e7106df.png)](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/0436977c7b918a699e2454681e7106df.png)
  b、注册一个能嗅出特定意图的广播接收器
 
 ```
@@ -343,7 +343,7 @@ run app.provider.info -a com.xxx.xxxx
 run app.provider.info -a com.mwr.example.sieve
 ```
 
-[![img](https://xzfile.aliyuncs.com/media/upload/picture/20240616112025-5f556ada-2b8f-1.png)](https://xzfile.aliyuncs.com/media/upload/picture/20240616112025-5f556ada-2b8f-1.png)
+[![img](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/36eaa128bc35e842d0d947231d375784.png)](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/36eaa128bc35e842d0d947231d375784.png)
 
 ####  获取所有可访问的Uri
 
@@ -355,7 +355,7 @@ run scanner.provider.finduris -a
 run scanner.provider.finduris -a com.mwr.example.sieve
 ```
 
-[![img](https://xzfile.aliyuncs.com/media/upload/picture/20240616112040-683bdab2-2b8f-1.png)](https://xzfile.aliyuncs.com/media/upload/picture/20240616112040-683bdab2-2b8f-1.png)
+[![img](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/3cbc7c54ed26ed8fe01d368146bd06b7.png)](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/3cbc7c54ed26ed8fe01d368146bd06b7.png)
 
 ####  检测SQL注入
 
@@ -367,7 +367,7 @@ run scanner.provider.injection -a com.xxx.xxxx
 run scanner.provider.injection -a com.mwr.example.sieve
 ```
 
-[![img](https://xzfile.aliyuncs.com/media/upload/picture/20240616112053-7073f3e0-2b8f-1.png)](https://xzfile.aliyuncs.com/media/upload/picture/20240616112053-7073f3e0-2b8f-1.png)
+[![img](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/6fb07371a2c533dbaedd61c34f6c652e.png)](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/6fb07371a2c533dbaedd61c34f6c652e.png)
 
 #### 进行SQL注入
 
@@ -379,14 +379,14 @@ run app.provider.query [--projection] [--selection]
 run app.provider.query content://com.mwr.example.sieve.DBContentProvider/Passwords/
 ```
 
-[![img](https://xzfile.aliyuncs.com/media/upload/picture/20240616112108-79551e58-2b8f-1.png)](https://xzfile.aliyuncs.com/media/upload/picture/20240616112108-79551e58-2b8f-1.png)
+[![img](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/2de91fc3e92becf1e756c8656b22511b.png)](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/2de91fc3e92becf1e756c8656b22511b.png)
 
 ```
 #列出所有表 
 run app.provider.query content://com.mwr.example.sieve.DBContentProvider/Passwords/ --projection "* FROM SQLITE_MASTER WHERE type='table';--"
 ```
 
-[![img](https://xzfile.aliyuncs.com/media/upload/picture/20240616112118-7f248fc6-2b8f-1.png)](https://xzfile.aliyuncs.com/media/upload/picture/20240616112118-7f248fc6-2b8f-1.png)
+[![img](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/b4a4af11ee5ec3ae93868477bde54d6c.png)](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/b4a4af11ee5ec3ae93868477bde54d6c.png)
 
 ####  12、检测目录遍历
 
@@ -398,7 +398,7 @@ run scanner.provider.traversal -a com.xxx.xxxx
 run scanner.provider.traversal -a com.mwr.example.sieve
 ```
 
-[![img](https://xzfile.aliyuncs.com/media/upload/picture/20240616112132-87379ba4-2b8f-1.png)](https://xzfile.aliyuncs.com/media/upload/picture/20240616112132-87379ba4-2b8f-1.png)
+[![img](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/fdc7077ad79ff4bd1eb2cf5f97d00b0c.png)](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/fdc7077ad79ff4bd1eb2cf5f97d00b0c.png)
  13、读取文件系统下的文件
 
 ```
@@ -409,7 +409,7 @@ run app.provider.read content://com.mwr.example.sieve.FileBackupProvider/etc/hos
 run app.provider.read content://com.mwr.example.sieve.FileBackupProvider/etc/hosts
 ```
 
-[![img](https://xzfile.aliyuncs.com/media/upload/picture/20240616112143-8e4b76ea-2b8f-1.png)](https://xzfile.aliyuncs.com/media/upload/picture/20240616112143-8e4b76ea-2b8f-1.png)
+[![img](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/c440c36615abbe8e8effe92c4e5c43f3.png)](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/c440c36615abbe8e8effe92c4e5c43f3.png)
 
 14、下载数据库文件到本地
 
@@ -418,7 +418,7 @@ run app.provider.read content://com.mwr.example.sieve.FileBackupProvider/etc/hos
 run app.provider.download content://com.mwr.example.sieve.FileBackupProvider/data/data/com.mwr.example.sieve/databases/database.db d:/database.db
 ```
 
-[![img](https://xzfile.aliyuncs.com/media/upload/picture/20240616112158-96c215a4-2b8f-1.png)](https://xzfile.aliyuncs.com/media/upload/picture/20240616112158-96c215a4-2b8f-1.png)
+[![img](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/64c2cd795ad0f8156944ac727b21f191.png)](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/64c2cd795ad0f8156944ac727b21f191.png)
 
 ## 文末小结
 

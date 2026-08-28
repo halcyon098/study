@@ -368,7 +368,7 @@ let response = await fetch('/article/fetch/post/image', {
 
 fetch原生支持率如图：
 
-![img](https://cdn.jsdelivr.net/gh/Dmup227/Dimags@main/D:%5CDocument%5Cimages202308170953457.png)
+![img](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/af2bf2fbb8f01161c08f35462c5091c5.png)
 
 
 

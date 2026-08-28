@@ -57,30 +57,30 @@ Nacos配置文件攻防思路总结
 
 [https://qyapi.weixin.qq.com/cgi-bin/gettoken?corpid=SafetyCockpit03&corpsecret=SafetyCockpit03](https://qyapi.weixin.qq.com/cgi-bin/gettoken?corpid=SafetyCockpit03&corpsecret=SafetyCockpit03)
 
-![](https://xzfile.aliyuncs.com/media/upload/picture/20240915174645-6ba9a09e-7347-1.png)
+![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/348ee3fdbf65719ec9a48fe6f9bd4d22.png)
 
 ### 先查看access\_token权限
 
 [https://open.work.weixin.qq.com/devtool/query](https://open.work.weixin.qq.com/devtool/query)  
-![](https://xzfile.aliyuncs.com/media/upload/picture/20240915174814-a08afec0-7347-1.png)
+![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/4d09ab4642278b2919f0ebc343358867.png)
 
 ### 获取企业微信API域名IP段
 
 [https://qyapi.weixin.qq.com/cgi-bin/get\_api\_domain\_ip?access\_token=SafetyCockpit03](https://qyapi.weixin.qq.com/cgi-bin/get_api_domain_ip?access_token=SafetyCockpit03)  
-![](https://xzfile.aliyuncs.com/media/upload/picture/20240915174854-b871db1c-7347-1.png)
+![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/d03d9f10d6df7acfd0db652d89dbd8b6.png)
 
 ### 获取部门列表
 
 [https://qyapi.weixin.qq.com/cgi-bin/department/list?access\_token=SafetyCockpit03](https://qyapi.weixin.qq.com/cgi-bin/department/list?access_token=SafetyCockpit03)  
-![](https://xzfile.aliyuncs.com/media/upload/picture/20240915174924-ca2fecb8-7347-1.png)
+![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/13326308d4e219bd455e7cc7f13244d6.png)
 
 ### 获取部门成员/详情
 
 [https://qyapi.weixin.qq.com/cgi-bin/user/simplelist?access\_token=SafetyCockpit03&department\_id=SafetyCockpit03&&fetch\_child=1](https://qyapi.weixin.qq.com/cgi-bin/user/simplelist?access_token=SafetyCockpit03&department_id=SafetyCockpit03&&fetch_child=1)  
 我这里尝试，未带&&fetch\_child=1如果只出来的一条信息，那么一般就是部门老大的信息（划重点，大鱼，只要你敢钓（狗头保命））：  
-![](https://xzfile.aliyuncs.com/media/upload/picture/20240915175024-edc12e26-7347-1.png)  
+![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/a62b898000afde19e42e0fe144b08ee5.png)  
 而带&&fetch\_child=1遍历的话，就是全部门的人员信息  
-![](https://xzfile.aliyuncs.com/media/upload/picture/20240915175036-f5606ed0-7347-1.png)
+![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/e5332e6776a4efd09ac1a5d280570601.png)
 
 ## 获取加入企业二维码/创建成员
 
@@ -88,11 +88,11 @@ Nacos配置文件攻防思路总结
 拿到secret当然是直接添加成员到企微，然后进行后续操作比如钓鱼的话方便一点。  
 但有时候我们拿到的key可能没有那么大的权限，如图，在获取加入企业微信二维码和创建成员的时候，并没有权限：  
 获取加入企业二维码：错误码48002  
-![](https://xzfile.aliyuncs.com/media/upload/picture/20240915175210-2d48dbca-7348-1.png)  
+![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/3796c4a89de720c64debaa8346ff8a4c.png)  
 创建成员：错误码48002  
-![](https://xzfile.aliyuncs.com/media/upload/picture/20240915175225-36339f04-7348-1.png)  
+![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/5e618261e6d9848bd37445b86356177c.png)  
 错误码48002解释：API接口无权限调用  
-![](https://xzfile.aliyuncs.com/media/upload/picture/20240915175239-3e40f818-7348-1.png)  
+![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/3ac1a8374d099a13205efb580e72e85a.png)  
 这个时候没法加入企微，除了得到一些人员信息，还能怎么利用呢？  
 答案是我们可以接管企微应用，利用企微应用钓鱼。
 
@@ -100,9 +100,9 @@ Nacos配置文件攻防思路总结
 
 如图，查询access\_token的时候，可以查到应用的AgentId，这个发送消息会用到。  
 [https://developer.work.weixin.qq.com/devtool/query](https://developer.work.weixin.qq.com/devtool/query)  
-![](https://xzfile.aliyuncs.com/media/upload/picture/20240915175607-ba78cc6c-7348-1.png)  
+![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/cfaa984cc96b04952567e4390b91186a.png)  
 然后在 [https://developer.work.weixin.qq.com/resource/devtool](https://developer.work.weixin.qq.com/resource/devtool) 工具里，发送应用消息  
-![](https://xzfile.aliyuncs.com/media/upload/picture/20240915175627-c641959c-7348-1.png)  
+![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/b83ae3b7e0c09a10fd2536877a968d27.png)  
 或者直接掏出数据包发送：
 
 ```
@@ -135,9 +135,9 @@ Content-Type: application/json
 ```
 
 测试效果图：  
-![](https://xzfile.aliyuncs.com/media/upload/picture/20240915175807-01f7e19a-7349-1.png)  
+![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/32eace5187e1d4e4ba98d4d154f6aacd.png)  
 点进去后：  
-![](https://xzfile.aliyuncs.com/media/upload/picture/20240915175820-09f394a2-7349-1.png)
+![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/60e656203823f12d1b9e3349440d286d.png)
 
 更多应用消息发送方式见官方文档，但是一般来讲上面提供的图文消息就够用了。
 
@@ -161,51 +161,51 @@ szmail.xxx.com
 ```
 
 经确认第一个outlook的登录页面，第二个是coremail的登录页面  
-![](https://xzfile.aliyuncs.com/media/upload/picture/20240915175854-1dc49c1a-7349-1.png)  
+![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/cff7ab8467b373f54395893d9b85172a.png)  
 然后就是搜索关键字，比如：邮箱，@xxx.com  
-![](https://xzfile.aliyuncs.com/media/upload/picture/20240915175914-2a1ef7c6-7349-1.png)  
+![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/62a21051ef0355976cb22b07e70450da.png)  
 最终找到N个公共邮箱系统，登录其中一个，是个核心公共邮箱，好几万封邮件：  
-![](https://xzfile.aliyuncs.com/media/upload/picture/20240915175927-31a7a010-7349-1.png)  
+![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/0cb1e020d9db36cfc793cebbc2fed511.png)  
 还可以搜索关键字，比如账号、开通、激活、经理……  
 这里搜索出来一些最近的账号开通信息：  
-![](https://xzfile.aliyuncs.com/media/upload/picture/20240915175941-39e20860-7349-1.png)  
+![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/03bfb1617e3d5a7ae9889e3840c08870.png)  
 很贴心，账密系统URL都在里面：  
-![](https://xzfile.aliyuncs.com/media/upload/picture/20240915175954-41a58658-7349-1.png)  
+![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/aa91654e6fbd280bbb82863273d22c01.png)  
 成功拿邮件里的账密成功登录到某系统，但就是个普通用户：  
-![](https://xzfile.aliyuncs.com/media/upload/picture/20240915180007-49a294c2-7349-1.png)  
+![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/add0fa411e0c4e81f62a35dbe5fd6e45.png)  
 F12查看该系统的验证方式，发现是JWT  
-![](https://xzfile.aliyuncs.com/media/upload/picture/20240915180020-513b31ee-7349-1.png)  
+![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/cce0a3efb56df59e9199da959da14dbb.png)  
 复制到jwt.io看下信息：发现算法是HS256对称加密算法，可以在配置文件找找秘钥，看能否伪造管理员的token。  
 不过看着data部分的rnStr字段，有种不妙的感觉。  
-![](https://xzfile.aliyuncs.com/media/upload/picture/20240915180035-59e9fa5a-7349-1.png)  
+![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/f8559355c1f10424c9610bb16e462fe1.png)  
 这里运气挺好，根据关键字找到了jwt key:  
-![](https://xzfile.aliyuncs.com/media/upload/picture/20240915180046-60a3e838-7349-1.png)  
+![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/b666b8bd6de78e7fbd9161dc0adf3302.png)  
 拿爆破脚本验证下该key是不是正确的：  
-![](https://xzfile.aliyuncs.com/media/upload/picture/20240915180058-67cf72e4-7349-1.png)  
+![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/716ad1b0b0d4ef986a98fbddd5a6dfe1.png)  
 也可以直接在jwt.io验证，具体方式看图，稍微有点绕：  
-![](https://xzfile.aliyuncs.com/media/upload/picture/20240915180111-6ff3571a-7349-1.png)  
+![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/77dbdf6fa083175769a09cd299ccad21.png)  
 先改变一下userid，从原来的4087变成4086，测试下是否可以伪造。  
 改变后发现直接提示401，感觉和上面提到的rnStr字段有关，试了删除了也不行，最终尝试无果，只能从其他地方找突破了。  
-![](https://xzfile.aliyuncs.com/media/upload/picture/20240915180124-77a37e72-7349-1.png)  
+![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/2bcf841af8e160f5b8abafdc929ad43f.png)  
 其他思路再有就是钓鱼了，因为本身就是公共账号，所以具有公信力，直接根据来往邮件信息，准备好话术开钓即可。
 
 ## AK/SK-敏感信息&云主机接管
 
 这块不太熟，就不妄论了，可以网上找找更加详细的利用方式。  
 但是需要注意的是，前期最好不要使用开源的云环境利用框架工具，因为大部分厂商都是有安全监测的，这里以阿里云为例：  
-![](https://xzfile.aliyuncs.com/media/upload/picture/20240915180151-87367ccc-7349-1.png)  
+![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/efca2407360f764cbcb8a80b97e8043d.png)  
 所以建议先使用官方提供的工具看看存储桶有无敏感信息，没有敏感信息的话再用开源工具进行利用也不迟，以免浪费辛辛苦苦搜集到的key。  
 阿里云官方工具下载链接：  
 [https://gosspublic.alicdn.com/ossbrowser/1.18.0/oss-browser-win32-x64.zip](https://gosspublic.alicdn.com/ossbrowser/1.18.0/oss-browser-win32-x64.zip)  
-![](https://xzfile.aliyuncs.com/media/upload/picture/20240915180216-9651bbea-7349-1.png)  
+![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/2a4f03d67a6d3502c7cc8dfb31835ed1.png)  
 腾讯云的话，可以直接使用在线环境：  
 [https://cosbrowser.cloud.tencent.com/login](https://cosbrowser.cloud.tencent.com/login)  
 [https://cos.cloud.tencent.com/tools/cosbrowser](https://cos.cloud.tencent.com/tools/cosbrowser)  
-![](https://xzfile.aliyuncs.com/media/upload/picture/20240915180229-9e22b48c-7349-1.png)  
+![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/3540b5266d334cc50da5a9426f8578fb.png)  
 AWS官方工具下载链接：  
 [https://s3browser.com/download/s3browser-11-7-5.exe](https://s3browser.com/download/s3browser-11-7-5.exe)  
 巨多资料：  
-![](https://xzfile.aliyuncs.com/media/upload/picture/20240915180241-a5999348-7349-1.png)
+![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/61ff6bf08df291ee9011649152e95f95.png)
 
 ## 如何防护
 
@@ -218,7 +218,7 @@ https://nacos.io/docs/v2/plugin/config-encryption-plugin/
 ```
 
 效果图：  
-![](https://xzfile.aliyuncs.com/media/upload/picture/20240915180313-b87405e8-7349-1.png)
+![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/b0dab5c8e5579e1bb7883d2451bad30c.png)
 
 ## 参考
 

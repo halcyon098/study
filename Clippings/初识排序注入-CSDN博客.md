@@ -18,7 +18,7 @@ tags:
 
 如下图
 
-![](https://i-blog.csdnimg.cn/blog_migrate/67c7af7556152576d8904c63d104e931.png)
+![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/a20cbc28bc1d84c22faa151950eb5ae3.png)
 
 检测方法：
 
@@ -36,11 +36,11 @@ tags:
 
 Poc：AdminID+desc,exp(7)
 
-![](https://i-blog.csdnimg.cn/blog_migrate/b269c33ad4681ded52ec39fa6b012c69.png)
+![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/f1a0d78cf4eecb8438e4f2af24e96381.png)
 
 Poc:AdminID+desc,exp(710)
 
-![](https://i-blog.csdnimg.cn/blog_migrate/7ee4b78f93503d2c9abc2300537c2f4a.png)
+![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/f238384b39cc0528a006503f88d2cb85.png)
 
 此时不难发现，溢出时，响应时间比较长
 
@@ -50,11 +50,11 @@ Poc 开始变形
 
 Poc:AdminID+desc,if(user()+like+'r%',exp(710),exp(7))
 
-![](https://i-blog.csdnimg.cn/blog_migrate/46aead4b7a521a7684f90d0828ab5eff.png)
+![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/b8e234b35575f474a92f3337d15bdb61.png)
 
 Poc:AdminID+desc,if(user()+like+'c%',exp(710),exp(7))
 
-![](https://i-blog.csdnimg.cn/blog_migrate/b0917619487137d827a3e575a21c957a.png)
+![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/17590b181f3d183e926628d48dfd6d70.png)
 
 **四、排序注入—补充**
 
@@ -76,20 +76,20 @@ Poc:AdminID+desc,if(user()+like+'c%',exp(710),exp(7))
 
 图一是使用报错注入获取用户名
 
-![](https://i-blog.csdnimg.cn/blog_migrate/f166fd238e8192a8ea72ca278dcb402c.png)
+![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/1c4640aebbf027b38d1573004ec912dc.png)
 
 图二是验证此poc是否可用（图一图二是同一系统不同的注入点）
 
-![](https://i-blog.csdnimg.cn/blog_migrate/273ee111d789c85aa9f0482fd569b370.png)
+![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/a69be67864ae3110479f3576bb7b9a93.png)
 
 图三是在有waf的情况下使用（有没有觉得这个poc有点眼熟呀）
 
-![](https://i-blog.csdnimg.cn/blog_migrate/cda4043c8ab2ffbd50f443d4b946101d.png)
+![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/717331ba7425206759fc928a1d6d571c.png)
 
 拿着这个poc去尝试这些天碰到的排序注入，发现都可以嗷，对比盲注来说，漏洞证明的过程还是会节省一些时间。暂不知是否通用，还需要大量的案例来验证。
 
 由于时间关系，只验证了排序注入，也未在本地尝试。
 
-![](https://i-blog.csdnimg.cn/blog_migrate/5766aeb8fcc4016dde453a7c6d237441.jpeg)
+![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/3a6ced523654a8de27bb487fb7142fb1.jpeg)
 
 更多网络安全教程资源和软件在这 微信名片

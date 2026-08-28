@@ -9,7 +9,7 @@ description: "前言 ​ Redis在大公司被大量应用，通过笔者的研�
 tags:
   - "clippings"
 ---
-[![](https://img2024.cnblogs.com/blog/35695/202412/35695-20241201073014811-1847930772.jpg)](https://www.doubao.com/?channel=cnblogs&source=hw_db_cnblogs&type=lunt&theme=bianc)
+[![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/a32f2de6953cc1287965374ec24bc047.jpg)](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/a32f2de6953cc1287965374ec24bc047.jpg)
 
 ## 前言
 
@@ -55,7 +55,7 @@ protected-mode 设为 no
 
 最新版安装成功后，如图1所示。默认的配置是使用6379端口，没有密码。这时候会导致未授权访问然后使用redis权限写文件。
 
-[![image.png](https://image.3001.net/images/20180504/15254230044192.png!small)](https://image.3001.net/images/20180504/15254230044192.png)
+[![image.png](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/284efe09bb845961135ed33000f07cfc.jpg)](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/284efe09bb845961135ed33000f07cfc.jpg)
 
 <center>图1 安装配置 redis</center>
 
@@ -198,7 +198,7 @@ save
 
 执行效果如图2所示:
 
-[![image.png](https://image.3001.net/images/20180504/15254230535225.png!small)](https://image.3001.net/images/20180504/15254230535225.png)
+[![image.png](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/bfcc33aca9d570a6ed548611c32cffdc.jpg)](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/bfcc33aca9d570a6ed548611c32cffdc.jpg)
 
 <center>图2Redis漏洞SSH免密码登录</center>
 
@@ -220,7 +220,7 @@ save
 
 通过nmap对某目标服务器进行全端口扫描，发现该目标开放Redis的端口为3357，默认端口为6379端口，再次通过iis put scaner软件进行同网段服务器该端口扫描，如图3所示，获取两台开放该端口的服务器。
 
-[![image.png](https://image.3001.net/images/20180504/15254230642483.png!small)](https://image.3001.net/images/20180504/15254230642483.png)
+[![image.png](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/ec704c8e9d87b094b8497d13caba6f5b.jpg)](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/ec704c8e9d87b094b8497d13caba6f5b.jpg)
 
 <center>图3扫描同网段开放该端口的服务器</center>
 
@@ -276,7 +276,7 @@ set webshell "<%@ Page Language=\"Jscript\"%><%eval(Request.Item[\"c\"],\"unsafe
 
 完整过程执行命令如图4所示，每一次命令显示“+OK”表示配置成功。
 
-[![image.png](https://image.3001.net/images/20180504/15254230762058.png!small)](https://image.3001.net/images/20180504/15254230762058.png)
+[![image.png](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/f7db1c3d346e5a56e1f407649e466126.jpg)](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/f7db1c3d346e5a56e1f407649e466126.jpg)
 
 <center>图4写入webshell</center>
 
@@ -286,7 +286,7 @@ set webshell "<%@ Page Language=\"Jscript\"%><%eval(Request.Item[\"c\"],\"unsafe
 
 “REDIS0006?webshell’a@H搀???”则表明正确获取webshell。
 
-[![image.png](https://image.3001.net/images/20180504/15254230864637.png!small)](https://image.3001.net/images/20180504/15254230864637.png)
+[![image.png](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/bb921a633095f583887e6e39858c5c26.jpg)](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/bb921a633095f583887e6e39858c5c26.jpg)
 
 <center>图5测试webshell是否正常</center>
 
@@ -294,7 +294,7 @@ set webshell "<%@ Page Language=\"Jscript\"%><%eval(Request.Item[\"c\"],\"unsafe
 
 如图6所示，使用中国菜刀后门管理连接工具，成功获取该网站的webshell。
 
-[![image.png](https://image.3001.net/images/20180504/15254230954638.png!small)](https://image.3001.net/images/20180504/15254230954638.png)
+[![image.png](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/9af45f4507f54e1def42ca6c6c4cec84.jpg)](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/9af45f4507f54e1def42ca6c6c4cec84.jpg)
 
 <center>图6获取webshell</center>
 
@@ -342,7 +342,7 @@ get a
 
 通过webshell，在其对应目录中发现还存在其它地址的redis，通过相同方法可以再次进行渗透，如图7所示，可以看到路径、端口、密码等信息。
 
-[![image.png](https://image.3001.net/images/20180504/15254231059009.png!small)](https://image.3001.net/images/20180504/15254231059009.png)
+[![image.png](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/386ec3cb1d31452496735751bae2e01f.jpg)](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/386ec3cb1d31452496735751bae2e01f.jpg)
 
 <center>图7查看redis其配置文件</center>
 
@@ -354,7 +354,7 @@ get a
 
 通过本地登录，通过“keys \*”命令查看，如果有入侵则其中会有很多的值，如图8所示，在keys \*执行成功后，可以看到有trojan1和trojan2命令，执行get trojan1即可进行查看。
 
-[![image.png](https://image.3001.net/images/20180504/15254231135066.png!small)](https://image.3001.net/images/20180504/15254231135066.png)
+[![image.png](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/03f1b3a30c2dff7af4b38ab45e7348fc.jpg)](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/03f1b3a30c2dff7af4b38ab45e7348fc.jpg)
 
 <center>图8检查keys</center>
 

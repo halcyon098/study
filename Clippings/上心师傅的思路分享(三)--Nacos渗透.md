@@ -99,7 +99,7 @@ Nacos 是阿里巴巴推出来的一个 [开源项目](https://so.csdn.net/so/se
 app.name="Nacos" bash
 ```
 
-![](https://i-blog.csdnimg.cn/blog_migrate/a43b7a878b6e1ca1b3d410df445357ee.png)
+![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/3187a38e2a14974672b741333ba2800b.png)
 
 ### 2.3 fofa语法
 
@@ -107,7 +107,7 @@ app.name="Nacos" bash
 app="Nacos" && icon_hash="1227052603" && country="CN"bash
 ```
 
-![](https://i-blog.csdnimg.cn/blog_migrate/a9e5c138af53af186c523c2d59a454db.png)
+![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/83dc5af15bcad92fde22523b79100445.png)
 
 ### 2.3 漏洞列表
 
@@ -203,7 +203,7 @@ cd 进入nacos的bin目录
 bash
 ```
 
-![](https://i-blog.csdnimg.cn/blog_migrate/258cfc585da93de492b1af7738e264dc.png)
+![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/d4aef9f22a5ea99d682d80766c9d1b9d.png)
 
 ### 3.3 访问方式
 
@@ -218,11 +218,11 @@ bash
 
 下面我的测试环境都是以搭建的虚拟机环境ip地址为准
 
-![](https://i-blog.csdnimg.cn/blog_migrate/afb6f7e67eca01b4d710442137f61d54.png)
+![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/feca0cc0a6ee2816662b62ec0eb4da9f.png)
 
 访问环境地址,出现下面的界面,代表搭建环境成功.
 
-![](https://i-blog.csdnimg.cn/blog_migrate/88cb9f631f85c5b8312410641ee0d982.png)
+![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/dbdbc5be5c9c2ce60aa6ad99d8057383.png)
 
 ## 4\. 工具监测
 
@@ -234,11 +234,11 @@ bash
 java -jar NacosExploitGUI_v4.0.jarbash
 ```
 
-![](https://i-blog.csdnimg.cn/blog_migrate/2457dfbc76365e0f2bf9c91daa2cadee.png)
+![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/e13aebdb7a008c7ca809babd4c114ccf.png)
 
 **因为是老版本,所以包含所有历史漏洞,扫描结果如下:**
 
-![](https://i-blog.csdnimg.cn/blog_migrate/898e50f2f42380cfa245a110d7c01878.png)
+![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/3d02c22080c16832e3a2e084a2d718cc.png)
 
 ## 5\. 漏洞复现
 
@@ -248,9 +248,9 @@ java -jar NacosExploitGUI_v4.0.jarbash
 
 一般会存在一个test/test的用户,也可以进行尝试
 
-![](https://i-blog.csdnimg.cn/blog_migrate/279b23aa6a73fe480eb0c9c99d5bf2f4.png)
+![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/4b8fa96a4dbf47195e443adb4f389c9b.png)
 
-![](https://i-blog.csdnimg.cn/blog_migrate/67f17843bb3984d39a0344579e96ac83.png)
+![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/868a99c90aa569a74626c8a40e06e2dc.png)
 
 ### 5.2 未授权接口
 
@@ -262,7 +262,7 @@ java -jar NacosExploitGUI_v4.0.jarbash
 /nacos/v1/auth/users?pageNo=1&pageSize=5bash
 ```
 
-![](https://i-blog.csdnimg.cn/blog_migrate/fa3bd90250390994db52ba51968b2543.png)
+![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/c17c72081135ee33b60c4255be6108b0.png)
 
 这里因为没有添加用户,所以就一个用户,如果有很多用户的话,可以尝试其他用户的弱口令
 
@@ -274,7 +274,7 @@ java -jar NacosExploitGUI_v4.0.jarbash
 /nacos/v1/core/cluster/nodes?withInstances=false&pageNo=1&pageSize=10&keyword=bash
 ```
 
-![](https://i-blog.csdnimg.cn/blog_migrate/c34b94e760bda64e8d3f98c9407821f0.png)
+![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/733af17342eb6087572506d0a074797a.png)
 
 #### 5.3.3 配置信息 API
 
@@ -284,7 +284,7 @@ java -jar NacosExploitGUI_v4.0.jarbash
 /nacos/v1/cs/configs?dataId=&group=&appName=&config_tags=&pageNo=1&pageSize=9&tenant=&search=accurate&accessToken=&username=bash
 ```
 
-![](https://i-blog.csdnimg.cn/blog_migrate/b4b7e0208a48a4ba867289b6a26730af.png)
+![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/3a4b9d64f0ca3e492c5197ca7282b43f.png)
 
 ### 5.3 CVE-2021-29441 Nacos权限认证绕过漏洞
 
@@ -294,7 +294,7 @@ java -jar NacosExploitGUI_v4.0.jarbash
 http://192.168.10.14:8848/nacos/v1/auth/users?pageNo=1&pageSize=1bash
 ```
 
-![](https://i-blog.csdnimg.cn/blog_migrate/e52bad1318c9d874f49aa935870b93d2.png)
+![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/f4f26fe46ccb89cb6d9bd78d1e5243f6.png)
 
 在浏览器直接访问是get请求:
 
@@ -302,15 +302,15 @@ http://192.168.10.14:8848/nacos/v1/auth/users?pageNo=1&pageSize=1bash
 http://192.168.10.14:8848/nacos/v1/auth/usersbash
 ```
 
-![](https://i-blog.csdnimg.cn/blog_migrate/409f8b8467599572372265ef828508b8.png)
+![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/526691ee71d46da124a1c032ceb90dcd.png)
 
 在burp的历史包中,将访问请求发送到重放模块,然后更改请求方式为post,修改User-Agent为Nacos- Server,至于为什么是username=xiaoyu&password=xioayu 参数你可以在登录界面抓一个包就知道为什么是这个格式了.
 
-![](https://i-blog.csdnimg.cn/blog_migrate/589dc001c249e31a3464e966e197c7e9.png)
+![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/9ad60294a4838b3c3cb68f48220becab.png)
 
 用xiaoyu/xiaoyu进行登录
 
-![](https://i-blog.csdnimg.cn/blog_migrate/5e9d2b5c474edc986aa76f60d53f6340.png)
+![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/cb0d3ccaed1cad3322a988613c3fde52.png)
 
 ### 5.4 Nacos token.secret.key默认配置(QVD-2023-6271)
 
@@ -325,7 +325,7 @@ bash
 
 注意需要先开启鉴权,不然登录是不需要使用JWT的
 
-![](https://i-blog.csdnimg.cn/blog_migrate/09f281b74899ac7b5603ed8f2151db7d.png)
+![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/3017abc3c799a028ebdd12b8928ad914.png)
 
 Nacos使用token.secret.key来进行身份认证和加密。在Nacos版本 <= 2.2.0 时,，这个密钥是固定的默认值，导致存在一个安全漏洞。
 
@@ -339,7 +339,7 @@ SecretKey012345678901234567890123456789012345678901234567890123456789bash
 
 **这个是2.2.0比前面的2.0.0多了一行红字,内部系统,不可暴露到公网**
 
-![](https://i-blog.csdnimg.cn/blog_migrate/ff5d24c0386c735ebfae8bdc5fac9de4.png)
+![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/b396ed531be68cd218992ddaf8e70e68.png)
 
 不带jwt直接访问如下地址,看别的师傅都说,正常是返回403,但是我是老版本,也会出现信息,结果我尝试了2.2.0还是会返回下面的信息,此时我已经懵逼了
 
@@ -349,11 +349,11 @@ http://192.168.10.14:8848/nacos/v1/auth/users?pageNo=1&pageSize=5&search=accurat
 
 2.2.0版本未经过鉴权的话进行测试发现也会出现下面的信息,并且可以进行一些列的操作,比如说直接添加用户,删除用户等等.
 
-![](https://i-blog.csdnimg.cn/blog_migrate/d8ca185547c107527d2de47a007888e8.png)
+![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/adadaccc8cbb9631f1fb1663b67f412e.png)
 
 老版本的话,会出现下面的信息,有我前面复现漏洞添加的新用户
 
-![](https://i-blog.csdnimg.cn/blog_migrate/9db30f280bb8c7bd3954f4b21531cec9.png)
+![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/015dd192eee357f207bf2101e7af7578.png)
 
 #### 5.4.2 构造JWT token
 
@@ -363,7 +363,7 @@ http://192.168.10.14:8848/nacos/v1/auth/users?pageNo=1&pageSize=5&search=accurat
 /nacos/v1/auth/users?pageNo=1&pageSize=9&search=accuratebash
 ```
 
-![](https://i-blog.csdnimg.cn/blog_migrate/b38beb7ca96258bf6ea893bbd615bdf3.png)
+![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/3f63e86d5921feb980b6d9bc84b9ec51.png)
 
 其中exp是时间戳,利用下面部分进行伪造令牌,然后进行尝试
 
@@ -386,9 +386,9 @@ bash
 
 时间戳修改为比当前时间晚一天就可以了,生成一个比当前时间晚一天的时间戳,写博文的时候当前日期为6月9日,时间戳改为6月10日
 
-![](https://i-blog.csdnimg.cn/blog_migrate/c32e8f7d95069e90ad487d094a217589.png)
+![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/d55fc576f68b7d938da9d1c362604250.png)
 
-按图所示填写对应的palyload和key,拿到伪造的JWT ![](https://i-blog.csdnimg.cn/blog_migrate/218a5dafc901534786eccb5611efd895.png)
+按图所示填写对应的palyload和key,拿到伪造的JWT ![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/b4358276eef04486e490c2760ffff69f.png)
 
 ```bash
 JWT构造网站
@@ -403,13 +403,13 @@ bash
 
 在JWT页面伪造好数据包后,就可以尝试在登录界面随意抓包,然后在数据包中添加下面的语句,
 
-![](https://i-blog.csdnimg.cn/blog_migrate/261304868ff3d2da933de801114aa565.png)
+![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/04afc3ef912a14fda6f4b7cc267b471b.png)
 
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJuYWNvcyIsImV4cCI6MTcxODAyMDM4Nn0.UpyKSCj74oARPBP23X0TnAtWI6i3OKhr3XsaqfMSkL0
 
 重新抓一个登录的包,拦截返回包,将上面将返回的数据,替换重新抓的拦截包里的数据,然后发包就会进行后台界面
 
-![](https://i-blog.csdnimg.cn/blog_migrate/bef2b34c8ab325b254f4531dbb42e26b.png)
+![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/68c566f929b0d8b602081815195641a3.png)
 
 ### 5.5 Nacos Derby SQL注入漏洞 (CNVD-2020-67618)
 
@@ -426,11 +426,11 @@ Nacos config server 中有未鉴权接口，执行 SQL 语句可以查看敏感�
 bash
 ```
 
-![](https://i-blog.csdnimg.cn/blog_migrate/3bff77449840763dc9a1ef48fd76fc9a.png)
+![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/938c7bf4071bd4649ce694180695da18.png)
 
 #### 5.5.2 工具复现
 
-![](https://i-blog.csdnimg.cn/blog_migrate/ac6fba5a457d02245414b90fd4c9b44e.png)
+![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/79837792c8a063fc24e58a87aefebf0e.png)
 
 #### 5.5.3 一些常用的查询语句
 
@@ -480,9 +480,9 @@ bash
 
 正常情况下:
 
-![](https://i-blog.csdnimg.cn/blog_migrate/dd883253f7377ca2dddaa226ba805f36.png) 在请求头中添加绕过后,出现下面的信息,说明权限绕过了
+![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/2223515dfe224c1e893ded30ec715798.png) 在请求头中添加绕过后,出现下面的信息,说明权限绕过了
 
-![](https://i-blog.csdnimg.cn/blog_migrate/842bb7d7db0695cabab3d484246acc7e.png)
+![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/37d7a6ba8c057cb336cafe4d7725cb09.png)
 
 ### 5.7 Nacos-client Yaml反序列化漏洞 和 Nacos Jraft Hessian反序列化漏洞(QVD-2023-13065)
 
@@ -490,7 +490,7 @@ bash
 
 [Nacos 漏洞利用总结 | h0ny's blog https://h0ny.github.io/posts/Nacos-%E6%BC%8F%E6%B4%9E%E5%88%A9%E7%94%A8%E6%80%BB%E7%BB%93/](https://h0ny.github.io/posts/Nacos-%E6%BC%8F%E6%B4%9E%E5%88%A9%E7%94%A8%E6%80%BB%E7%BB%93/ "Nacos 漏洞利用总结 | h0ny's blog")
 
-![](https://i-blog.csdnimg.cn/blog_migrate/c7d57374150e529321795829de86ab9f.png)
+![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/8bd65405b0c9f4bd8bc5d50f77c6fc6c.png)
 
 ## 6.其他利用方式
 
@@ -533,19 +533,19 @@ bash
 
 举报
 
- [![](https://csdnimg.cn/release/blogv2/dist/pc/img/toolbar/Group.png) 点击体验  
-DeepSeekR1满血版](https://ai.csdn.net/?utm_source=cknow_pc_blogdetail&spm=1001.2101.3001.10583) 隐藏侧栏 ![程序员都在用的中文IT技术交流社区](https://g.csdnimg.cn/side-toolbar/3.6/images/qr_app.png)
+ [![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/4b5d638b57b796bf4228e36a12fd3244.png) 点击体验  
+DeepSeekR1满血版](https://ai.csdn.net/?utm_source=cknow_pc_blogdetail&spm=1001.2101.3001.10583) 隐藏侧栏 ![程序员都在用的中文IT技术交流社区](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/6ddf638effe61d927f03a0789e73f41e.png)
 
 程序员都在用的中文IT技术交流社区
 
-![专业的中文 IT 技术社区，与千万技术人共成长](https://g.csdnimg.cn/side-toolbar/3.6/images/qr_wechat.png)
+![专业的中文 IT 技术社区，与千万技术人共成长](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/4832e9a5e9fe3a702f3d81b1ce7c9ca3.png)
 
 专业的中文 IT 技术社区，与千万技术人共成长
 
-![关注【CSDN】视频号，行业资讯、技术分享精彩不断，直播好礼送不停！](https://g.csdnimg.cn/side-toolbar/3.6/images/qr_video.png)
+![关注【CSDN】视频号，行业资讯、技术分享精彩不断，直播好礼送不停！](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/e311c5ce3170b9f4471a19010a5c3bd8.png)
 
 关注【CSDN】视频号，行业资讯、技术分享精彩不断，直播好礼送不停！
 
 客服 返回顶部
 
-![](https://i-blog.csdnimg.cn/blog_migrate/a43b7a878b6e1ca1b3d410df445357ee.png) ![](https://i-blog.csdnimg.cn/blog_migrate/a9e5c138af53af186c523c2d59a454db.png) ![](https://i-blog.csdnimg.cn/blog_migrate/258cfc585da93de492b1af7738e264dc.png) ![](https://i-blog.csdnimg.cn/blog_migrate/afb6f7e67eca01b4d710442137f61d54.png) ![](https://i-blog.csdnimg.cn/blog_migrate/88cb9f631f85c5b8312410641ee0d982.png) ![](https://i-blog.csdnimg.cn/blog_migrate/2457dfbc76365e0f2bf9c91daa2cadee.png) ![](https://i-blog.csdnimg.cn/blog_migrate/898e50f2f42380cfa245a110d7c01878.png) ![](https://i-blog.csdnimg.cn/blog_migrate/279b23aa6a73fe480eb0c9c99d5bf2f4.png) ![](https://i-blog.csdnimg.cn/blog_migrate/67f17843bb3984d39a0344579e96ac83.png) ![](https://i-blog.csdnimg.cn/blog_migrate/fa3bd90250390994db52ba51968b2543.png) ![](https://i-blog.csdnimg.cn/blog_migrate/c34b94e760bda64e8d3f98c9407821f0.png) ![](https://i-blog.csdnimg.cn/blog_migrate/b4b7e0208a48a4ba867289b6a26730af.png) ![](https://i-blog.csdnimg.cn/blog_migrate/e52bad1318c9d874f49aa935870b93d2.png) ![](https://i-blog.csdnimg.cn/blog_migrate/409f8b8467599572372265ef828508b8.png) ![](https://i-blog.csdnimg.cn/blog_migrate/589dc001c249e31a3464e966e197c7e9.png) ![](https://i-blog.csdnimg.cn/blog_migrate/5e9d2b5c474edc986aa76f60d53f6340.png) ![](https://i-blog.csdnimg.cn/blog_migrate/09f281b74899ac7b5603ed8f2151db7d.png) ![](https://i-blog.csdnimg.cn/blog_migrate/ff5d24c0386c735ebfae8bdc5fac9de4.png) ![](https://i-blog.csdnimg.cn/blog_migrate/d8ca185547c107527d2de47a007888e8.png) ![](https://i-blog.csdnimg.cn/blog_migrate/9db30f280bb8c7bd3954f4b21531cec9.png) ![](https://i-blog.csdnimg.cn/blog_migrate/b38beb7ca96258bf6ea893bbd615bdf3.png) ![](https://i-blog.csdnimg.cn/blog_migrate/c32e8f7d95069e90ad487d094a217589.png) ![](https://i-blog.csdnimg.cn/blog_migrate/218a5dafc901534786eccb5611efd895.png) ![](https://i-blog.csdnimg.cn/blog_migrate/261304868ff3d2da933de801114aa565.png) ![](https://i-blog.csdnimg.cn/blog_migrate/bef2b34c8ab325b254f4531dbb42e26b.png) ![](https://i-blog.csdnimg.cn/blog_migrate/3bff77449840763dc9a1ef48fd76fc9a.png) ![](https://i-blog.csdnimg.cn/blog_migrate/ac6fba5a457d02245414b90fd4c9b44e.png) ![](https://i-blog.csdnimg.cn/blog_migrate/dd883253f7377ca2dddaa226ba805f36.png) ![](https://i-blog.csdnimg.cn/blog_migrate/842bb7d7db0695cabab3d484246acc7e.png) ![](https://i-blog.csdnimg.cn/blog_migrate/c7d57374150e529321795829de86ab9f.png)
+![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/3187a38e2a14974672b741333ba2800b.png) ![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/83dc5af15bcad92fde22523b79100445.png) ![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/d4aef9f22a5ea99d682d80766c9d1b9d.png) ![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/feca0cc0a6ee2816662b62ec0eb4da9f.png) ![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/dbdbc5be5c9c2ce60aa6ad99d8057383.png) ![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/e13aebdb7a008c7ca809babd4c114ccf.png) ![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/3d02c22080c16832e3a2e084a2d718cc.png) ![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/4b8fa96a4dbf47195e443adb4f389c9b.png) ![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/868a99c90aa569a74626c8a40e06e2dc.png) ![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/c17c72081135ee33b60c4255be6108b0.png) ![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/733af17342eb6087572506d0a074797a.png) ![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/3a4b9d64f0ca3e492c5197ca7282b43f.png) ![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/f4f26fe46ccb89cb6d9bd78d1e5243f6.png) ![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/526691ee71d46da124a1c032ceb90dcd.png) ![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/9ad60294a4838b3c3cb68f48220becab.png) ![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/cb0d3ccaed1cad3322a988613c3fde52.png) ![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/3017abc3c799a028ebdd12b8928ad914.png) ![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/b396ed531be68cd218992ddaf8e70e68.png) ![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/adadaccc8cbb9631f1fb1663b67f412e.png) ![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/015dd192eee357f207bf2101e7af7578.png) ![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/3f63e86d5921feb980b6d9bc84b9ec51.png) ![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/d55fc576f68b7d938da9d1c362604250.png) ![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/b4358276eef04486e490c2760ffff69f.png) ![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/04afc3ef912a14fda6f4b7cc267b471b.png) ![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/68c566f929b0d8b602081815195641a3.png) ![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/938c7bf4071bd4649ce694180695da18.png) ![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/79837792c8a063fc24e58a87aefebf0e.png) ![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/2223515dfe224c1e893ded30ec715798.png) ![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/37d7a6ba8c057cb336cafe4d7725cb09.png) ![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/8bd65405b0c9f4bd8bc5d50f77c6fc6c.png)

@@ -134,13 +134,13 @@ PHP的CORS跨域漏洞可以参考https://mp.weixin.qq.com/s/ViSR-l41Z9qsazxI2MA
 https://github.com/p1g3/JSONP-Hunter
 
 结果：  
-![图片.png](https://image.3001.net/images/20230330/1680180642_642585a2374f705cafcd1.png!small)  
+![图片.png](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/6addcbecd92702db37cdcfb0728fbaf0.jpg)  
 扫描存在CORS跨域漏洞的网站 https://github.com/p1g3/CORS-SCAN
 
 使用：python3 cors\_test.py url\_file.txt
 
 xray也可以扫描这类漏洞，但是很少用xray去扫，因为很多cors请求读取的并不是敏感信息，这类漏洞交到SRC大概率是要被忽略的，我们需要人工判断响应数据中的数据是否足够敏感，xray默认配置即可扫描CORS  
-![图片.png](https://image.3001.net/images/20230330/1680180662_642585b650425aac56da7.png!small)  
+![图片.png](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/437ee76593ef164066c7fa58843bdd36.jpg)  
 发现存在错误配置的CORS请求后，还需考虑请求是否有refer校验，因为跨域漏洞的触发和csrf是类似的，需要通过交互让受害者访问我们的恶意脚本，如果因为refer校验不通过还需要进一步bypass。这也是大多数SRC让提供有效poc的原因。js代码编写经验较少的师傅可以用工具生成poc：
 
 https://github.com/0verSp4ce/PoCBox
@@ -153,7 +153,7 @@ docker container run -d -p 8088:80 registry.cn-hangzhou.aliyuncs.com/pocbox/pocb
 
 本地搭建好后在图示处填入相关数据后即可生成poc code，可以选择online test，也可以将poc code保存为html后本地访问，验证是否可以读取响应数据：
 
-![图片.png](https://image.3001.net/images/20230330/1680180699_642585db236a5b0b5bc99.png!small)
+![图片.png](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/d1872336ea4ed03fdf9d4ee6dbed4ee3.jpg)
 
 ## 参考链接
 
@@ -176,23 +176,23 @@ chatGPT
 
 相关推荐
 
-[![安服水洞系列|Vue源码泄露](https://image.3001.net/images/20230413/1681371959_6437b337aa1d2da567310.jpg!small)](https://www.freebuf.com/articles/web/362520.html)
+[![安服水洞系列|Vue源码泄露](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/807b865c622afa68c1d3aa6cb24db65b.jpg)](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/807b865c622afa68c1d3aa6cb24db65b.jpg)
 
 [Web安全](https://www.freebuf.com/articles/web/362520.html)
 
-[![攻防潜力股：ChatGPT的实习报告](https://image.3001.net/images/20230403/1680514303_642a9cff151754c5c6d8d.png)](https://www.freebuf.com/news/362480.html)
+[![攻防潜力股：ChatGPT的实习报告](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/a8cd15be1d0b96d3f0079bea5245e4c7.png)](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/a8cd15be1d0b96d3f0079bea5245e4c7.png)
 
 [资讯](https://www.freebuf.com/news/362480.html)
 
-[![威胁情报-telegram消息监控](https://image.3001.net/images/20230403/1680505893_642a7c25407a6844e1292.png)](https://www.freebuf.com/articles/network/362429.html)
+[![威胁情报-telegram消息监控](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/1535ecf2577ad75af73faecfb4494a61.png)](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/1535ecf2577ad75af73faecfb4494a61.png)
 
 [基础安全](https://www.freebuf.com/articles/network/362429.html)
 
-[![记一次绕过安全设备Getshell的实战经历](https://image.3001.net/images/20230403/1680488689_642a38f1eb637aaddd28a.png)](https://www.freebuf.com/articles/web/362390.html)
+[![记一次绕过安全设备Getshell的实战经历](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/7b5606d178df0a2d32375a05f54c779c.png)](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/7b5606d178df0a2d32375a05f54c779c.png)
 
 [Web安全](https://www.freebuf.com/articles/web/362390.html)
 
-[![CouchDB 漏洞复现](https://image.3001.net/images/20230403/1680484765_642a299dcb74e5e26e665.png)
+[![CouchDB 漏洞复现](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/904887680cc6153466701e4d842a1775.png)
 
 Web安全
 

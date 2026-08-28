@@ -8,7 +8,7 @@ description: "Golang学习笔记 1、环境搭建 IDEA+Go SDK 1.14 for Windows �
 tags:
   - "clippings"
 ---
-[![](https://img2024.cnblogs.com/blog/35695/202412/35695-20241201073014811-1847930772.jpg)](https://www.doubao.com/?channel=cnblogs&source=hw_db_cnblogs)
+[![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/a32f2de6953cc1287965374ec24bc047.jpg)](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/a32f2de6953cc1287965374ec24bc047.jpg)
 
 ## Golang学习笔记
 
@@ -19,19 +19,19 @@ tags:
 [下载网址<<<猛戳这里](https://studygolang.com/dl)
 
 进入下载页面后，根据操作系统选择下载的版本，我本次使用的是 Windows 10系统，所以直接选择 [go1.14.windows-amd64.msi](https://studygolang.com/dl/golang/go1.14.windows-amd64.msi) 下载。  
-![](https://img2020.cnblogs.com/blog/1951001/202003/1951001-20200307141455432-745600332.png)
+![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/baf2f5824d850d80271feaaee2059d98.png)
 
 下载完成之后，双击下好的安装包进行安装。
 
-![](https://img2020.cnblogs.com/blog/1951001/202003/1951001-20200307141603099-592422904.png)
+![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/ef9b0e43e20940811b8b2caa752867b4.png)
 
 双击之后，弹出安装界面，我们直接一路next，这里我选择的安装路径是 `D:\Program Files\go`
 
-![](https://img2020.cnblogs.com/blog/1951001/202003/1951001-20200307141708428-659765647.png)
+![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/5363af70c792e069c4beac051967b7b4.png)
 
 继续点击next，等待安装成功
 
-![](https://img2020.cnblogs.com/blog/1951001/202003/1951001-20200307141805971-1037671218.png)
+![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/3076dbe353db9e082b8c2295e083bd42.png)
 
 读完进度条之后，点击finish，到这一步我们的go1.14的SDK就已经按照成功了，接下来就是环境变量的设置。
 
@@ -46,23 +46,23 @@ tags:
 
 go命令依赖一个重要的环境变量：$GOPATH，首先我们需要在系统变量中设置GOPATH，GOPATH可以设置多个在windows系统中用 `;` 来隔开，我这里设置了两个GOPATH：
 
-![](https://img2020.cnblogs.com/blog/1951001/202003/1951001-20200307141850638-1088466898.png)
+![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/55d7e18d7c9fc7642d1451d27518495f.png)
 
 为了在终端上运行 `go` 命令，我们还需要在 Path 环境变量中设置存放go命令的目录：
 
-![](https://img2020.cnblogs.com/blog/1951001/202003/1951001-20200307141922022-496942580.png)
+![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/4930b123414e5c6fdc6b5c68770c50d8.png)
 
 点击 `浏览` ，选择我们之前安装 go sdk 路径下的 `bin` 目录，然后一路确定下去。
 
-![](https://img2020.cnblogs.com/blog/1951001/202003/1951001-20200307141937487-1809485531.png)
+![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/0d1642617a8197e41506647a5a1c7867.png)
 
 完成上述步骤之后，我们就可以在终端中输入 `go` 命令了（如果之前开启了终端，就需要重启），接下来我们来查看一下我们安装的 go 版本，在cmd终端中输入 `go version` 。
 
-![](https://img2020.cnblogs.com/blog/1951001/202003/1951001-20200307142003216-632612708.png)
+![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/22f9d4ec0a737f5272c35b2734be5e90.png)
 
 在Go中没有项目的概念，一切皆为包，当我们在自己的包中导入了其他依赖，Go会先从 GOROOT 目录中去寻找是否有对应的包，所以我们还需要在环境变量中设置 GOROOT，GOROOT的值就是我们安装的go sdk的路径：
 
-![](https://img2020.cnblogs.com/blog/1951001/202003/1951001-20200307142019122-526550276.png)
+![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/1697f15ce6fed522a728836bf0620ad7.png)
 
 ### IDEA中的配置
 
@@ -86,27 +86,27 @@ go命令依赖一个重要的环境变量：$GOPATH，首先我们需要在系�
 
 **首先创建Go project**
 
-![](https://img2020.cnblogs.com/blog/1951001/202003/1951001-20200307142053342-1036809554.png)
+![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/b81b181a7d91fbdbea7cefee7dfa352d.png)
 
 下载Go插件，安装完成后需要重启IDEA，点击 `Restart IDE` ：
 
-![](https://img2020.cnblogs.com/blog/1951001/202003/1951001-20200307143023059-2141089653.png)
+![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/cbbef48a6a964ba751baf8b7faca6172.png)
 
-![](https://img2020.cnblogs.com/blog/1951001/202003/1951001-20200307143047321-1386186848.png)
+![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/b021e4c64d711f09cfeab90c3bf2a884.png)
 
 重启IDEA后，创建项目，选择SDK：  
 选择SDK：
 
-![](https://img2020.cnblogs.com/blog/1951001/202003/1951001-20200307142128033-1532068788.png)
+![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/a55a3e28d6ebc527fbbcc65c40d5e0e1.png)
 
 创建项目名和路径：  
-![](https://img2020.cnblogs.com/blog/1951001/202003/1951001-20200307142147537-509169519.png)
+![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/b9d1d4e8f38fc162e90ba1a3e0d7a7af.png)
 
 **我们需要设置Go proxy以便更快速的下载外部依赖**
 
 > File ---> Setting ---> Language & Framework ----> Go ----> Go Modules
 
-![](https://img2020.cnblogs.com/blog/1951001/202003/1951001-20200307142205312-1370835599.png)
+![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/3024a85bab52d73835c128b2e1677405.png)
 
 在选择好SDK目录后，我们在Proxy这里填上代理地址： `https://goproxy.cn`
 
@@ -114,7 +114,7 @@ go命令依赖一个重要的环境变量：$GOPATH，首先我们需要在系�
 
 我们在 `learn_go` project项目目录下创建了一个 `basic/hello` 目录，在该目录下新建了一个 hello.go 文件
 
-![](https://img2020.cnblogs.com/blog/1951001/202003/1951001-20200307142220809-1540268970.png)
+![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/5e5244145de8cff1dd6148bda309c02b.png)
 
 文件内容如图所示，cd到hello目录中，我们在 terminal 中输入：
 
@@ -122,7 +122,7 @@ go命令依赖一个重要的环境变量：$GOPATH，首先我们需要在系�
 go mod init hello
 ```
 
-![](https://img2020.cnblogs.com/blog/1951001/202003/1951001-20200307142243309-1414832118.png)
+![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/444ffec945364f8541010ab65df37639.png)
 
 该命令执行完之后会在我们的当前目录下生成一个 go.mod 文件，文件内容如下：
 
@@ -140,7 +140,7 @@ go run hello.go
 
 运行结果如下:
 
-![](https://img2020.cnblogs.com/blog/1951001/202003/1951001-20200307142254225-2074856719.png)
+![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/43fea949a566bae6dcc9259c18e07de9.png)
 
 我们发现 go 会自动查找代码中的包，并下载依赖包，并且把具体的依赖关系和版本写入到go.mod和go.sum文件中。
 
@@ -158,7 +158,7 @@ posted @ [Sebuntin](https://www.cnblogs.com/sebuntin2020)   阅读( 12807 )  �
 [【推荐】编程新体验，更懂你的AI，立即体验豆包MarsCode编程助手](https://www.marscode.cn/?utm_source=advertising&utm_medium=cnblogs.com_ug_cpa&utm_term=hw_marscode_cnblogs&utm_content=home)  
 [【推荐】抖音旗下AI助手豆包，你的智能百科全书，全免费不限次数](https://www.doubao.com/?channel=cnblogs&source=hw_db_cnblogs)  
 [【推荐】轻量又高性能的 SSH 工具 IShell：AI 加持，快人一步](http://ishell.cc/)  
-[![](https://img2024.cnblogs.com/blog/35695/202503/35695-20250314212005023-452697622.jpg)](https://www.trae.com.cn/?utm_source=advertising&utm_medium=cnblogs_ug_cpa&utm_term=hw_trae_cnblogs)
+[![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/16e642d75389d801a3c8776d1a653507.jpg)](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/16e642d75389d801a3c8776d1a653507.jpg)
 
 **编辑推荐：**  
 · [dotnet 源代码生成器分析器入门](https://www.cnblogs.com/lindexi/p/18786647)  
@@ -176,4 +176,4 @@ posted @ [Sebuntin](https://www.cnblogs.com/sebuntin2020)   阅读( 12807 )  �
 
 <table><tbody><tr><td colspan="7"><table><tbody><tr><td><a href="https://www.cnblogs.com/sebuntin2020/p/">&lt;</a></td><td align="center">2025年3月</td><td align="right"><a href="https://www.cnblogs.com/sebuntin2020/p/">&gt;</a></td></tr></tbody></table></td></tr><tr><th align="center">日</th><th align="center">一</th><th align="center">二</th><th align="center">三</th><th align="center">四</th><th align="center">五</th><th align="center">六</th></tr><tr><td align="center">23</td><td align="center">24</td><td align="center">25</td><td align="center">26</td><td align="center">27</td><td align="center">28</td><td align="center">1</td></tr><tr><td align="center">2</td><td align="center">3</td><td align="center">4</td><td align="center">5</td><td align="center">6</td><td align="center">7</td><td align="center">8</td></tr><tr><td align="center">9</td><td align="center">10</td><td align="center">11</td><td align="center">12</td><td align="center">13</td><td align="center">14</td><td align="center">15</td></tr><tr><td align="center">16</td><td align="center">17</td><td align="center">18</td><td align="center">19</td><td align="center">20</td><td align="center">21</td><td align="center">22</td></tr><tr><td align="center">23</td><td align="center">24</td><td align="center">25</td><td align="center">26</td><td align="center">27</td><td align="center">28</td><td align="center">29</td></tr><tr><td align="center">30</td><td align="center">31</td><td align="center">1</td><td align="center">2</td><td align="center">3</td><td align="center">4</td><td align="center">5</td></tr></tbody></table>
 
-点击右上角即可分享 ![微信分享提示](https://img2023.cnblogs.com/blog/35695/202309/35695-20230906145857937-1471873834.gif)
+点击右上角即可分享 ![微信分享提示](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/555e49d6a3ba2183a3b8a2b6083355df.gif)

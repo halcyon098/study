@@ -15,7 +15,7 @@ LocalPotato - When Swapping The Context Leads You To SYSTEM
 10 February 2023 - [Andrea Pierini](https://www.google.com/url?q=https://twitter.com/decoder_it&sa=D&source=editors&ust=1676048763728427&usg=AOvVaw0MZ0z96qXmnGA5QUAJ5z67) & [Antonio Cocomazzi](https://www.google.com/url?q=https://twitter.com/splinter_code&sa=D&source=editors&ust=1676048763728802&usg=AOvVaw2RwQHtBq8LPs4OTZhlc61e)  
 \_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_\_
 
-![](https://www.localpotato.com/localpotato_html/images/image7.png)
+![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/f075e574b8b79453bce1d2df00b24b2a.png)
 
 ## Intro
 
@@ -45,7 +45,7 @@ The server then verifies that the security context is bound to a user, and if so
 
 In summary, during local authentication, the “Reserved” field which is usually set to zero for non-local authentication in the NTLM type 2 message, will reference the local server context handle that the client should associate to.
 
-![](https://www.localpotato.com/localpotato_html/images/image3.png)
+![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/b97dede1503cc2274835bff280475631.png)
 
 In the above figure, we have highlighted the Reserved field containing the upper value of the context handle.
 
@@ -70,7 +70,7 @@ The attack flow is as follows:
 
 Below is a graphical representation of the attack flow:
 
-![](https://www.localpotato.com/localpotato_html/images/image5.png)
+![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/3bade8a3a6997683fb67209611c37cde.png)
 
 To validate our assumptions about the context swap attack we did set up a custom scenario.  
 In our experiment, we used [two socket servers](https://www.google.com/url?q=https://learn.microsoft.com/en-us/windows/win32/secauthn/using-sspi-with-a-windows-sockets-server?source%3Drecommendations&sa=D&source=editors&ust=1676048763731760&usg=AOvVaw3AYxCZG2PLsMBVZAPdXoUo) and [two socket clients](https://www.google.com/url?q=https://learn.microsoft.com/en-us/windows/win32/secauthn/using-sspi-with-a-windows-sockets-client&sa=D&source=editors&ust=1676048763732021&usg=AOvVaw04z_x6UR7E0C5mHgaWrqEK) to authenticate via NTLM with different users and exchange each other's "context”.  
@@ -121,12 +121,12 @@ While this applies for Kerberos, it turns out that it can also affect the SPN se
 For this reason we chose to use the RPC/DCOM trigger for coercing a privileged client because we could return an arbitrary SPN in the binding strings of the Oxid resolver, thus bypassing the SMB anti-reflection mechanism.  
 All we needed to do was to set an SPN of "cifs/127.0.0.1" in the originating privileged client, which was not a problem thanks to our trigger:
 
-![](https://www.localpotato.com/localpotato_html/images/image6.png)
+![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/a8514509cdcf3bf12ae2699afae3890f.png)
 
 In the end, we were able to write an arbitrary file with SYSTEM privileges and arbitrary contents.  
 The network capture of the SMB packets shows us successfully authenticating to the C$ share as the SYSTEM user and overwriting the file PrintConfig.dll:
 
-![](https://www.localpotato.com/localpotato_html/images/image1.png)
+![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/1a13e4066bc72c54d24c7aafde26ee65.png)
 
 The POC
 
@@ -142,7 +142,7 @@ Converting an arbitrary file write into EoP is relatively straightforward.
 In our case, we utilized the McpManagementService CLSID on a Windows 2022 server, overwrote the printconfig.dll library, and instantiated the PrintNotify object.  
 This forced the service to load our malicious PrintConfig.dll, granting us a SYSTEM shell:
 
-![](https://www.localpotato.com/localpotato_html/images/image4.png)
+![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/46ca3fd94d767f65ba6977f7673edd5a.png)
 
 There are various methods to weaponize an arbitrary file write into code execution as SYSTEM, such as using an [XPS Print Job](https://www.google.com/url?q=https://decoder.cloud/2019/11/13/from-arbitrary-file-overwrite-to-system/&sa=D&source=editors&ust=1676048763738319&usg=AOvVaw1FGLv3BqrjQQTiDwgz7Jae) or [NetMan DLL Hijacking](https://www.google.com/url?q=https://itm4n.github.io/windows-server-netman-dll-hijacking/&sa=D&source=editors&ust=1676048763738507&usg=AOvVaw0tvwt6sgWPlkZzCg_9NdgN). So you are free to combine the LocalPotato primitive with what you prefer;)
 
@@ -152,13 +152,13 @@ The Patch
 
 The LocalPotato vulnerability was found in the NTLM authentication scheme. To locate the source of the vulnerability, we conducted a binary diff analysis of msv1\_0.dll, the security package loaded into LSASS to handle all NTLM-related operations:
 
-![](https://www.localpotato.com/localpotato_html/images/image2.png)
+![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/af310507ab17d7fbc17543dffccf3c51.png)
 
 The main focus of the analysis was the function SsprHandleChallengeMessage(), which handles NTLM challenges.
 
 We observed the addition of a new check for the enabled feature “Feature\_MSRC74246\_Servicing\_NTLM\_ServiceBinding\_ContextSwapping” when authentication occurs:
 
-![](https://www.localpotato.com/localpotato_html/images/image8.png)
+![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/2200475467a1700a36adc1bc5986b5df.png)
 
 The check introduced by Microsoft ensures that if the [ISC\_REQ\_UNVERIFIED\_TARGET\_NAME](https://www.google.com/url?q=https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831747\(v%3Dws.11\)&sa=D&source=editors&ust=1676048763739905&usg=AOvVaw15tbw_lxh654xFp5rNFi26) flag is set and an SPN is present, the SPN is set to NULL.
 

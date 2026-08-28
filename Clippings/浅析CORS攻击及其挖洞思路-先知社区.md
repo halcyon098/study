@@ -24,7 +24,7 @@ tags:
 
 引用一张图能很好地说明CORS机制的作用
 
-![](https://xzfile.aliyuncs.com/media/upload/picture/20200217200707-04fa9ae6-517e-1.png)
+![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/5531211499c59a95896460f0730cb565.png)
 
 ## 0x2 CORS机制实现
 
@@ -47,7 +47,7 @@ tags:
 
 那么这个机制,具体可以总结为下面这个图片
 
-![](https://xzfile.aliyuncs.com/media/upload/picture/20200217200722-0d80a07a-517e-1.png)
+![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/513d1d6c98c111391bc7e6fd8b0ada83.png)
 
 所有的请求实际上都已经发出了，只不过浏览器解析的时候根据返回的http头部字段来选择性拦截了而已。
 
@@ -121,11 +121,11 @@ location / {
 
 这里我自己写一个简单的存在CORS漏洞的服务为例子展示如何对此进行攻击(其实没办法攻击)。
 
-![](https://xzfile.aliyuncs.com/media/upload/picture/20200217200746-1bf9890a-517e-1.png)
+![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/0f5f5f0df77e0f7928d215dd0db10c9e.png)
 
 可以看到我们直接把cookie回显给了页面,当时我挖掘腾讯的时候就遇到这样的一个例子
 
-![](https://xzfile.aliyuncs.com/media/upload/picture/20200217200817-2e80d128-517e-1.png)
+![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/5e615b7631fd47525b8e1c5c11ea5812.png)
 
 但是没想着怎么去利用,然后给忽略了，不过当时好像也没开cors配置，毕竟是个test站点。
 
@@ -166,7 +166,7 @@ exp.php:
 
 然后我们假装受害者去访问下:
 
-![](https://xzfile.aliyuncs.com/media/upload/picture/20200217200828-34b843c8-517e-1.png)
+![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/e8853a66b3e24ae0ea32c3be1e7c02e1.png)
 
 结果返回的是html的源代码，没办法获取dom之后的结果,这其实也在我的意料之中因为浏览器不会去解析资源内容再返回，欢迎师傅们谈下这类型的信息泄漏有啥利用的思路。
 
@@ -206,7 +206,7 @@ exp.php:
 </html>
 ```
 
-![](https://xzfile.aliyuncs.com/media/upload/picture/20200217200930-59ca2596-517e-1.png)
+![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/ffb15482373086a4ab55a0afa018bcbc.png)
 
 第二种是发送cookie利用登陆信息，然后请求鉴权的api获取敏感数据。
 
@@ -243,25 +243,25 @@ exp.php:
 
 我们访问 [http://victim.com:8888/cors/vuln.php,然后点击登陆获取到登陆信息，然后我们假装成受害者点击\`http://attack.com:8888/cors/exp.php\`](http://victim.com:8888/cors/vuln.php,%E7%84%B6%E5%90%8E%E7%82%B9%E5%87%BB%E7%99%BB%E9%99%86%E8%8E%B7%E5%8F%96%E5%88%B0%E7%99%BB%E9%99%86%E4%BF%A1%E6%81%AF%EF%BC%8C%E7%84%B6%E5%90%8E%E6%88%91%E4%BB%AC%E5%81%87%E8%A3%85%E6%88%90%E5%8F%97%E5%AE%B3%E8%80%85%E7%82%B9%E5%87%BB%60http://attack.com:8888/cors/exp.php%60)
 
-![](https://xzfile.aliyuncs.com/media/upload/picture/20200217200952-670c4d2e-517e-1.png)
+![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/8c2d8002ec38932924614fcb454e9ac4.png)
 
 可以看到这个接口是需要登陆信息的
 
-![](https://xzfile.aliyuncs.com/media/upload/picture/20200217201006-6f39c2d8-517e-1.png)
+![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/1697e56f7c3771cea1928869ebc1e437.png)
 
 但是如果我们修改 `vuln.php` 成这样子呢
 
-![](https://xzfile.aliyuncs.com/media/upload/picture/20200217201018-765a13e2-517e-1.png)
+![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/c5d346b2b4e461ccd60f2417712dc81c.png)
 
 可以看到 `cookie` 的确发送了,也返回了对应的json数据，但是却没有被脚本接收到，因为脚本接收到数据得先问下浏览器支持不，我们可以看下console就可以发现被禁止的原因了，因为
 
 这样开启的跨域肯定是不安全的，所以浏览器直接ban掉了这种配置方式。
 
-![](https://xzfile.aliyuncs.com/media/upload/picture/20200217201039-83262c8c-517e-1.png)
+![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/b37df849e5dc9a94f86d525c6146c46c.png)
 
 这样也是不行的，我们再尝试修改成:
 
-![](https://xzfile.aliyuncs.com/media/upload/picture/20200217201054-8c10a91c-517e-1.png)
+![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/3c8a6afdbb14e428a1f0562e5c9696ba.png)
 
 这样便可以了获取到敏感信息了。
 
@@ -287,9 +287,9 @@ exp.php:
 
 burp是支持简单的cors漏洞扫描的
 
-![](https://xzfile.aliyuncs.com/media/upload/picture/20200217201108-9467a692-517e-1.png)
+![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/f4dd0adbc7b7be99f787418dcaadc361.png)
 
-![](https://xzfile.aliyuncs.com/media/upload/picture/20200217201114-97ee28c2-517e-1.png)
+![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/6fc78642bd2dd3cbc50a5ef66a0e27bc.png)
 
 但是误报率很高，而且也需要自己去手工验证，这里我比较推荐
 
@@ -298,7 +298,7 @@ burp是支持简单的cors漏洞扫描的
 这个实现我们可以用burp的替换功能来实现
 
 `proxy->options->Match and Replace->Add`  
-![](https://xzfile.aliyuncs.com/media/upload/picture/20200217201128-a05722f2-517e-1.png)
+![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/1ebb9346d372a4ea12017ba9a72d3adb.png)
 
 勾选上这个即可。
 

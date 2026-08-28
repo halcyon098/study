@@ -297,7 +297,7 @@ Neighbor       Mac Address        Vmknic         Expiry  State  Type
 192.168.17.36  00:50:56:62:91:3c  vmk2           57 sec         Unknown
 ```
 
-![image-20240111091504558](https://img2023.cnblogs.com/blog/458378/202401/458378-20240111091519147-881656287.png)
+![image-20240111091504558](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/8eff1a94c72e99f73854bee257124168.png)
 
 ## 三、esxcli命令语法及参数说明
 

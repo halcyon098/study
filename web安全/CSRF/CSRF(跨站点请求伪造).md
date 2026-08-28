@@ -10,7 +10,7 @@
 
 下面为CSRF攻击原理图：
 
-![](https://cdn.jsdelivr.net/gh/Dmup227/Dimags@main/D:%5CDocument%5Cimages202403191516555.jpg)
+![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/e03ed818e219a75ecb60b197fe6f8dcc.jpg)
 
 由上图分析我们可以知道构成CSRF攻击是有条件的：
 

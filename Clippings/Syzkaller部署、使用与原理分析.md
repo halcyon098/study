@@ -9,12 +9,12 @@ description: "文章浏览阅读3.1k次，点赞29次，收藏22次。本博客�
 tags:
   - "clippings"
 ---
-[![](https://img-home.csdnimg.cn/images/20201124032511.png "CSDN首页")](https://www.csdn.net/)
+[![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/49df37515ec71b2930158e0ee3038e84.png)](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/49df37515ec71b2930158e0ee3038e84.png)
 
 - [博客](https://blog.csdn.net/)
 - [学习](https://edu.csdn.net/?utm_source=zhuzhantoolbar)
 - [社区](https://devpress.csdn.net/)
-- [![](https://img-home.csdnimg.cn/images/20240829093757.png)GitCode](https://link.csdn.net/?target=https%3A%2F%2Fgitcode.com%3Futm_source%3Dcsdn_toolbar)
+- [![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/08e602b2069da53c89caac270b916cff.png)GitCode](https://link.csdn.net/?target=https%3A%2F%2Fgitcode.com%3Futm_source%3Dcsdn_toolbar)
 - [InsCodeAI](https://inscode.csdn.net/?utm_source=260232576)
 - [会议](https://summit.csdn.net/)
 
@@ -30,9 +30,9 @@ AI 搜索登录
 
 原创 于 2024-09-26 09:57:57 发布 · 3.1k 阅读
 
-·  ![](https://csdnimg.cn/release/blogv2/dist/pc/img/newHeart2023Black.png) 29
+·  ![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/fc8f6df7a228828427fe5dbceb83d37d.png) 29
 
-· ![](https://csdnimg.cn/release/blogv2/dist/pc/img/tobarCollect2.png)  22 ·
+· ![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/fddfcfe15d4eab62e243e1c316ede490.png)  22 ·
 
 CC 4.0 BY-SA版权
 
@@ -44,13 +44,13 @@ CC 4.0 BY-SA版权
 
 社区：[2048 AI社区](https://2048ai.net/?utm_source=blog_detail)[加入](https://2048ai.net/?utm_source=blog_detail)
 
- [![](https://i-blog.csdnimg.cn/direct/bf4cab7451924d13a022163a35b030ed.png?x-oss-process=image/resize,m_fixed,h_224,w_224) 网络安全 同时被 2 个专栏收录![](https://csdnimg.cn/release/blogv2/dist/pc/img/newArrowDown1White.png)](https://blog.csdn.net/ironmanjay/category_12016927.html "网络安全")
+ [![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/25efc54170faebfdbe0b2eef89a03099.png) 网络安全 同时被 2 个专栏收录![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/1348949d02c870e01504e6820679ac25.png)](https://blog.csdn.net/ironmanjay/category_12016927.html "网络安全")
 
 46 篇文章
 
 订阅专栏
 
- [![](https://i-blog.csdnimg.cn/blog_column_migrate/b568538aeecf5821b5d470b0ce39c65e.jpeg?x-oss-process=image/resize,m_fixed,h_224,w_224) 内核漏洞检测工具](https://blog.csdn.net/ironmanjay/category_12672076.html "内核漏洞检测工具")
+ [![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/059993b6a3638b1469b6a5b525dc4166.jpeg) 内核漏洞检测工具](https://blog.csdn.net/ironmanjay/category_12672076.html "内核漏洞检测工具")
 
 10 篇文章
 
@@ -117,7 +117,7 @@ CC 4.0 BY-SA版权
 
   关于Syzkaller的整体架构如下图所示，此图出自[How syzkaller works](https://github.com/google/syzkaller/blob/master/docs/internals.md)。
 
-![在这里插入图片描述](https://i-blog.csdnimg.cn/direct/e394f00fd77049e0b7001748731a8740.png#pic_center)
+![在这里插入图片描述](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/3e5036b3b8eb32d2cdb655365d6e6ae0.png)
 
   其中，红色标签表示对应的配置选项。此外，对于Syzkaller整体架构图中的各个模块的作用解释如下所示：
 
@@ -133,7 +133,7 @@ CC 4.0 BY-SA版权
 
   在源代码的`main`函数（“/syzkaller/syz-manager/manager.go”源代码文件的第151行）中，进行了一些初始化的操作，不过其中最重要的是`RunManager`函数，此函数以传入的Fuzz配置作为参数，使Syzkaller工具真正的启动。
 
-![在这里插入图片描述](https://i-blog.csdnimg.cn/direct/70f0aac2a2d1452c9d2f6ae453c963a0.png#pic_center)
+![在这里插入图片描述](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/36507c1efde3577d79dc777d678cfe60.png)
 
   `RunManager`函数实现在“/syzkaller/syz-manager/manager.go”源代码文件的第168行，这段代码使整个管理器程序的入口点，负责初始化管理器并启动主循环来管理VM的创建和运行。
 
@@ -273,14 +273,14 @@ func RunManager(cfg *mgrconfig.Config) {
 
 - 预加载语料库（Corpus），即`mgr.preloadCorpus()`：  
 	此功能是由实现在“/syzkaller/syz-manager/manager.go”中第606行的`preloadCorpus`函数完成的。  
-	![在这里插入图片描述](https://i-blog.csdnimg.cn/direct/735d775e723443e0b828fdbe36ed5d53.png#pic_center)  
+	![在这里插入图片描述](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/475ad80b278cd7c3ff3c527e1cb84a22.png)  
 	这个函数主要完成了两个操作：
 	- 加载工作目录中的语料库，即“corpus.db”。如果此语料库不存在则创建一个新的空语料库文件。在我们的测试中，工作目录设置为“/syzkaller/workdir/”，其中的语料库如下所示：  
-		![在这里插入图片描述](https://i-blog.csdnimg.cn/direct/d1a1126698ea441da4ec320ea66be474.png#pic_center)
+		![在这里插入图片描述](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/15bfc65e3847c2ee63e5c35b9136c7f0.png)
 	- 加载种子文件，这些种子文件都是由作者事先设计好的，存储在“/syzkaller/sys/target/test/”中，其中“target”就是我们进行Fuzz测试的目标，在我们的例子中，由于测试的是Linux系统，所以“target”的值为“linux”。我们可以使用这些定义好的种子文件中的内容，对目标进行Fuzz和变异以获得更高的覆盖率：  
-		![在这里插入图片描述](https://i-blog.csdnimg.cn/direct/2fc09ccf71a94bfe929938fee5a31beb.png#pic_center)  
+		![在这里插入图片描述](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/ecda86435edaaae5bd98c3cf87db5028.png)  
 		我们可以随便打开一个种子文件查看其中的内容，比如打开名为“ping”的这个种子文件。  
-		![在这里插入图片描述](https://i-blog.csdnimg.cn/direct/f1bf4782373b4fcd9d3e47c6485dd142.png#pic_center)  
+		![在这里插入图片描述](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/266e5ea3b5427a6867f269801c54ce80.png)  
 		这段代码是使用`socket`系统调用创建了一个基于ICMP协议的套接字，并将其文件描述符赋值给变量`r0`。接着，调用`close`系统调用关闭了这个套接字，释放了相关的资源。具体来说：
 		- `socket$inet_icmp(AUTO, AUTO, AUTO)`是创建一个基于ICMP协议的套接字。在这里，`AUTO`表示自动选择适当的参数。该系统调用创建了一个用于发送和接收`ICMP`协议数据包的套接字，并返回一个文件描述符，即`r0`。
 		- `close(r0)`是关闭之前创建的套接字。这是一种良好的做法，可以释放已经打开的资源，避免资源泄漏和占用。
@@ -459,7 +459,7 @@ func (mgr *Manager) vmLoop() {
 
   在这段代码中，我们只需要关注循环处理实例（注意，这是一个无限循环执行的代码）中运行具体实例的代码，即：
 
-![在这里插入图片描述](https://i-blog.csdnimg.cn/direct/325872aa232048e79dba16bb8ccded68.png#pic_center)
+![在这里插入图片描述](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/de4d88f8a2d17e3d9445122b7e982209.png)
 
   这行代码调用了`mgr.runInstance(*idx)`函数，该函数的作用是在虚拟机上运行一个实例，并返回实例的崩溃信息（如果有）以及可能出现的错误。因此，这行代码负责启动一个测试实例，并接收其返回的崩溃信息和错误信息。
 
@@ -469,7 +469,7 @@ func (mgr *Manager) vmLoop() {
 
   上一章节我们分析了，Syzkaller最终是通过调用`runInstance`函数来进行Fuzz的。所以我们从该函数开始进行下面的分析。`runInstance`函数实现在“/syzkaller/syz-manager/manager.go”文件的第763行。
 
-![在这里插入图片描述](https://i-blog.csdnimg.cn/direct/e587734104dd47fb850e29860bcc8114.png#pic_center)
+![在这里插入图片描述](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/c61058998cb4e716af668bcabae82d27.png)
 
   这段代码的作用是在虚拟机上运行一个实例并处理可能的崩溃情况。具体来说，它的主要步骤包括：
 
@@ -592,13 +592,13 @@ func (mgr *Manager) runInstanceInner(index int, instanceName string) (*report.Re
 
 - 复制二进制文件，即`inst.Copy(mgr.cfg.FuzzerBin)`和`inst.Copy(mgr.cfg.ExecutorBin)`：  
 	在这里我们主要关注在“/syzkaller/vm/isolated/isolated.go”文件中的第285行实现的`Copy`函数。  
-	![在这里插入图片描述](https://i-blog.csdnimg.cn/direct/af20571d17aa4502a4e9b95d00c45f9b.png#pic_center)  
+	![在这里插入图片描述](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/189adc3675803aa8112d1cb50481f1bd.png)  
 	可以发现，此函数的目的是将在Syzkaller安装阶段编译好的“syz-fuzzer”和“syz-executor”二进制文件复制到虚拟机中的目标目录中。这个目标目录由Syzkaller启动时加载的名为“setting.cfg”的配置文件中定义的“vm.target\_dir”的值确定的，即“/fuzzdir”。所以最终会将“syz-fuzzer”和“syz-executor”复制到虚拟机中的“/fuzzdir”目录中。
 - 启动Fuzz测试程序：  
 	启动Fuzz测试程序的过程包含两个操作，即`instance.FuzzerCmd(args)`和`inst.Run(mgr.cfg.Timeouts.VMRunningTime, mgr.vmStop, cmd)`，我们逐一分析：
 	- `instance.FuzzerCmd(args)`：  
 		该函数具体实现在“syzkaller/pkg/instance/instance.go”中的第483行：  
-		![在这里插入图片描述](https://i-blog.csdnimg.cn/direct/83cf19f0c53344d3b842e0c741753698.png#pic_center)  
+		![在这里插入图片描述](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/8af265067a039b674aad5524d9c52469.png)  
 		这个函数根据传入的参数生成对应的命令行参数字符串，其中包括了Fuzzer的路径、执行器的路径、实例的名称、架构、操作系统、远程管理器地址、沙盒模式、并发进程数、覆盖率选项、调试模式、是否执行测试以及其它可选参数。具体来说，做了如下操作：
 		1. `osArg := ""`：初始化一个空字符串，用于存储操作系统参数。
 		2. `if targets.Get(args.OS, args.Arch).HostFuzzer {...}`：检查目标操作系统是否需要指定操作系统参数。如果需要，会设置`osArg`为`-os=操作系统`。
@@ -883,7 +883,7 @@ func main() {
 
 - 通过RPC客户端调用RPC服务器上名为“Manager”的服务的`Check`方法来对客户端的请求进行检查，并加载语料库和种子到服务器/虚拟机中（即`manager.Call("Manager.Check", r.CheckResult, nil)`函数调用）：  
 	此功能是由“/syzkaller/syz-manager/rpc.go”中的第213行实现的`Check`函数完成的。在此函数中，我们只需要关注`machineChecked`函数。  
-	![在这里插入图片描述](https://i-blog.csdnimg.cn/direct/535a0ecf1070423ab2508e7e81f67a94.png#pic_center)  
+	![在这里插入图片描述](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/442c57348c400de101f9a014e37c2b76.png)  
 	该函数实现在“/syzkaller/syz-manager/manager.go”中的第1401行。其主要功能是更新`Manager`结构体中的一些状态，包括保存最新的检查结果、更新目标的启用系统调用列表、更新全局环境的文件列表（Globs），以及加载语料库和种子（Corpus）。  
 	在这里我们着重关注`loadCorpus`这个函数，因为该函数最终实现了向虚拟机中加载语料库和种子的功能。该函数实现在“/syzkaller/syz-manager/manager.go”中的第632行。
 ```
@@ -955,7 +955,7 @@ func (mgr *Manager) loadCorpus() {
 
   在以上操作中，我们着眼于标红的部分，即“遍历语料库/种子文件中的每个记录，并将其加载到管理器中”，这部分的代码实现为`mgr.loadProg(rec.Val, minimized, smashed)`。该函数实现在“/syzkaller/syz-manager/manager.go”中的第689行。
 
-![在这里插入图片描述](https://i-blog.csdnimg.cn/direct/f634e451e95a424d924c4fb4380c004e.png#pic_center)
+![在这里插入图片描述](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/72c84857d28997a670256b2575f4e71d.png)
 
   该函数的主要目的是加载程序到管理器中。它接收一个字节切片`data`，以及两个布尔值`minimized`和`smashed`。在加载程序之前，它会调用`checkProgram`函数来检查程序是否有效，并且会检查程序中是否包含禁用的系统调用。如果程序中包含了禁用的系统调用，根据配置选项的不同，会有两种处理方式：
 
@@ -1043,11 +1043,11 @@ func (target *Target) BuildChoiceTable(corpus []*Prog, enabled map[*Syscall]bool
 
 - 使用目标系统的`CalculatePriorities`方法计算每个系统调用之间的优先级（即`target.CalculatePriorities(corpus)`函数调用）：  
 	该功能是由实现在“/syzkaller/prog/prio.go”的第27行的`CalculatePriorities`来完成的。  
-	![在这里插入图片描述](https://i-blog.csdnimg.cn/direct/b4bec4a9d07b4190aeb057eeeed0c40d.png#pic_center)  
+	![在这里插入图片描述](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/0b6d4243d25d429d569344cbaa50ef45.png)  
 	该函数计算系统调用的优先级，结合静态和动态的优先级信息。静态优先级（即`target.calcStaticPriorities()`函数调用）是预定义的，而动态优先级（即`target.calcDynamicPrio(corpus)`函数调用）则是从给定的测试用例集中计算得出的。最终返回一个二维数组，其中每个元素代表对应系统调用的优先级值。下面我们来对计算系统调用的优先级的方法进行详细分析：
 	- 静态优先级（即`target.calcStaticPriorities()`函数调用）：  
 		该函数实现在“/syzkaller/prog/prio.go”的第41行。  
-		![在这里插入图片描述](https://i-blog.csdnimg.cn/direct/59c44c3a85bd45369d1117b04802312e.png#pic_center)  
+		![在这里插入图片描述](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/2aa6672675afa7fb0feb9a021c305e60.png)  
 		这个函数主要用于计算系统调用之间的静态优先级。它通过分析系统调用之间的资源使用情况来确定优先级。具体步骤如下：
 		1. 首先，使用`calcResourceUsage`函数计算系统调用之间的资源使用情况，得到一个表示资源使用情况的数据结构。
 		2. 然后，根据资源使用情况，创建一个二维数组`prios`用于存储系统调用之间的优先级。数组的大小为系统调用的数量，每个元素表示一个系统调用与其它系统调用之间的优先级。
@@ -1057,7 +1057,7 @@ func (target *Target) BuildChoiceTable(corpus []*Prog, enabled map[*Syscall]bool
 		函数最终会返回一个二维数组，表示系统调用之间的静态优先级关系。
 	- 动态优先级（即`target.calcDynamicPrio(corpus)`函数调用）：  
 		该函数实现在“/syzkaller/prog/prio.go”的第146行。  
-		![在这里插入图片描述](https://i-blog.csdnimg.cn/direct/6d07487cef7d4bd59a0258c102098117.png#pic_center)  
+		![在这里插入图片描述](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/26daaacdf35b0b3c1244e8ebb0892927.png)  
 		这个函数用于计算系统调用之间的动态优先级，主要基于给定的测试用例集合（`corpus`）。具体步骤如下：
 		1. 创建一个二维数组`prios`用于存储系统调用之间的动态优先级。数组的大小为系统调用的数量，每个元素表示一个系统调用与其他系统调用之间的动态优先级。
 		2. 遍历测试用例集合中的每个测试用例。
@@ -1067,7 +1067,7 @@ func (target *Target) BuildChoiceTable(corpus []*Prog, enabled map[*Syscall]bool
 		6. 返回计算得到的动态优先级数组。
 		这个函数最终会返回一个二维数组，表示系统调用之间的动态优先级关系。
 - 创建一个二维切片`run`，其中每个元素代表一个系统调用，并存储了累积加权优先级之和（即`sum += prios[i][j]`）。这有助于在生成测试程序时进行快速的二分查找（该代码片段如下所示）：  
-	![在这里插入图片描述](https://i-blog.csdnimg.cn/direct/3beae2fff38f49908313e396b9e9317c.png#pic_center)  
+	![在这里插入图片描述](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/15bb8bab61a7fb90c5ccd2adb8d882be.png)  
 	这段代码的作用是计算系统调用的动态优先级，具体步骤如下：
 	1. 对于每个系统调用`target.Syscalls[i]`，检查是否在`enabledCalls`中启用。如果未启用，则跳过该系统调用，继续处理下一个系统调用。
 	2. 对于已启用的系统调用，创建一个大小为`len(target.Syscalls)`的整数切片`run[i]`，用于存储该系统调用与其他系统调用之间的累积优先级和。
@@ -1077,7 +1077,7 @@ func (target *Target) BuildChoiceTable(corpus []*Prog, enabled map[*Syscall]bool
 	此外，对于给定的一对系统调用`i`和`j`，用`prios[i][j]`表示对包含在系统调用`i`的程序中添加系统调用`j`是否可能得到新的覆盖的猜测。
 - 在需要时启动并发测试进程，根据并行测试进程数量创建相应数量的测试进程（即`proc.loop()`函数调用）：  
 	该功能是由实现在“/syzkaller/syz-fuzzer/proc.go”的第62行的`loop()`函数来完成的。  
-	![在这里插入图片描述](https://i-blog.csdnimg.cn/direct/03ef681a46d04f06b98fe487187d3c30.png#pic_center)  
+	![在这里插入图片描述](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/b48cb08d76e210fa80c754bce907012c.png)  
 	这段代码负责控制Fuzz测试的整个流程，不断地生成测试程序并执行Fuzz测试。具体分析如下：
 	1. 生成周期（Generate Period）：根据是否有真实覆盖信号（real coverage signal），决定了生成程序的频率。如果没有真实的覆盖信号，则生成程序的频率较高，因为回退信号较弱。
 	2. 循环执行：在无限循环中，不断地进行以下操作：
@@ -1094,13 +1094,13 @@ func (target *Target) BuildChoiceTable(corpus []*Prog, enabled map[*Syscall]bool
 	以上代码就是Syzkaller进行Fuzz的核心逻辑，其中上面标黄的部分更是核心。这些核心可以分为执行（对生成的程序执行Fuzz测试就是调用了`execute`函数）、生成（生成语料库/种子调用了Generate函数）和变异（对语料库/种子进行变异调用了`Mutate`函数，同时`smashInput`也调用了`Mutate`函数）三个过程（或者可以认为是三个核心函数）。而这些核心代码我们要放到后面的章节进行分析，故关于Syzkaller的Fuzz的过程就到此为止，因为Syzkaller后续执行需要其它组件进行相应的配合。
 - 进行Fuzzer的轮询循环，定期检查和处理一些事务，包括生成新的候选输入、记录统计信息以及向管理器报告状态（即`fuzzer.pollLoop()`函数调用）：  
 	该函数实现在“/syzkaller/syz-fuzzer/fuzzer.go”的第404行。其目的是定期检查和处理一些事务，包括生成新的候选输入、记录统计信息以及向管理器报告状态。  
-	![在这里插入图片描述](https://i-blog.csdnimg.cn/direct/7d9442b462f640679c1121bef030e76e.png#pic_center)  
+	![在这里插入图片描述](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/c3e7064b41e6e2d597255adf071125b0.png)  
 	对于此函数我们要关注`fuzzer.poll`函数调用，因为此函数用于向管理器发起轮询请求，以获取新的输入、候选输入和相关统计信息，并将其添加到Fuzzer中。此函数实现在“/syzkaller/syz-fuzzer/fuzzer.go”的第443行。  
-	![在这里插入图片描述](https://i-blog.csdnimg.cn/direct/ac3f3772002b445b81c8f607e5d48b15.png#pic_center)  
+	![在这里插入图片描述](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/f5b958d32604a0bf83bf61698350ca4b.png)  
 	对于此函数我们主要关注`fuzzer.manager.Call("Manager.Poll", a, r);`，其目的是通过RPC调用向管理器发出轮询请求，请求管理器返回新的输入、候选输入和相关统计信息。而此处调用了在“/syzkaller/syz-manager/rpc.go”的第328行实现的`Poll`函数，该函数用于处理来自Fuzzer实例的轮询请求，主要功能包括合并统计信息、处理最大覆盖信号、准备并发送候选输入和新输入，并记录处理过的请求信息。该函数看起来虽然很长，不过我们只需要关注该函数的`serv.mgr.candidateBatch(serv.batchSize)`部分代码，因为正是该函数调用完成了对初始语料/种子的加载（或者说初始测试用例的加载）。  
-	![在这里插入图片描述](https://i-blog.csdnimg.cn/direct/058c76482dd14a8f8772ca610e7aac01.png#pic_center)  
+	![在这里插入图片描述](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/a222844370394621590aec0b4941a286.png)  
 	我们关注的`candidateBatch`函数实现在“/syzkaller/syz-manager/manager.go”的第1453行。  
-	![在这里插入图片描述](https://i-blog.csdnimg.cn/direct/81bf0273e0574ff58d80bd2d622238a6.png#pic_center)  
+	![在这里插入图片描述](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/e8dafb9c17c5ca3666d32c8c17d535df.png)  
 	这个函数用于从`Manager`的候选输入队列中提取一批候选输入，并在提取后更新队列状态。具体步骤如下：
 	1. 首先获取`Manager`的互斥锁，以确保在操作候选输入队列时不会发生竞争条件。
 	2. 初始化一个空的结果数组`res []rpctype.Candidate`，用于存储提取的候选输入。
@@ -1119,11 +1119,11 @@ func (target *Target) BuildChoiceTable(corpus []*Prog, enabled map[*Syscall]bool
 
   经过之前章节的分析，我们清楚syz-executor进程由`proc.execute(proc.execOpts, item.p, item.flags, StatCandidate, false)`函数调用启动。而`execute`函数实现在“/syzkaller/syz-fuzzer/proc.go”的第256行。
 
-![在这里插入图片描述](https://i-blog.csdnimg.cn/direct/b048e2f404f54283b6372fcfd248e560.png#pic_center)
+![在这里插入图片描述](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/e0b56132c7227d0f388aa7fb2f2846c8.png)
 
   该函数的主要作用是执行给定的程序（`prog.Prog`），并根据执行结果进行处理。不过我们要关注`proc.executeRaw(execOpts, p, stat)`这个函数调用，因为该函数最终真正的执行了给定的程序。该函数实现在“/syzkaller/syz-fuzzer/proc.go”的第324行。
 
-![在这里插入图片描述](https://i-blog.csdnimg.cn/direct/16dec3f220784029a258931ce0623314.png#pic_center)
+![在这里插入图片描述](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/9fd1a12d740d43a7ded6435256336964.png)
 
 该函数的作用是执行给定的程序（`prog.Prog`），并返回执行结果信息。让我们逐步解释这段代码的功能：
 
@@ -1139,16 +1139,16 @@ func (target *Target) BuildChoiceTable(corpus []*Prog, enabled map[*Syscall]bool
 
 - 在每次循环中，首先尝试重启执行器（executor），以确保它处于可用状态。如果执行器无法重启，则会导致错误，并在下一次循环中进行重试（即`proc.env.RestartIfNeeded(p.Target)`函数调用）：  
 	该功能是由实现在“/syzkaller/pkg/ipc/ipc.go”的第304行的`RestartIfNeeded`函数实现的。  
-	![在这里插入图片描述](https://i-blog.csdnimg.cn/direct/1322fc010ed047fba1da9f72a6225405.png#pic_center)  
+	![在这里插入图片描述](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/84c87d96986316c10a4c37a8947b97c8.png)  
 	这个方法用于确保执行器进程处于可用状态，如果需要重新启动，则重新启动它。不过我们关注`makeCommand(env.pid, env.bin, env.config, env.inFile, env.outFile, env.out, tmpDirPath)`这个函数调用，因为该函数创建执行器进程的命令对象。该函数实现在“/syzkaller/pkg/ipc/ipc.go”的第571行。这个函数看起来很长，不过我们只需要关注下图中红框和红箭头部分的代码。  
-	![在这里插入图片描述](https://i-blog.csdnimg.cn/direct/38da906a6f4b44abae169a07a248187f.png#pic_center)  
+	![在这里插入图片描述](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/14bb6b691ef222ca43ca14f1cca48748.png)  
 	因为在这里首先创建syz-executor进程的命令对象`cmd`（即第一个红框处的代码），然后通过创建好的命令对象`cmd`来启动syz-executor进程（即第二个红框处的代码）
 	故通过以上代码就完成了syz-executor进程的初始化（即启动了之前传入虚拟机中的名为“syz-executor”二进制文件），这些环节都是一环套一环的，此时我们就可以进行后面的操作了。
 - 然后，通过`proc.env.Exec(opts, p)`方法执行程序，该方法返回执行结果的输出、信息以及是否出现挂起（hang）的情况（即`proc.env.Exec(opts, p)`函数调用）：  
 	该功能是由实现在“/syzkaller/pkg/ipc/ipc.go”的第255行的`Exec`函数实现的。  
-	![在这里插入图片描述](https://i-blog.csdnimg.cn/direct/5c6fc762a48845e989b1d0b8e6e9c572.png#pic_center)  
+	![在这里插入图片描述](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/54fe02f95df7d072e20c25089e90cc1c.png)  
 	该方法主要用于执行给定的程序。不过我们只需要关心`env.cmd.exec(opts, progData)`这个函数调用，因为该函数最最终执行了给定的程序。该函数实现在“/syzkaller/pkg/ipc/ipc.go”的第761行。  
-	![在这里插入图片描述](https://i-blog.csdnimg.cn/direct/002e6e3e56074f5d970e8a35ecd55508.png#pic_center)  
+	![在这里插入图片描述](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/ba65cfab27bef32ff0c24b0d039886e3.png)  
 	该函数的目的是将待执行/测试的程序（语料库/种子文件）传输给syz-executor执行，其核心功能由`c.outwp.Write(progData);`完成，故此时syz-executor已经接收到了待执行/测试的程序（语料库/种子文件），下面就要开始对syz-executor中的核心代码进行分析了。
 
   根据以上分析我们知道，最终Syzkaller将待执行/测试的程序（语料库/种子文件）传输给syz-executor去执行，所以我们就要来到“/syzkaller/executor/executor.cc”的第422行的`main`函数（注：syz-executor由C++语言编写）中来看syz-executor究竟进行了什么操作。
@@ -1324,7 +1324,7 @@ int main(int argc, char** argv)
 
   整体来说，这段代码主要实现了命令行解析、命令处理以及相应操作的执行，其中涉及了内存映射、SEGV信号处理、控制管道的设置、覆盖率检测、沙盒操作等功能。其中最重要的功能就是上面标红的部分，具体来说是下面的代码：
 
-![在这里插入图片描述](https://i-blog.csdnimg.cn/direct/c02c32a31a6c45b2badb0d50d2b9858a.png#pic_center)
+![在这里插入图片描述](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/6f6723322009962062d58ddc4cf29d2f.png)
 
   这部分代码会根据不同的沙盒类型，来选择对应的操作。因为我们使用Linux系统作为虚拟机进行Fuzz，所以最终执行的就是对Linux系统沙盒的具体操作，即调用了`do_sandbox_none()`函数，而该函数实现在“/syzkaller/executor/common\_linux.h”的第4054行。
 
@@ -1395,27 +1395,27 @@ static int do_sandbox_none(void)
 
   这部分代码很多，不过我们只需要关心上面标红的部分（即“调用`loop`函数执行主循环”，这才是syz-executor执行的核心函数），这部分功能通过调用`loop()`函数来完成，而`loop()`函数又实现在“/syzkaller/executor/common.h”的第629行和第774行。这里虽然有两处`loop()`函数的具体实现，不过我们并不关心其函数内部究竟做了什么事情，而是关心这两个`loop()`函数都调用了`execute_one()`函数。而`execute_one()`函数实现在“syzkaller/executor/executor.cc”的第753行，这个函数代码很多，不过我们并不关注，我们只需要知道该函数负责执行输入的程序，并确保系统调用能够顺利完成即可。对于此函数值得注意的一点是，其调用了`schedule_call()`函数。
 
-![在这里插入图片描述](https://i-blog.csdnimg.cn/direct/92069cb804bd4ccc9edf2b5a3409f728.png#pic_center)
+![在这里插入图片描述](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/8d5247f9e5fd525aef4f842bd36e5392.png)
 
   `schedule_call()`函数实现在“syzkaller/executor/executor.cc”的第970行，该函数用于安排系统调用的执行，并确保选定的线程可以执行该系统调用。这个函数的核心是调用了`thread_create()`函数。
 
-![在这里插入图片描述](https://i-blog.csdnimg.cn/direct/2933a59630f2440db91d6f1f4490dc50.png#pic_center)
+![在这里插入图片描述](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/641355eba3ae0f13cc087e7ccced9a29.png)
 
   `thread_create()`函数实现在“syzkaller/executor/executor.cc”的第1217行，该函数用于创建线程对象，并根据需要进行相关的初始化工作，包括覆盖率收集和线程的事件初始化。这个函数的核心是调用了`thread_start`函数。
 
-![在这里插入图片描述](https://i-blog.csdnimg.cn/direct/29ccc5b5d7d84f2da11b37df00785b0c.png#pic_center)
+![在这里插入图片描述](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/7b2a5494a84128986ee69192e7b2bd14.png)
 
   `thread_start`函数（实现在“/syzkaller/executor/common.h”的第354行）用于启动线程并执行指定的函数，具有一定的重试机制以应对可能的资源不足情况。我们并不向下继续分析`thread_start`函数具体都做了什么，而是注意`thread_start`函数中传入的`worker_thread`参数，而`worker_thread`实际是一个函数，该函数实现在“syzkaller/executor/executor.cc”的第1244行。在`thread_start`函数内部调用了`worker_thread()`函数。而对于`worker_thread()`函数，我们也不关心它都做了什么，我们只需要注意到其调用了`execute_call()`函数。
 
-![在这里插入图片描述](https://i-blog.csdnimg.cn/direct/9e6c5dc3b2ec411e8433f13e4ab0b818.png#pic_center)
+![在这里插入图片描述](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/ca63b734aa851132c45081ecf2760c8f.png)
 
   `execute_call()`函数实现在“syzkaller/executor/executor.cc”的第1259行，该函数负责执行系统调用，并记录执行结果，以便后续的分析和处理。我们主要关注在该函数中对`execute_syscall()`函数的调用。
 
-![在这里插入图片描述](https://i-blog.csdnimg.cn/direct/546d5d8dad384a6dab494f43049dc065.png#pic_center)
+![在这里插入图片描述](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/972e21b8d83297dcad4dacf146806609.png)
 
   `execute_syscall()`函数实现在“/syzkaller/executor/executor\_linux.h”的第72行。
 
-![在这里插入图片描述](https://i-blog.csdnimg.cn/direct/e8f0750f32224fa984eb1b725c3f1c70.png#pic_center)
+![在这里插入图片描述](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/affa487d9e1b425d48c029cfb55e392c.png)
 
   这段代码定义了`execute_syscall()`函数，它用于执行系统调用。下面就让我们逐步分析该函数：
 
@@ -1432,7 +1432,7 @@ static int do_sandbox_none(void)
 
   经过之前章节的分析，我们清楚Generate进程由`proc.fuzzer.target.Generate(proc.rnd, prog.RecommendedCalls, ct)`函数调用启动。而`Generate`函数实现在“/syzkaller/prog/generation.go”的第12行。
 
-![在这里插入图片描述](https://i-blog.csdnimg.cn/direct/fab5b2a5e89b4fdbbd65ab4007690390.png#pic_center)
+![在这里插入图片描述](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/b88dd2a9ef1da389c017edf0f8245d1d.png)
 
   该函数用于生成具有指定数量系统调用的随机程序，并确保这些程序的结构和内容符合预期，其实现的主要步骤如下：
 
@@ -1447,7 +1447,7 @@ static int do_sandbox_none(void)
 
   其中核心步骤为上面标红的部分，其功能由`r.generateCall(s, p, len(p.Calls))`函数调用实现，而`generateCall()`函数实现在“/syzkaller/prog/rand.go”的第578行。
 
-![在这里插入图片描述](https://i-blog.csdnimg.cn/direct/7a6855b4cbee4a9a958fc44a38fd77ba.png#pic_center)
+![在这里插入图片描述](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/a6159ead73f6e16c22c19287d632999c.png)
 
   该方法的作用是根据当前的程序状态和一些随机性，以及可能的偏向，选择并生成一个特定的系统调用序列。下面我们将逐步分析该方法的功能：
 
@@ -1466,12 +1466,12 @@ static int do_sandbox_none(void)
 
 - 获取特定索引`idx`处的系统调用信息（即`meta := r.target.Syscalls[idx]`操作）：  
 	其实这里并不涉及函数调用，不过有一个很重要的结构，即`Syscalls`结构体，该结构体定义在“/syzkaller/prog/types.go”的第12行。  
-	![在这里插入图片描述](https://i-blog.csdnimg.cn/direct/de3a80999da540ec8106798930a31bea.png#pic_center)  
+	![在这里插入图片描述](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/f2a3667bfcf6db991e8961627baa5b0c.png)  
 	该结构体描述了一个系统调用的属性，包括名称、内核系统调用号、参数列表、返回类型以及与之相关的资源描述。可以认为这是一个模板，Generate进程就是根据这个模板生成的对系统调用的描述来生成具体的系统调用及其对应参数。  
 	其实这个模板属于中间层，它将“syzkaller/sys/linux/”目录（这里我们因为测试使用的Linux系统，所以打开Linux目录，如果测试的其它内容，只需要打开对应目录即可）中的文件的内容以`Syscalls`结构体为模板生成对应系统调用的相关信息。“syzkaller/sys/linux/”目录中的文件如下图所示：  
-	![在这里插入图片描述](https://i-blog.csdnimg.cn/direct/b392d3aa84314a27bc00a5a612285fa2.png#pic_center)  
+	![在这里插入图片描述](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/d80993d6630db2265d61fa3074efb31c.png)  
 	我们可以随便打开一个文件看看，比如打开名为“aio.txt.const”的文件，其中的内容如下所示。  
-	![在这里插入图片描述](https://i-blog.csdnimg.cn/direct/bc73827b595741ab929271d76712c924.png#pic_center)  
+	![在这里插入图片描述](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/1a91db5d1e91edbd2624eb77ef1459a0.png)  
 	这段代码是由syz-sysgen生成的，用于描述不同架构下的异步IO系统调用和相关常量。以下是代码中的一些关键内容：
 	- `arches`：定义了支持的架构列表，包括386、amd64、arm等。
 	- `IOCB_CMD_XXXX`：定义了不同类型的IO控制命令，如PREAD、PWRITE等。
@@ -1479,12 +1479,12 @@ static int do_sandbox_none(void)
 	- `__NR_XXXX`：定义了不同架构下的异步IO系统调用号，如io\_setup、io\_submit等。
 	该文件提供了跨不同架构的异步IO系统调用和相关常量的映射关系，是Syzkaller用于在不同架构下生成系统调用代码的重要参考数据。其它文件也是类似内容，我们不再展开。此外，这些文件及其中内容，都是作者提供的，我们并不需要进行修改。
 	最终这些文件会通过syz-extract和syz-sysgen的配合，生成以`Syscalls`结构体为模板的系统调用信息结构。最终生成的内容保存在“syzkaller/sys/linux/gen/amd64.go”文件（因为我们测试的系统是amd64架构，所以这里打开的是amd64.go，如果是其它架构，只需要打开对应文件即可）中，具体内容如下所示：  
-	![在这里插入图片描述](https://i-blog.csdnimg.cn/direct/6cbd6875e4f949bebb730c391864fd19.png#pic_center)
+	![在这里插入图片描述](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/b9e6a59d9fbf9a000dbff63d5a973cb3.png)
 	其实这里生成了很多很多系统调用的信息，不过由于篇幅原因，肯定不能展开了，不过这些系统调用信息就用到了本章节Generate进程生成系统调用和对应的参数的功能上面了。最终Generate进程就会根据此模板内容，对目标系统调用生成测试用例以及参数。
 	各位读者应该注意到了，这里涉及到syz-extract和syz-sysgen这两个二进制文件，不过由于这两个二进制文件的执行过程并不是我们分析的主线，所以就不进行过多赘述，我们只需要知道它们是用于将给定的系统调用信息转换为指定的系统调用模板结构，以及Syzkaller在执行的过程中，调用了这两个二进制文件即可。所以这部分内容算是支线分析，只需要简单介绍。
 - 使用选定的系统调用的元信息，调用`generateParticularCall`方法来生成一个特定的系统调用（即`r.generateParticularCall(s, meta)`函数调用）：  
 	该函数实现在“/syzkaller/prog/rand.go”文件的第593行，其具体代码内容如下图所示。  
-	![在这里插入图片描述](https://i-blog.csdnimg.cn/direct/6096e94bfcb74733a2d57ac11715e38b.png#pic_center)  
+	![在这里插入图片描述](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/fcd750048dfc7a766e0368a948dd36ac.png)  
 	该函数负责生成特定系统调用的调用序列，并处理条件字段和参数大小分配等细节。它的实现逻辑如下：
 	1. 首先，检查该系统调用的属性。如果该系统调用被禁用（Disabled），则会通过`panic`函数抛出异常，指示禁用的系统调用无法生成调用序列。同样地，如果系统调用被标记为不生成（NoGenerate），则会抛出异常，指示不生成调用序列的系统调用。
 	2. 如果系统调用没有被禁用或标记为不生成，那么就创建一个新的调用对象（Call）。调用对象的元数据（`meta`）来自传入的参数，即待生成系统调用的元数据。
@@ -1492,9 +1492,9 @@ static int do_sandbox_none(void)
 	4. 调用`patchConditionalFields`方法对生成的参数列表进行修补，以处理条件字段。这个方法可能会生成额外的调用序列（`moreCalls`）。
 	5. 最后，调用`assignSizesCall`方法为系统调用分配大小，并将生成的调用对象添加到调用序列中。如果有额外的调用序列，则也会将它们添加到结果中。
 	我们主要关注上面标红部分的具体代码执行逻辑，即`r.generateArgs(s, meta.Args, DirIn)`函数调用，此`generateArgs()`函数实现在“/syzkaller/prog/rand.go”中的第670行。  
-	![在这里插入图片描述](https://i-blog.csdnimg.cn/direct/e3a4730f32ba4d6a9a61f3fccc4a65b9.png#pic_center)  
+	![在这里插入图片描述](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/f8251643fcaefd300d0e917a7a0d50a4.png)  
 	该函数用于生成调用的参数列表，并收集在生成参数过程中产生的额外调用列表。我们只需要关注该函数中的`r.generateArg(s, field.Type, field.Dir(dir))`函数调用，该`generateArg()`函数实现在“/syzkaller/prog/rand.go”中的第687行。  
-	![在这里插入图片描述](https://i-blog.csdnimg.cn/direct/22679b246a9a429d9579e83ab034c7e8.png#pic_center)  
+	![在这里插入图片描述](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/a741296694702d1debfc4eee6fc85d6b.png)  
 	这里只涉及到`generateArgImpl()`函数，故继续向下分析。`generateArgImpl()`函数实现在“/syzkaller/prog/rand.go”中的第691行。
 ```
 func (r *randGen) generateArgImpl(s *state, typ Type, dir Dir, ignoreSpecial bool) (arg Arg, calls []*Call) {
@@ -1558,15 +1558,15 @@ func (r *randGen) generateArgImpl(s *state, typ Type, dir Dir, ignoreSpecial boo
 
   该函数的核心是上面标红的部分，即`typ.generate(r, s, dir)`函数调用，`generate()`函数实际是一个接口，定义在`/syzkaller/prog/types.go`的第178行。
 
-![在这里插入图片描述](https://i-blog.csdnimg.cn/direct/2bb2bc0002fd4103bfe9e799f0420fe6.png#pic_center)
+![在这里插入图片描述](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/aff2d362502cebca1da72e435536af78.png)
 
   该接口共实现了14种方法，每种方法对应一种类型的参数值的具体生成，如下图所示。
 
-![在这里插入图片描述](https://i-blog.csdnimg.cn/direct/0b7af55b98fa4f37a812e8bad3ead5a4.png#pic_center)
+![在这里插入图片描述](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/a63fb8cae1a8a3aed36d4af351990273.png)
 
   我们可以点击查看ArrayType类型关于`generate()`函数的具体实现。可以发现ArrayType类型关于`generate()`函数的具体实现在“/syzkaller/prog/rand.go”的第858行。
 
-![在这里插入图片描述](https://i-blog.csdnimg.cn/direct/3dd6c820bf9044cca9bda1b763f4a6ed.png#pic_center)
+![在这里插入图片描述](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/f75bb6e892ad76b4467edc5259639f00.png)
 
   该方法负责生成数组类型的参数，并返回生成的参数对象列表以及生成的额外调用列表。该方法的具体逻辑如下：
 
@@ -1577,7 +1577,7 @@ func (r *randGen) generateArgImpl(s *state, typ Type, dir Dir, ignoreSpecial boo
 
   可以发现，最终数组类型的参数无非就是通过随机生成的，并没有什么特殊的地方，可能就是对于参数的调整以及处理比其它工具更为完善。下面我们再来按照同样的方法查看IntType类型关于`generate()`函数的具体实现。可以发现IntType类型关于`generate()`函数的具体实现在“/syzkaller/prog/rand.go”的第844行。
 
-![在这里插入图片描述](https://i-blog.csdnimg.cn/direct/52e26101e6cc4ef99bf943383c6e9a51.png#pic_center)
+![在这里插入图片描述](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/d7a3a0b52ce02d2d22f444572d48a5b7.png)
 
   用于生成整数类型参数的函数。它根据整数类型的定义，生成一个具体的整数值，并将其封装为一个参数返回。具体来说：
 
@@ -1596,7 +1596,7 @@ func (r *randGen) generateArgImpl(s *state, typ Type, dir Dir, ignoreSpecial boo
 
   经过之前章节的分析，我们清楚Mutate进程由`p.Mutate(proc.rnd, prog.RecommendedCalls, ct, proc.fuzzer.noMutate, fuzzerSnapshot.corpus)`函数调用启动。而`Mutate`函数实现在“/syzkaller/prog/mutation.go”的第27行。
 
-![在这里插入图片描述](https://i-blog.csdnimg.cn/direct/04e7f1172f5a44c291f503192618fb57.png#pic_center)
+![在这里插入图片描述](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/eccfc5c3c2ba58e60ef22a94fa3eb7ba.png)
 
   该函数用于对给定的程序进行变异操作，以生成新的程序版本，其中包括压缩、拼接、插入、修改和移除调用等操作。其具体逻辑如下。
 
@@ -1618,9 +1618,9 @@ func (r *randGen) generateArgImpl(s *state, typ Type, dir Dir, ignoreSpecial boo
 
 1. `squashAny()`  
 	该函数实现在“/syzkaller/prog/mutation.go”的第94行。该函数的作用是从程序中随机选取一个复杂指针，将其指向的参数压缩为ANY类型。如果压缩后的ANY类型包含数据块（blobs），则对其中的一个数据块进行变异。  
-	![在这里插入图片描述](https://i-blog.csdnimg.cn/direct/84e270a709c94ac5aec2d3c95be6f064.png#pic_center)  
+	![在这里插入图片描述](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/b1d8d5d25d0d8f8147f5d12cb6f7f14a.png)  
 	该段代码的核心部分是`mutateData(r, arg.Data(), 0, maxBlobLen)`函数调用，`mutateData()`函数实现在“/syzkaller/prog/mutation.go”的第710行。  
-	![在这里插入图片描述](https://i-blog.csdnimg.cn/direct/5b63b8561c4d4a26a2ce29da610806fd.png#pic_center)  
+	![在这里插入图片描述](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/9205cf5b4c2146d7f4bc4b741b88c02a.png)  
 	这个函数用于对数据进行突变，即在一定范围内修改数据内容以模拟程序中的数据变化。主要逻辑如下：
 	1. 通过`mutateDataFuncs`切片随机选择一个数据变异函数`f`。
 	2. 使用选定的函数`f`对数据进行变异，并返回变异后的数据和一个布尔值`stop`。
@@ -1762,14 +1762,14 @@ var mutateDataFuncs = [...]func(r *randGen, data []byte, minLen, maxLen uint64) 
 
 2. `splice()`  
 	该函数实现在“/syzkaller/prog/mutation.go”的第77行。  
-	![在这里插入图片描述](https://i-blog.csdnimg.cn/direct/8ba0837b7f4f4bd794ceca22b2281c4b.png#pic_center)  
+	![在这里插入图片描述](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/f8d93bf8629af7c100dccf83ebc02fa9.png)  
 	该函数用于生成新的测试用例（系统调用），通过将两个现有的程序片段进行组合，以创建一个新的测试用例（系统调用）。具体来说：
 	1. 从语料库中随机选择一个程序`p0`。
 	2. 随机选择一个索引`i`，将目标程序`ctx.p`的调用保留到索引`i`（不包括索引`i`），然后将程序`p0`从索引`i`（包括索引`i`）开始的调用连接到`ctx.p`的调用列表中。
 	3. 如果连接后的调用数量超过了规定的最大调用数量`ctx.ncalls`，则删除超出部分的调用。
 3. `insertCall()`  
 	该函数实现在“/syzkaller/prog/mutation.go”的第141行。  
-	![在这里插入图片描述](https://i-blog.csdnimg.cn/direct/85478a70f1794fc3b018594164fdf83f.png#pic_center)  
+	![在这里插入图片描述](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/544d1cf55d80acf2e425e84b8caa36e5.png)  
 	该函数的作用是在现有系统调用序列的随机位置插入一个新的调用，有一定的偏向性，更倾向于在系统调用序列的末尾进行插入。如果系统调用序列已经包含了指定数量的系统调用，则不会插入新的调用。具体步骤如下：
 	1. 检查系统调用序列的系统调用数量是否已经达到指定的`ncalls`。
 	2. 如果系统调用序列的系统调用数量已经达到了指定的上限，则函数返回`false`，表示无法插入新的系统调用。
@@ -1780,7 +1780,7 @@ var mutateDataFuncs = [...]func(r *randGen, data []byte, minLen, maxLen uint64) 
 	7. 函数返回`true`，表示成功插入新的系统调用。
 4. `mutateArg()`  
 	该函数实现在“/syzkaller/prog/mutation.go”的第172行。  
-	![在这里插入图片描述](https://i-blog.csdnimg.cn/direct/b9f26d7c27d947ee85e2a2b1b0f88083.png#pic_center)  
+	![在这里插入图片描述](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/1e18e2e9ef164764c9ff7f2074befeb6.png)  
 	这个函数的目的是通过变异参数来增加测试用例的多样性和复杂性，以便更好地进行Fuzz测试。它的操作步骤如下：
 	1. 如果系统调用序列中没有系统调用，则返回`false`，表示没有进行变异。
 	2. 选择一个随机的系统调用，通过调用`chooseCall`函数来完成。
@@ -1793,7 +1793,7 @@ var mutateDataFuncs = [...]func(r *randGen, data []byte, minLen, maxLen uint64) 
 	9. 如果需要，更新系统调用的大小信息。
 	10. 如果变异成功，则返回`true`，表示已经进行了变异。
 	该函数的核心为上面标红的部分，即`p.Target.mutateArg(r, s, arg, argCtx, &updateSizes)`函数调用，`mutateArg`函数实现在“/syzkaller/prog/mutation.go”的第240行。  
-	![在这里插入图片描述](https://i-blog.csdnimg.cn/direct/2718e749ea874f13b4c9292f091ae771.png#pic_center)  
+	![在这里插入图片描述](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/c2b29340285b88a836facb2044f864ab.png)  
 	这个函数的目的是对目标系统调用的参数进行变异。其具体逻辑如下：
 	1. `mutateArg`函数接收一个随机数生成器`r`、一个状态`s`、一个参数`arg`以及一个参数上下文`ctx`，还有一个布尔值指针`updateSizes`，用来表示是否需要更新参数的大小。
 	2. 在函数中，首先获取参数的基础大小（如果有的话），这通常是指参数引用的内存块的大小。
@@ -1804,11 +1804,11 @@ var mutateDataFuncs = [...]func(r *randGen, data []byte, minLen, maxLen uint64) 
 	4. 如果变异操作需要更新参数的大小且基础指针不为空，且在变异后参数的大小增加了，则更新基础指针的大小为新的大小，并为其分配新的地址。
 	5. 最后，返回生成的系统调用列表和一个布尔值表示是否成功进行了参数变异。
 	该函数的核心是上面标红的部分，即`arg.Type().mutate(r, s, arg, ctx)`函数调用，`mutate()`其实是一个函数接口，其声明在“/syzkaller/prog/types.go”的第179行。  
-	![在这里插入图片描述](https://i-blog.csdnimg.cn/direct/34fd0b387f8a416fb80690e54951df47.png#pic_center)  
+	![在这里插入图片描述](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/d93d12af1d856c572fc95ee02aabfe2a.png)  
 	该函数接口共为14种不同的参数类型，实现了14种对应的参数变异的具体函数。我们可以按照如下图所示的顺序进行查看。  
-	![在这里插入图片描述](https://i-blog.csdnimg.cn/direct/a616266f33ce49fc88cc693185b8c60a.png#pic_center)  
+	![在这里插入图片描述](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/a4ab1b98519fa50169eae278c666791d.png)  
 	比如我们在这里可以查看IntType类型中关于`mutate`接口的具体实现，其具体实现在“/syzkaller/prog/mutation.go”的第299行。  
-	![在这里插入图片描述](https://i-blog.csdnimg.cn/direct/2d7003be19944d72a188564a58da707f.png#pic_center)  
+	![在这里插入图片描述](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/b72e236f89270e3713a22c6e4e5237b9.png)  
 	这段代码是IntType类型的`mutate`方法，用于对整数类型的参数进行变异。以下是它的逻辑：
 	1. 首先，检查是否应该进行二进制变异。如果是，调用`regenerate`函数重新生成参数。
 	2. 如果不是二进制变异，那么参数被认为是ConstArg类型。根据参数的对齐方式，选择不同的变异方法。
@@ -1816,7 +1816,7 @@ var mutateDataFuncs = [...]func(r *randGen, data []byte, minLen, maxLen uint64) 
 	4. 在变异完成后，将参数值截断为类型位数大小，以确保结果值在合适的范围内。
 	5. 最后，返回生成的调用列表、重试标志（retry）和保留标志（preserve）。
 	该函数其实又对底层的具体参数变异逻辑进行了封装，如果我们想看具体是如何变异的，还需要继续向下分析。不过我们就不一一分析了，我们在这里以`mutateInt()`函数为了，来看看其具体是如何进行参数变异的，`mutateInt()`函数实现在“/syzkaller/prog/mutation.go”的第267行。  
-	![在这里插入图片描述](https://i-blog.csdnimg.cn/direct/df1539b3195442d99f59d407c05fb4bb.png#pic_center)  
+	![在这里插入图片描述](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/15d2024b5d58909703d2066c630cf966.png)  
 	这个`mutateInt()`函数用于对整数类型的参数进行变异。它采用随机策略，根据一定的概率选择以下操作之一：
 	1. 以`1/3`的概率将参数值增加一个随机的值（范围为`1`到`4`）。
 	2. 以`1/2`的概率将参数值减少一个随机的值（范围为`1`到`4`）。
@@ -1825,13 +1825,13 @@ var mutateDataFuncs = [...]func(r *randGen, data []byte, minLen, maxLen uint64) 
 	可以发现，参数变异的底层逻辑无非还是随机，即随机对参数进行变异（比如，增加参数值、减少参数值和对参数值进行按位与或运算）。对于其它变异函数以及其它类型的变异函数也都遵循这个逻辑，即随机的逻辑，只是实现的具体细节上可能有差异。我们就不一一分析了，感兴趣的读者可以自行查看。
 5. `removeCall()`  
 	该函数实现在“/syzkaller/prog/mutation.go”的第161行。  
-	![在这里插入图片描述](https://i-blog.csdnimg.cn/direct/f5fc50706c484924b5cc432e7b343ed9.png#pic_center)  
+	![在这里插入图片描述](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/d189e8e1bca76cfb692a2b437b6c0e8e.png)  
 	这个函数的作用是从程序中随机删除一个调用。它的实现逻辑如下：
 	1. 首先，检查程序中是否存在调用，如果不存在，则函数返回`false`，表示没有进行删除操作。
 	2. 然后，通过生成一个`0`到`len(p.Calls)-1`之间的随机整数来选择要删除的调用的索引。
 	3. 最后，调用程序的`RemoveCall`方法来从调用列表中删除选定的调用，并返回`true`，表示删除成功。
 	该函数的核心是上面标黄的部分，即`p.RemoveCall(idx)`函数调用。其中`RemoveCall()`函数实现在“/syzkaller/prog/prog.go”的第427行。  
-	![在这里插入图片描述](https://i-blog.csdnimg.cn/direct/a8f8ea6808ed4fd4bd92c68625de4451.png#pic_center)  
+	![在这里插入图片描述](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/e3257871e7c01690998bbca1eac786c1.png)  
 	这段代码实现了从系统调用的系统调用列表中删除指定索引的系统调用。其步骤如下：
 	1. 首先，获取要删除的系统调用`c`，它是系统调用列表`p.Calls`中索引为`idx`的元素。
 	2. 然后，遍历系统调用`c`的所有参数和返回值，并调用`removeArg`函数来删除它们。
@@ -1876,7 +1876,7 @@ $ sudo apt install tree
 $ su
 ```
 4. 输入密码后即可进入root用户权限：  
-	![在这里插入图片描述](https://i-blog.csdnimg.cn/direct/c7af0fe7885c409a88044af455ba3954.png#pic_center)
+	![在这里插入图片描述](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/f64489d22a21dfc755a5a9c858af6030.png)
 5. 然后进入系统的根目录后使用如下这些命令进行下载并解压，并且添加环境变量：
 ```
 # cd /
@@ -1886,7 +1886,7 @@ $ su
 # export PATH=$GOROOT/bin:$PATH
 ```
 6. 最后就可以输入`go version`命令查看go 1.20.1是否安装成功，如果出现如下内容，即代表go 1.20.1安装成功：  
-	![在这里插入图片描述](https://i-blog.csdnimg.cn/direct/108315cc66b84804b091d0b51bb6b306.png#pic_center)
+	![在这里插入图片描述](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/94bd635f75f4eb61f4ade7ce8a8f4e04.png)
 
 #### 2.1.2、使用源码安装系统
 
@@ -1895,7 +1895,7 @@ $ su
 $ su
 ```
 2. 输入密码后即可进入root用户权限：  
-	![在这里插入图片描述](https://i-blog.csdnimg.cn/direct/2a55bdf6b751447fa2ef22f5c25e551c.png#pic_center)
+	![在这里插入图片描述](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/d910244b176ef389193f6604fea35f96.png)
 3. 然后在系统的根目录中下载源码，并进入Syzkaller源代码目录进行编译：
 ```
 # cd /
@@ -1908,13 +1908,13 @@ $ su
 # tree ./bin/
 ```
 5. 编译完成后，在Syzkaller目录下会出现一个bin目录，此目录中的内容如下图所示，这些就是我们后面需要用到的二进制文件，此时我们就部署好了Syzkaller：  
-	![在这里插入图片描述](https://i-blog.csdnimg.cn/direct/176494fd115a4ed19c6e9f7f81677a6e.png#pic_center)
+	![在这里插入图片描述](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/5e5103d3e57f3020b9cedaa1745a3cf7.png)
 
    注：实际执行中遇到的问题及解决方法  
    A 问题1：
 
 1. 在步骤3对Syzkaller进行编译的时候，出现如下问题：  
-	![在这里插入图片描述](https://i-blog.csdnimg.cn/direct/0f3a5e76045242899d2a3f7ad26f33b3.png#pic_center)
+	![在这里插入图片描述](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/aa20ea24a6bb692fc1e97f4728811d22.png)
 2. 这是因为文件夹的所有者和现在的用户不一致，我们只需要执行如下命令即可：
 ```
 $ git config --global --add safe.directory "*"
@@ -1956,7 +1956,7 @@ CONFIG_SECURITYFS=y
 # make -j4
 ```
 6. 编译成功后，使用如下两条命令查看对应目录的内容，会出现如下箭头所指的红框所示的内容：  
-	![在这里插入图片描述](https://i-blog.csdnimg.cn/direct/3b2f1a734d1e4111b6ef605e796e5a1e.png#pic_center)
+	![在这里插入图片描述](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/843d47fc44e66688a8e01a7bd088939a.png)
 
 #### 2.2.2、配置测试虚拟机
 
@@ -1970,7 +1970,7 @@ CONFIG_SECURITYFS=y
 # ./create-image.sh
 ```
 2. 以上命令执行时间较长，等待执行完成后，可以使用`ll`命令查看执行结果，如果执行成功，会在此目录生成如下内容：  
-	![在这里插入图片描述](https://i-blog.csdnimg.cn/direct/468ada63409646e9b11a9f2fe2835f7f.png#pic_center)
+	![在这里插入图片描述](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/7553df50a13150d70f6ab6d5910c4578.png)
 3. 然后切换到系统的根目录，然后使用如下命令启动QEMU虚拟机：
 ```
 # cd /
@@ -1986,14 +1986,14 @@ CONFIG_SECURITYFS=y
 - `-nographic`：禁用图形显示，所有输出都将通过控制台输出
 - `-pidfile vm.pid 2>&1 | tee vm.log`：将QEMU进程pid储存在vm.pid这个文件中，并将执行过程中的标准错误和标准输出同时定向输出到控制台和vm.log文件中
 4. 出现以下内容，即代表成功，只需要输入`root`后按Enter即可，此时就进入QEMU虚拟机中了。另外需要注意的是，一直到Fuzz结束之前，此虚拟机都不要关闭，如果Fuzz结束或者有其它原因需要关闭这个虚拟机，只需要在此虚拟机内执行` init 0`命令即可：  
-	![在这里插入图片描述](https://i-blog.csdnimg.cn/direct/1b7c9106e78041148ee31527b11ac98b.png#pic_center)
+	![在这里插入图片描述](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/48609ae8f9fc7f5bb1e83a71473a5253.png)
 5. 进入虚拟机后我们暂时先不要做其它操作，我们首先在主机新开一个终端，顺序执行如下命令使用ssh来查看主机和这个虚拟机之间是否可以进行通信：
 ```
 $ cd /
 $ sudo ssh -i image-test/bullseye.id_rsa -p 10021 -o "StrictHostKeyChecking no" root@localhost
 ```
 6. 若出现如下内容，即代表主机和刚刚安装的虚拟机之间的通信没有问题：  
-	![在这里插入图片描述](https://i-blog.csdnimg.cn/direct/9c0edfa1643e440e826caa62280d3ec4.png#pic_center)
+	![在这里插入图片描述](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/b87f059129612e592810c83fcad6c7af.png)
 7. 既然主机和客户机之间的通信没有问题，那么我们在这个新打开的终端中执行如下命令，断开ssh连接：
 ```
 # exit
@@ -2009,7 +2009,7 @@ $ sudo ssh -i image-test/bullseye.id_rsa -p 10021 -o "StrictHostKeyChecking no" 
    A 问题1：
 
 1. 在步骤3第一次启动QEMU虚拟机的时候，出现如下问题：  
-	![在这里插入图片描述](https://i-blog.csdnimg.cn/direct/23c3f74b8fc449ff971258dd466b8e2c.png#pic_center)
+	![在这里插入图片描述](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/bd19435a4c1b20a258d356404a504814.png)
 2. 这是因为我们在“2.2.1、下载编译测试内核”章节的步骤4中填入内容后，忘记删除各自对应的注释，导致编译内核时新的配置被重写了。为了解决这个问题，我们首先执行如下命令进入Linux内核源代码目录：
 ```
 # cd /linux-5.14/
@@ -2019,13 +2019,13 @@ $ sudo ssh -i image-test/bullseye.id_rsa -p 10021 -o "StrictHostKeyChecking no" 
 # gedit .config
 ```
 4. 然后按“Ctrl+F”搜索“CONFIG\_KCOV”，将搜索到的箭头所指红框一行内容删除：  
-	![在这里插入图片描述](https://i-blog.csdnimg.cn/direct/8cd050dbe2c942fa8ec57b2796617347.png#pic_center)
+	![在这里插入图片描述](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/7622e9309c5bf8d7c3453ebea8825c26.png)
 5. 继续按“Ctrl+F”搜索“CONFIG\_KASAN”，将搜索到的箭头所指红框一行内容删除：  
-	![在这里插入图片描述](https://i-blog.csdnimg.cn/direct/04c6d73ada474f83924d0da337d2fc78.png#pic_center)
+	![在这里插入图片描述](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/0fb69a52e481e8f1d6652739b081e3ff.png)
 6. 继续按“Ctrl+F”搜索“CONFIG\_CONFIGFS\_FS”，将搜索到的箭头所指红框一行内容删除：  
-	![在这里插入图片描述](https://i-blog.csdnimg.cn/direct/62db3ba82eb64eedacb2ae7cfd072d6e.png#pic_center)
+	![在这里插入图片描述](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/3994d9b0dfe66466feca6a5e8fbf91f3.png)
 7. 继续按“Ctrl+F”搜索“CONFIG\_SECURITYFS”，将搜索到的箭头所指红框一行内容删除：  
-	![在这里插入图片描述](https://i-blog.csdnimg.cn/direct/3a4fc1d2f40343fbaf9271cdf18a76e7.png#pic_center)
+	![在这里插入图片描述](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/e721a8c812e43fa89e0e7ceab57392fb.png)
 8. 做完以上工作后，保存修改后关闭配置文件，然后重复执行步骤3，并继续向下操作即可
 
 #### 2.2.3、对Linux内核进行Fuzz
@@ -2082,9 +2082,9 @@ $ cd /syzkaller/
 $ sudo ./bin/syz-manager -config=setting.cfg
 ```
 4. 成功启动后，终端中会出现如下图所示的内容，我们需要保存下图红框处的Http地址，因为发现的崩溃、统计数据和其他信息都会在管理器配置的这个指定的Http地址上公开：  
-	![在这里插入图片描述](https://i-blog.csdnimg.cn/direct/057f2b97e4194536b6ff030a43ae16ae.png#pic_center)
+	![在这里插入图片描述](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/9b5c948c1d707784a0d2874468256d31.png)
 5. 将上一步获取到的地址用浏览器打开，会得到如下图所示的内容，这就代表Syzkaller已经成功开始Fuzz了，并且实时的运行结果会输出到“setting.cfg”文件中指定的“fuzzdir”目录（虚拟机中）中：  
-	![在这里插入图片描述](https://i-blog.csdnimg.cn/direct/679d6908a4c54f40bbef8e83e8219b3f.png#pic_center)
+	![在这里插入图片描述](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/560774e0bb918baae5747f5afb5affd2.png)
 
 ## 3、测试用例
 
@@ -2124,7 +2124,7 @@ CONFIG_SECURITYFS=y
 # make -j4
 ```
 6. 编译成功后，使用如下两条命令查看对应目录的内容，会出现如下箭头所指的红框所示的内容：  
-	![在这里插入图片描述](https://i-blog.csdnimg.cn/direct/c24cd132fb734bcca2c708accf3857ab.png#pic_center)
+	![在这里插入图片描述](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/bbf1eb1fd019efda9e740ddf8ccfc05d.png)
 
 #### 3.1.2、配置测试虚拟机
 
@@ -2138,21 +2138,21 @@ CONFIG_SECURITYFS=y
 # ./create-image.sh
 ```
 2. 若此目录生成如下内容，则代表执行成功：  
-	![在这里插入图片描述](https://i-blog.csdnimg.cn/direct/e4041ed63d7947e388ad2a084fbbe98d.png#pic_center)
+	![在这里插入图片描述](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/f60450b0ed1dfe23b4fbee856f581caa.png)
 3. 然后切换到系统的根目录，然后使用如下命令启动QEMU虚拟机：
 ```
 # cd /
 # qemu-system-x86_64 -m 2G -smp 2 -kernel /linux-5.14/arch/x86/boot/bzImage -append "console=ttyS0 root=/dev/sda earlyprintk=serial net.ifnames=0" -drive file=/images-test-linux5.14/bullseye.img,format=raw -net user,hostfwd=tcp:127.0.0.1:10021-:22 -net nic,model=e1000 -enable-kvm -nographic -pidfile vm.pid 2>&1 | tee vm.log
 ```
 4. 出现以下内容，即代表成功，只需要输入`root`后按Enter即可，此时就进入QEMU虚拟机中了。另外需要注意的是，一直到Fuzz结束之前，此虚拟机都不要关闭，如果Fuzz结束或者有其它原因需要关闭这个虚拟机，只需要在此虚拟机内执行` init 0`命令即可：  
-	![在这里插入图片描述](https://i-blog.csdnimg.cn/direct/deacab5980504055bf8fd94fd443fa25.png#pic_center)
+	![在这里插入图片描述](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/c628fab488afd3418a9e666e507c84c3.png)
 5. 进入虚拟机后我们暂时先不要做其它操作，我们首先在主机新开一个终端，顺序执行如下命令使用ssh来查看主机和这个虚拟机之间是否可以进行通信：
 ```
 $ cd /
 $ sudo ssh -i images-test-linux5.14/bullseye.id_rsa -p 10021 -o "StrictHostKeyChecking no" root@localhost
 ```
 6. 若出现如下内容，即代表主机和刚刚安装的虚拟机之间的通信没有问题：  
-	![在这里插入图片描述](https://i-blog.csdnimg.cn/direct/795732d483a04cf2ab76e8d559f1c73e.png#pic_center)
+	![在这里插入图片描述](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/66835a4d84ae1b6288e78747742a9688.png)
 7. 既然主机和客户机之间的通信没有问题，那么我们在这个新打开的终端中执行如下命令，断开ssh连接：
 ```
 # exit
@@ -2198,9 +2198,9 @@ $ cd /syzkaller/
 $ sudo ./bin/syz-manager -config=setting.cfg
 ```
 4. 成功启动后，终端中会出现如下图所示的内容，我们需要保存下图红框处的Http地址，因为发现的崩溃、统计数据和其他信息都会在管理器配置的这个指定的Http地址上公开：  
-	![在这里插入图片描述](https://i-blog.csdnimg.cn/direct/ea83b6a4e28b43d19ed081bf15a661ab.png#pic_center)
+	![在这里插入图片描述](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/8970532ece3a4ec0a85e84c8a4015846.png)
 5. 将上一步获取到的地址用浏览器打开，会得到如下图所示的内容，这就代表Syzkaller已经成功开始Fuzz了，并且实时的运行结果会输出到“setting.cfg”文件中指定的“fuzzdir”目录（虚拟机中）中：  
-	![在这里插入图片描述](https://i-blog.csdnimg.cn/direct/20e8cec5dc974c50a0fb2de7d98b6050.png#pic_center)
+	![在这里插入图片描述](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/d15e9c632bf238c7241524f6cb84bbbf.png)
 
 ### 3.2、对Linux 4.14内核进行Fuzz测试
 
@@ -2238,31 +2238,31 @@ CONFIG_SECURITYFS=y
 # make -j4
 ```
 6. 编译成功后，使用如下两条命令查看对应目录的内容，会出现如下箭头所指的红框所示的内容：  
-	![在这里插入图片描述](https://i-blog.csdnimg.cn/direct/9eebe4e6aacf4d92b1a5aff630c8e732.png#pic_center)
+	![在这里插入图片描述](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/cf4df720493375fc8316c824c80186db.png)
 
    注：实际执行中遇到的问题及解决方法  
    A 问题1：
 
 1. 在步骤5编译Linux 4.14内核时，出现如下问题：  
-	![在这里插入图片描述](https://i-blog.csdnimg.cn/direct/a951b05c3fbc47be8221f00ec38c1ca4.png#pic_center)
+	![在这里插入图片描述](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/5d98af4e752225dbaad01bd4ba3ffd84.png)
 2. 首先打开如下文件：
 ```
 # gedit scripts/selinux/genheaders/genheaders.c
 ```
 3. 在打开的文件中，删除红框和红箭头处所示的内容，保存修改后退出：  
-	![在这里插入图片描述](https://i-blog.csdnimg.cn/direct/e61aaa84d94d4b2ca5f063744ac154f6.png#pic_center)
+	![在这里插入图片描述](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/9e330ea451749792434de07e7d0ffd08.png)
 4. 然后再打开如下文件：
 ```
 # gedit scripts/selinux/mdp/mdp.c
 ```
 5. 在打开的文件中，删除红框和红箭头处所示的内容，保存修改后退出：  
-	![在这里插入图片描述](https://i-blog.csdnimg.cn/direct/ea891ef79bbd4c7fbb3a505b1e9516d8.png#pic_center)
+	![在这里插入图片描述](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/2978fc53a80e90f07b9313463ce144d5.png)
 6. 然后再打开如下文件：
 ```
 # gedit security/selinux/include/classmap.h
 ```
 7. 在打开的文件中，添加红框和红箭头处所示的内容，保存修改后退出：  
-	![在这里插入图片描述](https://i-blog.csdnimg.cn/direct/e665842dce2441e791061942d2aea9a0.png#pic_center)
+	![在这里插入图片描述](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/1deed22b70f68c5a3abca57c1948d362.png)
 8. 然后执行如下命令，清除之前的编译记录：
 ```
 # make clean
@@ -2272,7 +2272,7 @@ CONFIG_SECURITYFS=y
    B 问题2：
 
 1. 在步骤5编译Linux 4.14内核时，出现如下问题：  
-	![在这里插入图片描述](https://i-blog.csdnimg.cn/direct/a8309949574f489ab8d292bd1b8809ef.png#pic_center)
+	![在这里插入图片描述](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/cdd49eea208edacc2d8578de3b951065.png)
 2. 为了解决这个问题，我们首先创建并打开如下文件：
 ```
 # gedit patch-machine_kexec_64.patch
@@ -2365,21 +2365,21 @@ index 5d73c443e778b3..220e97841e494c 100644
 # ./create-image.sh
 ```
 2. 若此目录生成如下内容，则代表执行成功：  
-	![在这里插入图片描述](https://i-blog.csdnimg.cn/direct/26e2dc83908349e7aae82b618071abd0.png#pic_center)
+	![在这里插入图片描述](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/27174db6398605212721f43a3c1090eb.png)
 3. 然后切换到系统的根目录，然后使用如下命令启动QEMU虚拟机：
 ```
 # cd /
 # qemu-system-x86_64 -m 2G -smp 2 -kernel /linux-4.14/arch/x86/boot/bzImage -append "console=ttyS0 root=/dev/sda earlyprintk=serial net.ifnames=0" -drive file=/images-test-linux4.14/bullseye.img,format=raw -net user,hostfwd=tcp:127.0.0.1:10021-:22 -net nic,model=e1000 -enable-kvm -nographic -pidfile vm.pid 2>&1 | tee vm.log
 ```
 4. 启动QEMU虚拟机后，终端中不停刷新如下信息，就是无法启动QEMU虚拟机，目前仍没有排查出具体原因，故截至目前无法使用Syzkaller对Linux 4.14版本的内核进行Fuzz测试，后续如果解决此问题，将会更新此文档的这部分内容：  
-	![在这里插入图片描述](https://i-blog.csdnimg.cn/direct/8cf48bc3cf5c4890b4193d8512ffa1c7.png#pic_center)
+	![在这里插入图片描述](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/df0f79810a09cb706d3c8ef94a0f5b05.png)
 
 ## 4、总结
 
 ### 4.1、部署架构
 
   关于Syzkaller部署的架构图，如下所示。  
-![在这里插入图片描述](https://i-blog.csdnimg.cn/direct/0d94b44cace14c3eb940a44209fbd5f3.png#pic_center)
+![在这里插入图片描述](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/1d8dbbea003f9543c4833968ea7a6f4c.png)
 
   对于以上架构图，我们具体来看Syzkaller是否对其中的组件进行了修改。详情可参见下方的表格。
 
@@ -2449,26 +2449,26 @@ index 5d73c443e778b3..220e97841e494c 100644
 
 显示推荐内容
 
- [![](https://profile-avatar.csdnimg.cn/cff7f8e2180340ae8504f8c947ba6173_ironmanjay.jpg!1) IronmanJay](https://ironmanjay.blog.csdn.net/)
+ [![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/8b401b8f9e12e92a81619e4d56f4e7b8.png) IronmanJay](https://ironmanjay.blog.csdn.net/)
 
-- ![](https://csdnimg.cn/release/blogv2/dist/pc/img/toolbar/like.png) 29
+- ![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/fc29722986dfaa759687f3f50bac4868.png) 29
 	点赞
-- ![](https://csdnimg.cn/release/blogv2/dist/pc/img/toolbar/unlike.png)
+- ![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/25b4a4445d540cfdff9e9dcbf477595b.png)
 	踩
-- [![](https://csdnimg.cn/release/blogv2/dist/pc/img/toolbar/collect.png)  22](https://blog.csdn.net/IronmanJay/article/details/)
+- [![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/e62e7277ee39e0af238743390005ee5b.png)  22](https://blog.csdn.net/IronmanJay/article/details/)
 	收藏
-- [![](https://csdnimg.cn/release/blogv2/dist/pc/img/toolbar/comment.png) 1](https://blog.csdn.net/IronmanJay/article/details/#commentBox)
+- [![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/87ede3e3bf8c9f91b359020f72ccba4d.png) 1](https://blog.csdn.net/IronmanJay/article/details/#commentBox)
 	评论
-- [![](https://csdnimg.cn/release/blogv2/dist/pc/img/toolbar/share.png) 分享](https://blog.csdn.net/IronmanJay/article/details/)
+- [![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/54179f17279cbff209040ce084614d85.png) 分享](https://blog.csdn.net/IronmanJay/article/details/)
 	复制链接
 	分享到 QQ
 	分享到新浪微博
-	![](https://csdnimg.cn/release/blogv2/dist/pc/img/share/icon-wechat.png)扫一扫
-- [![打赏](https://csdnimg.cn/release/blogv2/dist/pc/img/toolbar/reward.png) 打赏](https://blog.csdn.net/IronmanJay/article/details/)
+	![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/20e8e4c4bfe501dd6197c79c6e98bd3d.png)扫一扫
+- [![打赏](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/cc0eb7a22ea8d201205c55df7e8a3e13.png) 打赏](https://blog.csdn.net/IronmanJay/article/details/)
 	打赏
-- ![](https://csdnimg.cn/release/blogv2/dist/pc/img/toolbar/more.png)
-	 ![打赏](https://csdnimg.cn/release/blogv2/dist/pc/img/toolbar/reward.png) 打赏![](https://csdnimg.cn/release/blogv2/dist/pc/img/toolbar/report.png) 举报
-	 ![](https://csdnimg.cn/release/blogv2/dist/pc/img/toolbar/report.png) 举报
+- ![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/1140e92b9ecdf58cf3875e1509d4b769.png)
+	 ![打赏](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/cc0eb7a22ea8d201205c55df7e8a3e13.png) 打赏![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/c891661a115ec42d2d6d01d24fbab5f0.png) 举报
+	 ![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/c891661a115ec42d2d6d01d24fbab5f0.png) 举报
 
 专栏目录
 
@@ -2507,7 +2507,7 @@ index 5d73c443e778b3..220e97841e494c 100644
 11. [5、参考文献](https://blog.csdn.net/IronmanJay/article/details/#t30)
 12. [总结](https://blog.csdn.net/IronmanJay/article/details/#t31)
 
-收起 ![](https://csdnimg.cn/release/blogv2/dist/pc/img/arrowup-line-top-White.png)
+收起 ![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/fb14f1ec01c0e2659facbecb25ec57d6.png)
 
 上一篇：
 
@@ -2517,11 +2517,11 @@ index 5d73c443e778b3..220e97841e494c 100644
 
 [【LeetCode每日一题】——95.不同的二叉搜索树 II](https://blog.csdn.net/IronmanJay/article/details/142548957)
 
-[![](https://profile-avatar.csdnimg.cn/cff7f8e2180340ae8504f8c947ba6173_ironmanjay.jpg!1)](https://ironmanjay.blog.csdn.net/)
+[![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/8b401b8f9e12e92a81619e4d56f4e7b8.png)](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/8b401b8f9e12e92a81619e4d56f4e7b8.png)
 
 [IronmanJay](https://ironmanjay.blog.csdn.net/ "IronmanJay")
 
-博客等级 ![](https://csdnimg.cn/identity/blog7.png)
+博客等级 ![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/1c8a7a7d8215f3d622de3410ebcf2877.png)
 
 码龄6年
 
@@ -2551,11 +2551,11 @@ index 5d73c443e778b3..220e97841e494c 100644
 
 评论 1
 
-![](https://csdnimg.cn/release/blogv2/dist/pc/img/closeBt.png)
+![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/a1a64fb7538927f3ed351d86204d21e2.png)
 
-![](https://csdnimg.cn/release/blogv2/dist/pc/img/commentArrowLeftWhite.png)被折叠的  条评论 [为什么被折叠?](https://blogdev.blog.csdn.net/article/details/122245662) [![](https://csdnimg.cn/release/blogv2/dist/pc/img/iconPark.png)到【灌水乐园】发言](https://bbs.csdn.net/forums/FreeZone)
+![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/1989e3f025de8615865a2224010a2042.png)被折叠的  条评论 [为什么被折叠?](https://blogdev.blog.csdn.net/article/details/122245662) [![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/ad0b00e7b82bd0490a667198d87e6376.png)到【灌水乐园】发言](https://bbs.csdn.net/forums/FreeZone)
 
-查看更多评论![](https://csdnimg.cn/release/blogv2/dist/pc/img/commentArrowDownWhite.png)
+查看更多评论![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/c413dfd758ce98e0a802566b73840370.png)
 
 添加红包
 
@@ -2587,15 +2587,15 @@ index 5d73c443e778b3..220e97841e494c 100644
 
 领取后你会自动成为博主和红包主的粉丝 [规则](https://blogdev.blog.csdn.net/article/details/128932621)
 
-![](https://profile-avatar.csdnimg.cn/default.jpg!2)
+![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/f8d84d3852e1cd07c00a67bf576a8159.png)
 
 hope\_wisdom
 
 发出的红包
 
-打赏作者![](https://csdnimg.cn/release/blogv2/dist/pc/img/closeBt.png)
+打赏作者![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/a1a64fb7538927f3ed351d86204d21e2.png)
 
-[![](https://profile-avatar.csdnimg.cn/cff7f8e2180340ae8504f8c947ba6173_ironmanjay.jpg!1)](https://ironmanjay.blog.csdn.net/)
+[![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/8b401b8f9e12e92a81619e4d56f4e7b8.png)](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/8b401b8f9e12e92a81619e4d56f4e7b8.png)
 
 IronmanJay
 
@@ -2605,9 +2605,9 @@ IronmanJay
 
 扫码支付：¥1
 
-![](https://csdnimg.cn/release/blogv2/dist/pc/img/pay-time-out.png) 获取中
+![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/29717c44b68d63d5affe3124a2f4bad3.png) 获取中
 
-![](https://csdnimg.cn/release/blogv2/dist/pc/img/newWeiXin.png) ![](https://csdnimg.cn/release/blogv2/dist/pc/img/newZhiFuBao.png) 扫码支付
+![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/5e7013242fc1a307b8e39fce938e8a87.png) ![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/5aec9cd1be71664303e00fb0f848edd1.png) 扫码支付
 
 您的余额不足，请更换扫码支付或[充值](https://i.csdn.net/#/wallet/balance/recharge?utm_source=RewardVip)
 
@@ -2617,26 +2617,26 @@ IronmanJay
 
 [使用余额支付](https://blog.csdn.net/IronmanJay/article/details/)
 
-![](https://csdnimg.cn/release/blogv2/dist/pc/img/pay-time-out.png) 点击重新获取
+![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/29717c44b68d63d5affe3124a2f4bad3.png) 点击重新获取
 
-![](https://csdnimg.cn/release/blogv2/dist/pc/img/weixin.png)![](https://csdnimg.cn/release/blogv2/dist/pc/img/zhifubao.png)![](https://csdnimg.cn/release/blogv2/dist/pc/img/jingdong.png)扫码支付
+![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/fc10c4816fbb5864e7bc4e2287d1abcd.png)![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/ae14b8bc59d224e7ea84d3361bfda048.png)![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/d65ee38bd56812d74f9cdb0191f4ff5f.png)扫码支付
 
  钱包余额 0
 
-![](https://csdnimg.cn/release/blogv2/dist/pc/img/pay-help.png)
+![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/0390d3c566f8cadca7d75a8cb181bf83.png)
 
 抵扣说明：
 
 1.余额是钱包充值的虚拟货币，按照1:1的比例进行支付金额的抵扣。  
 2.余额无法直接购买下载，可以购买VIP、付费专栏及课程。
 
-[![](https://csdnimg.cn/release/blogv2/dist/pc/img/recharge.png)余额充值](https://i.csdn.net/#/wallet/balance/recharge)
+[![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/fa0abc15b7771942e178bbd7789c6776.png)余额充值](https://i.csdn.net/#/wallet/balance/recharge)
 
     
 
 举报
 
-![](https://csdnimg.cn/release/blogv2/dist/pc/img/closeBlack.png)
+![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/e8adf158557254be3d511338ce37c93c.png)
 
 选择你想要举报的内容（必选）
 
@@ -2653,25 +2653,25 @@ IronmanJay
 
 确定
 
- [![](https://csdnimg.cn/release/blogv2/dist/pc/img/toolbar/Group.png) 点击体验  
-DeepSeekR1满血版](https://ai.csdn.net/?utm_source=cknow_pc_blogdetail&spm=1001.2101.3001.10583)![](https://g.csdnimg.cn/side-toolbar/3.6/images/mobile.png)
+ [![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/4b5d638b57b796bf4228e36a12fd3244.png) 点击体验  
+DeepSeekR1满血版](https://ai.csdn.net/?utm_source=cknow_pc_blogdetail&spm=1001.2101.3001.10583)![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/7661342cc3c5670f5798d079a31e781f.png)
 
  下载APP
 
-![程序员都在用的中文IT技术交流社区](https://g.csdnimg.cn/side-toolbar/3.6/images/qr_app.png)
+![程序员都在用的中文IT技术交流社区](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/6ddf638effe61d927f03a0789e73f41e.png)
 
 程序员都在用的中文IT技术交流社区
 
  公众号
 
-![专业的中文 IT 技术社区，与千万技术人共成长](https://g.csdnimg.cn/side-toolbar/3.6/images/qr_wechat.png)
+![专业的中文 IT 技术社区，与千万技术人共成长](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/4832e9a5e9fe3a702f3d81b1ce7c9ca3.png)
 
 专业的中文 IT 技术社区，与千万技术人共成长
 
  视频号
 
-![关注【CSDN】视频号，行业资讯、技术分享精彩不断，直播好礼送不停！](https://g.csdnimg.cn/side-toolbar/3.6/images/qr_video.png)
+![关注【CSDN】视频号，行业资讯、技术分享精彩不断，直播好礼送不停！](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/e311c5ce3170b9f4471a19010a5c3bd8.png)
 
 关注【CSDN】视频号，行业资讯、技术分享精彩不断，直播好礼送不停！
 
-![](https://g.csdnimg.cn/side-toolbar/3.6/images/totop.png)
+![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/2c299f780c6318e74239e7ac78f8860f.png)

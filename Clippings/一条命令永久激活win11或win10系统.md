@@ -9,7 +9,7 @@ description: "安全提示：激活方法来源于网络，属于github上的MAS
 tags:
   - "clippings"
 ---
-![一条命令永久激活win11或win10系统](https://picx.zhimg.com/70/v2-3861cf52ed85173fdc48265774252016_1440w.image?source=172ae18b&biz_tag=Post)
+![一条命令永久激活win11或win10系统](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/4f6fc0a303b7459bcfa597be43411c9c.jpg)
 
 一条命令永久激活win11或win10系统
 
@@ -34,24 +34,24 @@ tags:
 **PowerShell激活（win8及以上版本）**
 
 1. 打开 PowerShell (不是 CMD). 搜索框输入PowerShell,然后打开
-![](https://pic1.zhimg.com/v2-918d5a196fef6b308518b0b20477fb9c_1440w.jpg)
+![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/caf002b3b449d7f65bb3b149c92dae03.jpg)
 
 2.复制一下代码到命令行，按回车键
 
 ```
 irm https://get.activated.win | iex
 ```
-![](https://pic4.zhimg.com/v2-231d6156f2ce085826f9d1b35f85720d_1440w.jpg)
+![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/f126a1ee4e4e6f0b23ed03e7a5a69f1f.jpg)
 
 3.你会看到激活选项。选择\[1\] [HWID](https://zhida.zhihu.com/search?content_id=250387047&content_type=Article&match_order=1&q=HWID&zhida_source=entity) 用于 Windows 激活。选择\[2\] [Ohook](https://zhida.zhihu.com/search?content_id=250387047&content_type=Article&match_order=1&q=Ohook&zhida_source=entity) 用于 Office 激活
 
 Permanent是永久的意思。
 
-![](https://pic1.zhimg.com/v2-3fc2e6b3a35406cbb39794338a9c2da8_1440w.jpg)
+![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/da0f44f1c216ab110105c66ad12a7275.jpg)
 
 4、输入1激活windows系统，等待几分钟，耐心等待，出现以下界面代表激活成功了。
 
-![](https://picx.zhimg.com/v2-a09f65298c524dc49134d231979f71c3_1440w.jpg)
+![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/3106ac13fcd1a18501e33f477316bd9e.jpg)
 
 需要注意的是，选1，激活windows系统需要连接网络，能上网才行，属于在线激活
 
@@ -65,17 +65,17 @@ Permanent是永久的意思。
 
 2、解压文件
 
-![](https://pic4.zhimg.com/v2-4fce61e9b5131c4f3818e061997f2109_1440w.jpg)
+![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/20d6625a7007192fb2fceca0762d296f.jpg)
 
 3、在文件夹中找到名字为All-In-One-Version-KL的文件夹
 
-![](https://pic3.zhimg.com/v2-fe5bf348d8bcb0fc59c68083e289bb88_1440w.jpg)
+![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/3f86ce81be596fbd0cda7143bdbe48ac.jpg)
 
 4、右键，以管理员运行 `MAS_AIO.cmd` 文件
 
 5、会看到激活选项，和上面的在线激活界面一样了
 
-![](https://pic3.zhimg.com/v2-dbabf1b81e977076c5c8edb49915c77a_1440w.jpg)
+![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/0331994146b5c52fe3b677059a1ee03b.jpg)
 
 **三、卸载激活方法**
 
@@ -118,7 +118,7 @@ slmgr /rearm
   
 请确保在使用这些命令时，以管理员身份运行命令提示符。执行后，重新启动计算机会生效更改。
 
-![](https://pic2.zhimg.com/v2-b48a5d5a89f59b090e7fa452abf9073f_1440w.jpg)
+![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/43b446556ac74b5838b71ff406fab4c2.jpg)
 
 还没有人送礼物，鼓励一下作者吧
 

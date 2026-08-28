@@ -31,7 +31,7 @@ Proxifier功能:
 ### 安装激活proxifier
 
 1. 访问proxifier官网进行下载， [下载地址](https://proxifier.com/download/)
-	[![](https://img2023.cnblogs.com/blog/3164322/202309/3164322-20230905213730808-2012868662.png)](https://img2023.cnblogs.com/blog/3164322/202309/3164322-20230905213730808-2012868662.png)
+	[![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/d06d7cc3f5ddc19cab007c46d3f55994.png)](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/d06d7cc3f5ddc19cab007c46d3f55994.png)
 	下载完成后自行安装即可。
 2. proxifier软件需要收费，也可以免费使用31天，激活码可以自行在网上搜索。
 	注意：windows和mac的激活码不通用
@@ -47,26 +47,26 @@ Proxifier功能:
 ### 配置proxifier代理
 
 1. 点击 `Proxies`
-	[![](https://img2023.cnblogs.com/blog/3164322/202309/3164322-20230905213750449-511656421.png)](https://img2023.cnblogs.com/blog/3164322/202309/3164322-20230905213750449-511656421.png)
+	[![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/80cd2d12071e4de34963f517dbaeba4b.png)](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/80cd2d12071e4de34963f517dbaeba4b.png)
 2. 配置代理服务器
 	点击 `Add` —>地址默认为 `127.0.0.1` ，端口为 `8080`,与burp一致，进行保存
-	[![](https://img2023.cnblogs.com/blog/3164322/202309/3164322-20230905213802929-2103352877.png)](https://img2023.cnblogs.com/blog/3164322/202309/3164322-20230905213802929-2103352877.png)
+	[![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/d6cf33e7a49c78a9bf14327b0813e7bf.png)](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/d6cf33e7a49c78a9bf14327b0813e7bf.png)
 3. 进行规则配置
-	[![](https://img2023.cnblogs.com/blog/3164322/202309/3164322-20230905213820028-1332520490.png)](https://img2023.cnblogs.com/blog/3164322/202309/3164322-20230905213820028-1332520490.png)
+	[![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/6a9db9664f12d6386607b5dbe476565f.png)](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/6a9db9664f12d6386607b5dbe476565f.png)
 4. 点击 `Add` 进行添加规则， `name` 自己随意命名， `Action` 选择前面配置好的代理 `127.0.0.1:8080` ， `Applications` 中点击 `➕` 选择微信小程序。
-	[![](https://img2023.cnblogs.com/blog/3164322/202309/3164322-20230905213836813-1837133991.png)](https://img2023.cnblogs.com/blog/3164322/202309/3164322-20230905213836813-1837133991.png)
+	[![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/b906dedfcd2b177b3032ea9711e2f45a.png)](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/b906dedfcd2b177b3032ea9711e2f45a.png)
 5. 点击➕后，在访达中使用快捷键 `command+shift+G` 搜索小程序的位置
 	highlighter-
 	```
 	/Applications/WeChat.app/Contents/MacOS/WeChatAppEx.app/Contents/
 	```
-	[![](https://img2023.cnblogs.com/blog/3164322/202309/3164322-20230905213853391-897426413.png)](https://img2023.cnblogs.com/blog/3164322/202309/3164322-20230905213853391-897426413.png)
+	[![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/dabb8c0372270d8fa46f452bc959be4a.png)](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/dabb8c0372270d8fa46f452bc959be4a.png)
 6. 选择 ` WeChatAppEx Helper.app`
-	[![](https://img2023.cnblogs.com/blog/3164322/202309/3164322-20230905213907036-954394802.png)](https://img2023.cnblogs.com/blog/3164322/202309/3164322-20230905213907036-954394802.png)
+	[![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/3b42807a0ba442e33a7ce3fcfcb0016c.png)](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/3b42807a0ba442e33a7ce3fcfcb0016c.png)
 7. 确认无误，点击 `Save` 进行保存
-	[![](https://img2023.cnblogs.com/blog/3164322/202309/3164322-20230905213920454-1654665766.png)](https://img2023.cnblogs.com/blog/3164322/202309/3164322-20230905213920454-1654665766.png)
+	[![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/83fb519e72a2791e436270bd8ff796b9.png)](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/83fb519e72a2791e436270bd8ff796b9.png)
 8. 打开burp，打开小程序进行测试
-	[![](https://img2023.cnblogs.com/blog/3164322/202309/3164322-20230905213935916-682528946.png)](https://img2023.cnblogs.com/blog/3164322/202309/3164322-20230905213935916-682528946.png)
+	[![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/bae48b6ee28e8a0fe724f0e47f6dbfca.png)](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/bae48b6ee28e8a0fe724f0e47f6dbfca.png)
 	成功抓取
   
 

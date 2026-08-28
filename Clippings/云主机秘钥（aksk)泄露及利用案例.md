@@ -9,7 +9,7 @@ description: "前言云平台作为降低企业资源成本的工具，在当今
 tags:
   - "clippings"
 ---
-[![](https://img2024.cnblogs.com/blog/35695/202506/35695-20250620221146444-645204917.webp)](https://www.doubao.com/?channel=cnblogs&source=hw_db_cnblogs&type=lunt&theme=bianc)
+[![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/e985866d71b146418899d291d274785f.webp)](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/e985866d71b146418899d291d274785f.webp)
 
 ## 前言
 
@@ -61,17 +61,17 @@ HeapDump [文件](https://www.eolink.com/news/tags-985.html) 是JVM虚拟机运�
 
 访问某一网站时进行测试发现存在spring未授权，此时查看是否有heapdump文件，下载解压，全局搜索可发现秘钥泄露。
 
-![](https://img2023.cnblogs.com/blog/1049983/202312/1049983-20231214140230753-1515578940.png)
+![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/f9ceaeb34070bac18783258285be6146.png)
 
 2、通过暴破路径的方式获取。
 
 在文件存储位置会有一些敏感文件泄露，比如请求下载云服务器上某文件时候抓包分析。可以在请求位置暴破文件名，云服务器会返回带有访问秘钥的敏感文件。
 
-![](https://img2023.cnblogs.com/blog/1049983/202312/1049983-20231214140233940-1772046318.png)
+![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/593d42b57a93baca3efececccfccb83a.png)
 
 得到文件地址后访问下载，下载后用工具爬取内容。发现泄露ak\\sk
 
-![](https://img2023.cnblogs.com/blog/1049983/202312/1049983-20231214140234736-1172102367.png)
+![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/42e72ab92576dc7bfdd23d135a274596.png)
 
 工具链接： [https://github.com/whwlsfb/JDumpSpider](https://github.com/whwlsfb/JDumpSpider)
 
@@ -79,25 +79,25 @@ HeapDump [文件](https://www.eolink.com/news/tags-985.html) 是JVM虚拟机运�
 
 使用工具：hog
 
-![](https://img2023.cnblogs.com/blog/1049983/202312/1049983-20231214140235314-1400858717.png)
+![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/65f18c43d77ce68e5c5711898d68eaad.png)
 
 访问某网站，使用插件hog探测，会在Findings位置显示是否有密钥泄露。（网站采用异步加载也适用）
 
-![](https://img2023.cnblogs.com/blog/1049983/202312/1049983-20231214140235852-1054898617.png)
+![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/0c7ec8d9d23dca408c871767fd3e3f96.png)
 
-![](https://img2023.cnblogs.com/blog/1049983/202312/1049983-20231214140236530-638569623.png)
+![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/88442c37de8df5890851e7b602d07d30.png)
 
-![](https://img2023.cnblogs.com/blog/1049983/202312/1049983-20231214140237244-2142096245.png)
+![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/ab2c52edd575e4914a9710a1e519f918.png)
 
 ### 案例三：小程序上传等功能点泄露。
 
 某小程序打开后在个人中心头像位置
 
-![](https://img2023.cnblogs.com/blog/1049983/202312/1049983-20231214140237813-382042872.png)
+![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/ad2b29f981b358a1bed4765dc83f4834.png)
 
 点击头像抓包：
 
-![](https://img2023.cnblogs.com/blog/1049983/202312/1049983-20231214140238496-638861904.png)
+![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/cb0652da18cdbea21f2d446424bf99b7.png)
 
 可以看到accesskeyid\\acesskeysecret泄露。
 
@@ -107,9 +107,9 @@ HeapDump [文件](https://www.eolink.com/news/tags-985.html) 是JVM虚拟机运�
 
 常见的nacos后台配置列表，打开示例可以看到一些配置信息，可以看到有ak\\sk泄露。
 
-![](https://img2023.cnblogs.com/blog/1049983/202312/1049983-20231214140239324-894491048.png)
+![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/ed72813d191e8921fab3087594e5f06c.png)
 
-![](https://img2023.cnblogs.com/blog/1049983/202312/1049983-20231214140240543-1221606941.png)
+![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/2654f59bc9b1ae38fdf8f936fb54d725.png)
 
 ## 0x04漏洞利用
 
@@ -121,11 +121,11 @@ OSS Browser--阿里云官方提供的OSS图形化管理工具
 
 [https://github.com/aliyun/oss-browser](https://github.com/aliyun/oss-browser)
 
-![](https://img2023.cnblogs.com/blog/1049983/202312/1049983-20231214140242128-1819097202.png)
+![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/af8b5faeae8a6f79bbe82bdb78f19b54.png)
 
-![](https://img2023.cnblogs.com/blog/1049983/202312/1049983-20231214140244195-1131879917.png)
+![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/8d5dd7d65869fb3fe1a70f98ebd25500.png)
 
-![](https://img2023.cnblogs.com/blog/1049983/202312/1049983-20231214140249303-1807554903.png)
+![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/eb851e0fd7a9d1891c4b22d91eb20fc6.png)
 
 可以看到登入存储桶后可以查看、上传、删除、下载桶内文件，造成存储桶接管的危害。
 
@@ -133,27 +133,27 @@ OSS Browser--阿里云官方提供的OSS图形化管理工具
 
 [https://cosbrowser.cloud.tencent.com/web/bucket](https://cosbrowser.cloud.tencent.com/web/bucket)
 
-![](https://img2023.cnblogs.com/blog/1049983/202312/1049983-20231214140250259-1548528285.png)
+![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/2b8543e5a6205020e82eaf235b297d83.png)
 
-![](https://img2023.cnblogs.com/blog/1049983/202312/1049983-20231214140251748-1175210793.png)
+![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/50da6a2b15710e7d23fb3afceba58bfe.png)
 
 行云管家（支持多家云主机厂商）：
 
-![](https://img2023.cnblogs.com/blog/1049983/202312/1049983-20231214140254371-1625411832.png)
+![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/7369ef11757bdfe2d9e994369bfb61b7.png)
 
 可以选不同厂商的云主机导入。
 
-![](https://img2023.cnblogs.com/blog/1049983/202312/1049983-20231214140255255-1297317853.png)
+![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/67e4b4711366a3b1ff183729e8c98d60.png)
 
 选择主机导入：
 
-![](https://img2023.cnblogs.com/blog/1049983/202312/1049983-20231214140255885-66888553.png)
+![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/d99b94bb5977c66d2c7daddc16bcdda5.png)
 
 通过行云管家接管主机后，不仅可以访问OSS服务，还可以直接重置服务器密码，接管服务器。
 
-![](https://img2023.cnblogs.com/blog/1049983/202312/1049983-20231214140256424-1796243379.png)
+![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/07fd27374e0c28898636882e5a68ef3f.png)
 
-![](https://img2023.cnblogs.com/blog/1049983/202312/1049983-20231214140301176-1022311978.png)
+![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/fc6e17d0a39018e79275cfe5af6f370b.png)
 
 可以对主机进行重启、暂停、修改主机信息等操作。
 
@@ -163,13 +163,13 @@ CF 云环境利用框架
 
 [https://github.com/teamssix/cf/releases](https://github.com/teamssix/cf/releases)
 
-![](https://img2023.cnblogs.com/blog/1049983/202312/1049983-20231214140304232-1984367553.png)
+![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/f74440f7f510c9f61ebd82b74946546f.png)
 
-![](https://img2023.cnblogs.com/blog/1049983/202312/1049983-20231214140305353-1059758328.png)
+![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/8a92875c906afeb92c9637fa337e696e.png)
 
 使用cf查看该主机可做的操作权限，可以看到能执行命令。
 
-![](https://img2023.cnblogs.com/blog/1049983/202312/1049983-20231214140309379-639134861.png)
+![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/90e7a24b0154ff39389c1f920734a73c.png)
 
 cf tencent cvm exec -c whoami等等。
 
@@ -181,7 +181,7 @@ cf tencent cvm exec -c whoami等等。
 
 输入ak\\sk查询主机，选择主机名填入，查看云助手列表是true或者false，为true可执行命令。
 
-![](https://img2023.cnblogs.com/blog/1049983/202312/1049983-20231214140315057-415948625.png)  
+![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/9d820a73a92d1d69f05d510b7652c79f.png)  
 
   
 
@@ -191,7 +191,7 @@ cf tencent cvm exec -c whoami等等。
 
 免责声明：本内容来自平台创作者，博客园系信息发布平台，仅提供信息存储空间服务。
 
-[![](https://pic.cnblogs.com/face/1049983/20170429193445.png)](https://home.cnblogs.com/u/backlion/)
+[![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/fc6adea6ccc5179d59eb91560feaddb8.png)](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/fc6adea6ccc5179d59eb91560feaddb8.png)
 
 [渗透测试中心](https://home.cnblogs.com/u/backlion/)  
 [粉丝 - 925](https://home.cnblogs.com/u/backlion/followers/) [关注 - 0](https://home.cnblogs.com/u/backlion/followees/)  

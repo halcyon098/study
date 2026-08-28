@@ -25,7 +25,7 @@ tags:
 urlcrazy -i  weibo.com
 ```
 
-[![](https://tomyyyyy.oss-cn-hangzhou.aliyuncs.com/img/image-20211202150722193.png)](https://tomyyyyy.oss-cn-hangzhou.aliyuncs.com/img/image-20211202150722193.png)
+[![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/a4329d930ce3dc2b5245cf97ac54aa59.png)](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/a4329d930ce3dc2b5245cf97ac54aa59.png)
 
 > valid为false的就是没有人使用的，我们就可以挑一个便宜的注册一个。然后利用域名搭建一个邮箱服务器，这里推荐ewomail，下文有具体的搭建方式。
 
@@ -93,7 +93,7 @@ nslookup　-type=txt　qq.com
 dig　-t　txt　qq.com
 ```
 
-[![](https://tomyyyyy.oss-cn-hangzhou.aliyuncs.com/img/image-20211201150825636.png)](https://tomyyyyy.oss-cn-hangzhou.aliyuncs.com/img/image-20211201150825636.png)
+[![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/2007fc3bc280fac89384156e997ab521.png)](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/2007fc3bc280fac89384156e997ab521.png)
 
 > spf可以配置四种规则：
 > 
@@ -107,7 +107,7 @@ dig　-t　txt　qq.com
 
 记录中有spf1说明使用了 spf ,这个时候所谓伪造邮件的时候是发送不到qq邮箱的。
 
-[![](https://tomyyyyy.oss-cn-hangzhou.aliyuncs.com/img/image-20211201163555360.png)](https://tomyyyyy.oss-cn-hangzhou.aliyuncs.com/img/image-20211201163555360.png)
+[![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/421395abe7d06aa2e70f80951e5b1937.png)](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/421395abe7d06aa2e70f80951e5b1937.png)
 
 再看看`spf.mail.qq.com`,它也是引用了其它域名的SPF策略，继续查询，可以看到有很多的ip段，我们在使用qq邮箱发邮件时，收件方会查询到这些IP，如果发件人的源IP不在这些IP列表里，则说明是一封伪造的邮件。
 
@@ -139,7 +139,7 @@ selector._domainkey.xxxxxxxx.com
 
 以阿里云的邮件为例，查看邮件源文件，通过s字段可以得到selector的值为s1024,因此阿里云的DKIM服务器域名为s1024.\_domainkey.aliyun.com，同样通过dig或者nslookup即可获取解密密钥。
 
-[![](https://tomyyyyy.oss-cn-hangzhou.aliyuncs.com/img/image-20211201172925293.png)](https://tomyyyyy.oss-cn-hangzhou.aliyuncs.com/img/image-20211201172925293.png)
+[![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/d7e0f363263039068c3e4a46fd71aece.png)](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/d7e0f363263039068c3e4a46fd71aece.png)
 
 ### 1.2.3 DMARC
 
@@ -149,7 +149,7 @@ DMARC由Mail Sender方（域名拥有者Domain Owner）在DNS里声明自己采�
 
 以阿里云为例，获取\_dmarc.aliyun.com的txt记录即可获取DMARC策略。
 
-[![](https://tomyyyyy.oss-cn-hangzhou.aliyuncs.com/img/image-20211201173142268.png)](https://tomyyyyy.oss-cn-hangzhou.aliyuncs.com/img/image-20211201173142268.png)
+[![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/de3796110a168fba54f1c77f1469140b.png)](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/de3796110a168fba54f1c77f1469140b.png)
 
 v=DMARC1：版本
 
@@ -192,23 +192,23 @@ BEC诈骗（Business Email Compromise），又被叫商务邮件诈骗，攻击�
 
 我们直接在kali上打开setoolkit
 
-[![](https://tomyyyyy.oss-cn-hangzhou.aliyuncs.com/img/image-20211202160815929.png)](https://tomyyyyy.oss-cn-hangzhou.aliyuncs.com/img/image-20211202160815929.png)
+[![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/5a8361459981905c4ff60bdf201b2f59.png)](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/5a8361459981905c4ff60bdf201b2f59.png)
 
 然后我们选择**Social-Engineering Attacks**，
 
-[![](https://tomyyyyy.oss-cn-hangzhou.aliyuncs.com/img/10567998-bc298deb72c7743c.png)](https://tomyyyyy.oss-cn-hangzhou.aliyuncs.com/img/10567998-bc298deb72c7743c.png)
+[![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/420b6d2c044ecc3e61170c8dfc8f3435.png)](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/420b6d2c044ecc3e61170c8dfc8f3435.png)
 
 然后我们再选择选择**Website Attack Vectors**
 
-[![](https://tomyyyyy.oss-cn-hangzhou.aliyuncs.com/img/10567998-b7a27f999e0f5b90.png)](https://tomyyyyy.oss-cn-hangzhou.aliyuncs.com/img/10567998-b7a27f999e0f5b90.png)
+[![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/3e17d5e95c8f828ad17c21de462477b4.png)](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/3e17d5e95c8f828ad17c21de462477b4.png)
 
 再选择**Credential Harvester Attack Method**
 
-[![](https://tomyyyyy.oss-cn-hangzhou.aliyuncs.com/img/10567998-efc69eed47aa9b02.png)](https://tomyyyyy.oss-cn-hangzhou.aliyuncs.com/img/10567998-efc69eed47aa9b02.png)
+[![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/9b30dea711dd22d0c957b9138746b012.png)](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/9b30dea711dd22d0c957b9138746b012.png)
 
 最后选择**Site Cloner**，输入要克隆的网址，然后它克隆好之后就会返回克隆后的地址。
 
-[![](https://tomyyyyy.oss-cn-hangzhou.aliyuncs.com/img/image-20211202161728574.png)](https://tomyyyyy.oss-cn-hangzhou.aliyuncs.com/img/image-20211202161728574.png)
+[![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/4abf546f3347b7a40103b9c516e3b3d7.png)](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/4abf546f3347b7a40103b9c516e3b3d7.png)
 
 > 填写需要监听的IP，默认直接回车  
 > 填写需要克隆的网站地址
@@ -294,7 +294,7 @@ vim config.json
 [gophish-v0.11.0-windows-64](https://github.com/gophish/gophish/releases/download/v0.11.0/gophish-v0.11.0-windows-64bit.zip)  
 下载完成后，使用压缩工具解压到文件夹中
 
-[![](https://tomyyyyy.oss-cn-hangzhou.aliyuncs.com/img/image-20211102145205414.png)](https://tomyyyyy.oss-cn-hangzhou.aliyuncs.com/img/image-20211102145205414.png)
+[![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/577fb2bba0df37663c4327572a3f8c9c.png)](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/577fb2bba0df37663c4327572a3f8c9c.png)
 
 （可选）修改配置文件：  
 如果有远程访问gophish的后台管理系统的需求，则修改配置文件。具体参考Linux下修改gophish配置文件  
@@ -314,20 +314,20 @@ vim config.json
 进入后台后，左边的栏目即代表各个功能，分别是Dashboard仪表板 、Campaigns钓鱼事件 、Users & Groups用户和组 、Email Templates邮件模板 、Landing Pages钓鱼页面 、Sending Profiles发件策略六大功能  
 由于实际使用中并不是按照该顺序来配置各个功能，因此下面通过实际使用顺序来详细介绍各功能的使用方法
 
-[![](https://tomyyyyy.oss-cn-hangzhou.aliyuncs.com/img/image-20211102150749362.png)](https://tomyyyyy.oss-cn-hangzhou.aliyuncs.com/img/image-20211102150749362.png)
+[![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/a342c2435106b7b027139d3b2da9e772.png)](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/a342c2435106b7b027139d3b2da9e772.png)
 
 #### 2.2.2.1 Sending Profiles
 
 作用：设置发件人的邮箱  
 点击New Profile新建一个策略，依次来填写各个字段。（可选）Email Headers 是自定义邮件头字段，例如邮件头的X-Mailer字段，若不修改此字段的值，通过gophish发出的邮件，其邮件头的X-Mailer的值默认为gophish。
 
-[![](https://tomyyyyy.oss-cn-hangzhou.aliyuncs.com/img/image-20211102164128466.png)](https://tomyyyyy.oss-cn-hangzhou.aliyuncs.com/img/image-20211102164128466.png)
+[![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/d804adfa535dfe9d54b587451e17ffd9.png)](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/d804adfa535dfe9d54b587451e17ffd9.png)
 
 Send Test Email测试邮箱验证是否通过
 
 password需要填写邮箱的授权码
 
-[![](https://tomyyyyy.oss-cn-hangzhou.aliyuncs.com/img/image-20211103105917081.png)](https://tomyyyyy.oss-cn-hangzhou.aliyuncs.com/img/image-20211103105917081.png)
+[![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/0e9778642d6a709362b19317f8ca750e.png)](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/0e9778642d6a709362b19317f8ca750e.png)
 
 > 可以看到发送成功，成功送达目标邮箱  
 > 还可以伪造任意x-mailer头 (如果不设置的话默认是gophish)  
@@ -343,7 +343,7 @@ wlmhymexqpljchcb
 
 这个是用来设置攻击目标，即你要发送邮件的收件人地址，可以导入csv文档
 
-[![](https://tomyyyyy.oss-cn-hangzhou.aliyuncs.com/img/image-20211103110522510.png)](https://tomyyyyy.oss-cn-hangzhou.aliyuncs.com/img/image-20211103110522510.png)
+[![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/4b512043fa22b4c7a7c161e82106d96c.png)](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/4b512043fa22b4c7a7c161e82106d96c.png)
 
 #### 2.2.2.3 Email Templates
 
@@ -351,11 +351,11 @@ wlmhymexqpljchcb
 
 设置好钓鱼邮件的发送方和接收方，便可以设置钓鱼邮件的模板。gophish支持手动编辑生成钓鱼邮件，也支持导入现有邮件内容。现有邮件eml导入:(QQ邮件)下载eml文件，打开导入即可。
 
-[![](https://tomyyyyy.oss-cn-hangzhou.aliyuncs.com/img/image-20211103110801078.png)](https://tomyyyyy.oss-cn-hangzhou.aliyuncs.com/img/image-20211103110801078.png)
+[![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/4825bc458cfe09a52124eaadc5c048ef.png)](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/4825bc458cfe09a52124eaadc5c048ef.png)
 
 首先我先导出了qq邮件的一个eml文件保存到本地，然后用记事本打开
 
-[![](https://tomyyyyy.oss-cn-hangzhou.aliyuncs.com/img/image-20211103111058096.png)](https://tomyyyyy.oss-cn-hangzhou.aliyuncs.com/img/image-20211103111058096.png)
+[![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/ac339009042d0adfe1c92d5637b8577a.png)](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/ac339009042d0adfe1c92d5637b8577a.png)
 
 然后点击import email导入相应的模板
 
@@ -364,7 +364,7 @@ wlmhymexqpljchcb
 作用：伪造钓鱼页面  
 gophish支持手动编辑生成钓鱼邮件，Import Site填写被伪造网站的URL即可通过互联网自动抓取被伪造网站的前端代码。也支持导入现有邮件内容，配置时勾选捕获提交的数据和捕获密码，服务器会把相关数据保存下来。
 
-[![](https://tomyyyyy.oss-cn-hangzhou.aliyuncs.com/img/image-20211102162326489.png)](https://tomyyyyy.oss-cn-hangzhou.aliyuncs.com/img/image-20211102162326489.png)
+[![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/29788baff31d5a394ba174c6d7ec508e.png)](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/29788baff31d5a394ba174c6d7ec508e.png)
 
 [https://personalbank.cib.com.cn/pers/main/login.do](https://personalbank.cib.com.cn/pers/main/login.do)
 
@@ -373,7 +373,7 @@ gophish支持手动编辑生成钓鱼邮件，Import Site填写被伪造网站�
 作用：发送钓鱼邮件  
 填写好攻击的名称，选择钓鱼邮件模板，选择相应的钓鱼页面，目标邮箱，和发送邮箱。需要填上GoPhish服务端的地址，在钓鱼开始前，这个地址会将先前钓鱼邮件模板中的链接替换。
 
-[![](https://tomyyyyy.oss-cn-hangzhou.aliyuncs.com/img/image-20211102163851415.png)](https://tomyyyyy.oss-cn-hangzhou.aliyuncs.com/img/image-20211102163851415.png)
+[![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/5f72bb6b3e1c352d8bb25817fbadfac6.png)](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/5f72bb6b3e1c352d8bb25817fbadfac6.png)
 
 ## 2.3 利用EwoMail搭建邮箱服务器
 
@@ -448,7 +448,7 @@ ssl端口 [https://IP:7000](https://ip:7000/)
 
 然后配置邮箱系统设置
 
-[![](https://tomyyyyy.oss-cn-hangzhou.aliyuncs.com/img/m_6cb5530a739c12cba550f5778a67d972_r.png)](https://tomyyyyy.oss-cn-hangzhou.aliyuncs.com/img/m_6cb5530a739c12cba550f5778a67d972_r.png)
+[![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/f1afcc3ab80e94bb8d89013e4c18c3af.png)](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/f1afcc3ab80e94bb8d89013e4c18c3af.png)
 
 ## 2.4 利用腾讯域名邮箱
 
@@ -456,19 +456,19 @@ ssl端口 [https://IP:7000](https://ip:7000/)
 
 利用[https://mail.qq.com/cgi-bin/loginpage?t=dm\_loginpage&c=1](https://mail.qq.com/cgi-bin/loginpage?t=dm_loginpage&c=1),该链接直接创建你的域名邮箱
 
-[![](https://tomyyyyy.oss-cn-hangzhou.aliyuncs.com/img/image-20211201155655846.png)](https://tomyyyyy.oss-cn-hangzhou.aliyuncs.com/img/image-20211201155655846.png)
+[![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/c844affd769190a807e2a1a84b9925cd.png)](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/c844affd769190a807e2a1a84b9925cd.png)
 
 如果你的域名是在腾讯注册的话，可以直接在域名管理这里进行开通即可，更加方便
 
-[![](https://tomyyyyy.oss-cn-hangzhou.aliyuncs.com/img/image-20211201155410593.png)](https://tomyyyyy.oss-cn-hangzhou.aliyuncs.com/img/image-20211201155410593.png)
+[![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/e70d7bfef7ecfea91e90e3736f68d344.png)](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/e70d7bfef7ecfea91e90e3736f68d344.png)
 
 然后按照他的流程完成企业邮箱的开通即可，开通之后会进入到这样的页面
 
-[![](https://tomyyyyy.oss-cn-hangzhou.aliyuncs.com/img/image-20211201160025821.png)](https://tomyyyyy.oss-cn-hangzhou.aliyuncs.com/img/image-20211201160025821.png)
+[![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/dc677b093f71200d9bcc7861e8c2955f.png)](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/dc677b093f71200d9bcc7861e8c2955f.png)
 
 然后点击右侧的链接进行激活，填写个人信息即可，激活成功之后会进入到企业微信的后台管理平台了
 
-[![](https://tomyyyyy.oss-cn-hangzhou.aliyuncs.com/img/image-20211201160507774.png)](https://tomyyyyy.oss-cn-hangzhou.aliyuncs.com/img/image-20211201160507774.png)
+[![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/e944a6be2af87012886885a6b0067551.png)](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/e944a6be2af87012886885a6b0067551.png)
 
 然后我们就可以在通讯录这个地方，添加，修改，或者删除我们的邮箱，同时可以在手机或者电脑的企业邮箱中收发我们的邮件了。
 
@@ -476,7 +476,7 @@ ssl端口 [https://IP:7000](https://ip:7000/)
 
 首先根据腾讯企业邮箱的[官方文档](https://service.exmail.qq.com/cgi-bin/help?subtype=1&&id=28&&no=1001254),发送邮件服务器我们可以配置为smtp协议
 
-[![](https://tomyyyyy.oss-cn-hangzhou.aliyuncs.com/img/image-20211201161808013.png)](https://tomyyyyy.oss-cn-hangzhou.aliyuncs.com/img/image-20211201161808013.png)
+[![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/3819822c590db7a7dc944997bba1ea6e.png)](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/3819822c590db7a7dc944997bba1ea6e.png)
 
 ## 三、各种方式绕过邮箱的安全机制
 
@@ -526,11 +526,11 @@ swaks --data readmail.txt --header "Subject:标题" --to xxxxxxxx@qq.com --from 
 
 之前有人使用西里尔语中的`'a'`字符构建一个`apple.com`的同态域名，最后浏览器只显示了编码后的域名。访问[https://www.apple.com](https://www.xn--80ak6aa92e.com/),实际上该链接地址是`https://www.xn--80ak6aa92e.com/`，但是浏览器显示的却是`https://www.apple.com`,
 
-[![](https://tomyyyyy.oss-cn-hangzhou.aliyuncs.com/img/image-20211202101525571.png)](https://tomyyyyy.oss-cn-hangzhou.aliyuncs.com/img/image-20211202101525571.png)
+[![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/e1916c56e9150ef9f9e0e817d878dd75.png)](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/e1916c56e9150ef9f9e0e817d878dd75.png)
 
 而作为邮箱服务器，对IDN的检测就更加的少了，而且检测的话也没有什么比较有效的方式，因此如果我们利用IDN域名作为我们的邮箱服务器的话，简直可以以假乱真。
 
-如果我们想要去去注册一个这样子的域名的话，首先要先找到对应字母的替换形式，可以找到西方其它国家的一些字母进行替换，例如上文所提到的西里尔语，我们可以直接复制相应的字母到我们的域名中，例如[西里尔语中的一些字母](https://zh.wikipedia-on-ipfs.org/wiki/%E6%B1%89%E8%AF%AD%E8%A5%BF%E9%87%8C%E5%B0%94%E5%AD%97%E6%AF%8D%E8%BD%AC%E5%86%99%E7%B3%BB%E7%BB%9F)，[![](https://tomyyyyy.oss-cn-hangzhou.aliyuncs.com/img/image-20211202105015821.png)](https://tomyyyyy.oss-cn-hangzhou.aliyuncs.com/img/image-20211202105015821.png)
+如果我们想要去去注册一个这样子的域名的话，首先要先找到对应字母的替换形式，可以找到西方其它国家的一些字母进行替换，例如上文所提到的西里尔语，我们可以直接复制相应的字母到我们的域名中，例如[西里尔语中的一些字母](https://zh.wikipedia-on-ipfs.org/wiki/%E6%B1%89%E8%AF%AD%E8%A5%BF%E9%87%8C%E5%B0%94%E5%AD%97%E6%AF%8D%E8%BD%AC%E5%86%99%E7%B3%BB%E7%BB%9F)，[![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/9e38699174402e71cdd4a66ea7b8f846.png)](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/9e38699174402e71cdd4a66ea7b8f846.png)
 
 我们可以直接复制他们中和英文类似的字母，例如`a、e、o`,之类的，然后利用IDN转码工具查看一下转码之后的效果
 
@@ -539,7 +539,7 @@ swaks --data readmail.txt --header "Subject:标题" --to xxxxxxxx@qq.com --from 
 
 像是之前的`www.apple.com`,如果我们只替换字母`a`的话，就是这样的
 
-[![](https://tomyyyyy.oss-cn-hangzhou.aliyuncs.com/img/image-20211202105409811.png)](https://tomyyyyy.oss-cn-hangzhou.aliyuncs.com/img/image-20211202105409811.png)
+[![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/4da8db00b87c54acebd2deeed4b5bef9.png)](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/4da8db00b87c54acebd2deeed4b5bef9.png)
 
 然后我们就可以到可以购买idn域名的服务厂商去购买域名了，例如https://sg.godaddy.com/，这种全球性的域名厂商，我们可以直接购买带有西里尔字母的域名就可以了
 
@@ -609,7 +609,7 @@ xxx,您好
 
 \_\_EOF\_\_
 
-[![](https://tomyyyyy.oss-cn-hangzhou.aliyuncs.com/img/image-20210828172831872.png)](https://tomyyyyy.oss-cn-hangzhou.aliyuncs.com/img/image-20210828172831872.png)
+[![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/deeb4e4f0259239fdbbe1b92ebfd1543.png)](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/deeb4e4f0259239fdbbe1b92ebfd1543.png)
 
 - **本文作者：** [tomyyyyy](https://www.cnblogs.com/tomyyyyy)
 - **本文链接：** [https://www.cnblogs.com/tomyyyyy/p/15648358.html#tid-ehdDtQ](https://www.cnblogs.com/tomyyyyy/p/15648358.html#tid-ehdDtQ)
@@ -635,7 +635,7 @@ posted @   [tomyyyyy](https://www.cnblogs.com/tomyyyyy)  阅读(5189)  评论
 [【推荐】抖音旗下AI助手豆包，你的智能百科全书，全免费不限次数](https://www.doubao.com/?channel=cnblogs&source=hw_db_cnblogs)  
 [【推荐】轻量又高性能的 SSH 工具 IShell：AI 加持，快人一步](http://ishell.cc/)  
 
-[![](https://img2024.cnblogs.com/blog/35695/202503/35695-20250303221234470-1278783675.jpg)](https://juejin.cn/coding-contest?utm_source=juejin&utm_medium=juejin_trae&utm_campaign=bokeyuan)
+[![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/e9fdd2be0defa817090d7885a26762a7.jpg)](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/e9fdd2be0defa817090d7885a26762a7.jpg)
 
 **编辑推荐：**  
 · [Linux系列：如何调试 malloc 的底层源码](https://www.cnblogs.com/huangxincheng/p/18750484)  
@@ -653,4 +653,4 @@ posted @   [tomyyyyy](https://www.cnblogs.com/tomyyyyy)  阅读(5189)  评论
 
 点击右上角即可分享
 
-![微信分享提示](https://img2023.cnblogs.com/blog/35695/202309/35695-20230906145857937-1471873834.gif)
+![微信分享提示](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/555e49d6a3ba2183a3b8a2b6083355df.gif)

