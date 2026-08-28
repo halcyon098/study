@@ -9,7 +9,14 @@ Thumbs.db
 .space/
 
 # 忽略 Obsidian 的工作区状态（但保留插件和主题设置）
-# 如果你想完全不同步配置，可以直接写 .obsidian/
 .obsidian/workspace.json
 .obsidian/workspace-mobile.json
 .obsidian/graph.json
+.obsidian/cache
+
+# 插件的本地数据（可能含 token/密钥等敏感信息，且因设备而异）
+.obsidian/plugins/*/data.json
+
+# 插件安装包/压缩包，属于构建产物，体积大且不需要同步
+.obsidian/plugins/*.zip
+.obsidian/plugins/**/*.zip
